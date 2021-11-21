@@ -44,6 +44,18 @@ use Cake\Mailer\TransportFactory;
 use Cake\Routing\Router;
 use Cake\Utility\Security;
 
+
+Configure::write('CakePdf', [
+    'engine' => 'CakePdf.DomPdf',
+    'margin' => [
+        'bottom' => 15,
+        'left' => 50,
+        'right' => 30,
+        'top' => 45
+    ],
+    'orientation' => 'portrait',
+    'download' => true
+]);
 /*
  * See https://github.com/josegonzalez/php-dotenv for API details.
  *

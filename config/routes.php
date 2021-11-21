@@ -88,6 +88,7 @@ $routes->prefix('Admin', function (RouteBuilder $routes) {
     $routes->connect('/categories', ['controller' => 'categoria', 'action' => 'index']);
     $routes->connect('/merch', ['controller' => 'merchandising', 'action' => 'index']);
     $routes->connect('/manufacturer', ['controller' => 'fabricante', 'action' => 'index']);
+    $routes->connect('/compra/cantidad/*', ['controller' => 'compra', 'action' => 'cantidad']);
     $routes->fallbacks(DashedRoute::class);
 });
 

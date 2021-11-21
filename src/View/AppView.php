@@ -38,4 +38,11 @@ class AppView extends View
     public function initialize(): void
     {
     }
+
+    public function assetUrl($path, $options = array()) {
+        if (!empty($this->request->params['ext']) && $this->request->params['ext'] === 'pdf' ) {
+            $options['fullBase'] = true;
+        }
+        return parent::assetUrl($path, $options);
+    }
 }
