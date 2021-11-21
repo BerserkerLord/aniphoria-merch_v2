@@ -40,7 +40,7 @@ class EstatusTable extends Table
         parent::initialize($config);
 
         $this->setTable('estatus');
-        $this->setDisplayField('id');
+        $this->setDisplayField('estatus');
         $this->setPrimaryKey('id');
 
         $this->hasMany('Factura', [

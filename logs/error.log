@@ -11054,3 +11054,160 @@ Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 130
 
 
 
+2021-11-21 03:11:44 Error: [RuntimeException] Cannot insert row in "compra_merchandising" table, it has no primary key. in C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\Table.php on line 2000
+Stack Trace:
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\Table.php:1928
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\Table.php:1829
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\Table.php:1529
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Database\Connection.php:693
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\Table.php:1530
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\Table.php:1830
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\Association\BelongsToMany.php:780
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\Association\BelongsToMany.php:724
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\Association\BelongsToMany.php:1166
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Database\Connection.php:693
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\Association\BelongsToMany.php:1185
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\Association\BelongsToMany.php:664
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\AssociationCollection.php:318
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\AssociationCollection.php:288
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\AssociationCollection.php:248
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\Table.php:1961
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\Table.php:1934
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\Table.php:1829
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\Table.php:1529
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Database\Connection.php:693
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\Table.php:1530
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\Table.php:1830
+- C:\xampp\htdocs\aniphoria-merch_v2\src\Controller\Admin\CompraController.php:57
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Controller\Controller.php:521
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:79
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Http\BaseApplication.php:229
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:164
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:160
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:119
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\xampp\htdocs\aniphoria-merch_v2\webroot\index.php:40
+
+Request URL: /admin/compra/add
+Referer URL: http://localhost/aniphoria-merch_v2/admin/compra/add
+
+
+2021-11-21 03:21:16 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY' in C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php on line 39
+Stack Trace:
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php:39
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php:178
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php:58
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Database\Connection.php:343
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php:69
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Database\Connection.php:346
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Database\Query.php:245
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\Table.php:2036
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\Table.php:1928
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\Table.php:1829
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\Table.php:1529
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Database\Connection.php:693
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\Table.php:1530
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\Table.php:1830
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\Association\BelongsToMany.php:780
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\Association\BelongsToMany.php:724
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\Association\BelongsToMany.php:1166
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Database\Connection.php:693
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\Association\BelongsToMany.php:1185
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\Association\BelongsToMany.php:664
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\AssociationCollection.php:318
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\AssociationCollection.php:288
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\AssociationCollection.php:248
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\Table.php:1961
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\Table.php:1934
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\Table.php:1829
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\Table.php:1529
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Database\Connection.php:693
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\Table.php:1530
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\Table.php:1830
+- C:\xampp\htdocs\aniphoria-merch_v2\src\Controller\Admin\CompraController.php:57
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Controller\Controller.php:521
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:79
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Http\BaseApplication.php:229
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:164
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:160
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:119
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\xampp\htdocs\aniphoria-merch_v2\webroot\index.php:40
+
+Request URL: /admin/compra/add
+Referer URL: http://localhost/aniphoria-merch_v2/admin/compra/add
+
+
+2021-11-21 03:29:26 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY' in C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php on line 39
+Stack Trace:
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php:39
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php:178
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php:58
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Database\Connection.php:343
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php:69
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Database\Connection.php:346
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Database\Query.php:245
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\Table.php:2036
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\Table.php:1928
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\Table.php:1829
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\Table.php:1529
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Database\Connection.php:693
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\Table.php:1530
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\Table.php:1830
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\Association\BelongsToMany.php:780
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\Association\BelongsToMany.php:724
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\Association\BelongsToMany.php:1166
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Database\Connection.php:693
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\Association\BelongsToMany.php:1185
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\Association\BelongsToMany.php:664
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\AssociationCollection.php:318
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\AssociationCollection.php:288
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\AssociationCollection.php:248
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\Table.php:1961
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\Table.php:1934
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\Table.php:1829
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\Table.php:1529
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Database\Connection.php:693
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\Table.php:1530
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\Table.php:1830
+- C:\xampp\htdocs\aniphoria-merch_v2\src\Controller\Admin\CompraController.php:57
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Controller\Controller.php:521
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:79
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Http\BaseApplication.php:229
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:164
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:160
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:119
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\xampp\htdocs\aniphoria-merch_v2\webroot\index.php:40
+
+Request URL: /admin/compra/add
+Referer URL: http://localhost/aniphoria-merch_v2/admin/compra/add
+
+

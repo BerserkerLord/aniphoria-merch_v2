@@ -38,7 +38,7 @@ class FabricanteTable extends Table
         parent::initialize($config);
 
         $this->setTable('fabricante');
-        $this->setDisplayField('id');
+        $this->setDisplayField('rfc');
         $this->setPrimaryKey('id');
     }
 

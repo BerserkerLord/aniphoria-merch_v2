@@ -41,7 +41,7 @@ class CompraMerchandisingTable extends Table
         parent::initialize($config);
 
         $this->setTable('compra_merchandising');
-        $this->setDisplayField('id');
+        $this->setDisplayField('articulo');
         $this->setPrimaryKey('id');
 
         $this->belongsTo('Compra', [

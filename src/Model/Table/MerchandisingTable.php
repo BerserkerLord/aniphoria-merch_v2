@@ -40,7 +40,7 @@ class MerchandisingTable extends Table
         parent::initialize($config);
 
         $this->setTable('merchandising');
-        $this->setDisplayField('id');
+        $this->setDisplayField('articulo');
         $this->setPrimaryKey('id');
 
         $this->belongsTo('Categoria', [
@@ -48,7 +48,13 @@ class MerchandisingTable extends Table
             'joinType' => 'INNER',
         ]);
 
-        $this->hasMany('Imagen', ['dependent' => true   ]);
+        $this->hasMany('Imagen', ['dependent' => true]);
+
+        $this->belongsToMany('Compra', [
+            'foreignKey' => 'merchandising_id',
+            'targetForeignKey' => 'compra_id',
+            'joinTable' => 'compra_merchandising',
+        ]);
     }
 
     /**
