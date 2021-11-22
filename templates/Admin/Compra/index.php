@@ -28,6 +28,7 @@
                     <td class="actions">
                         <?= $this->Html->link(__('View'), ['action' => 'view', $compra->id]) ?>
                         <?= $this->Html->link(__('Edit'), ['action' => 'edit', $compra->id]) ?>
+                        <?= $this->Html->link(__('Factura'), ['action' => 'factura', $compra->id]) ?>
                         <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $compra->id], ['confirm' => __('Are you sure you want to delete # {0}?', $compra->id)]) ?>
                     </td>
                 </tr>

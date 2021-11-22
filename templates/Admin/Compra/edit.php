@@ -23,9 +23,6 @@
                 <legend><?= __('Edit Compra') ?></legend>
                 <?php
                     echo $this->Form->control('estatus_id', ['options' => $estatus]);
-                    echo $this->Form->control('fabricante_id', ['options' => $fabricante, 'empty' => true]);
-                    echo $this->Form->control('fecha');
-                    echo $this->Form->control('merchandising._ids', ['options' => $merchandising]);
                 ?>
             </fieldset>
             <?= $this->Form->button(__('Submit')) ?>
