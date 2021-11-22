@@ -51,6 +51,8 @@ class AdministradorController extends AppController
         $administrador = $this->Administrador->newEmptyEntity();
         if ($this->request->is('post')) {
             $administrador = $this->Administrador->patchEntity($administrador, $this->request->getData());
+            $contrasena = MD5($this->request->getData('contrasenia'));
+            $administrador->contrasenia=$contrasena;
             $administrador->token=MD5(rand(1,9999).'');
             $this->addPhoto($administrador);
             if ($this->Administrador->save($administrador)) {
@@ -114,7 +116,7 @@ class AdministradorController extends AppController
 
     public function addPhoto($administrador){
         if(!$administrador->getErrors){
-            $image=$this->request->getData('foto');
+            $image=$this->request->getData('imagen');
             $nombre=$image->getClientFilename();
             $path=WWW_ROOT.'img'.DS.'admins'.DS.$nombre;
             if($nombre){
@@ -126,7 +128,7 @@ class AdministradorController extends AppController
 
     public function changePhoto($administrador, $anterior){
         if (!$administrador->getErrors) {
-            $image = $this->request->getData('foto');
+            $image = $this->request->getData('imagen');
             $nombre = $image->getClientFilename();
             if ($nombre){
                 $path=WWW_ROOT.'img'.DS.'admins'.DS.$nombre;

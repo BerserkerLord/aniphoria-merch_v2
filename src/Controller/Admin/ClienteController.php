@@ -50,8 +50,11 @@ class ClienteController extends AppController
     {
         $cliente = $this->Cliente->newEmptyEntity();
         if ($this->request->is('post')) {
+            
             $cliente = $this->Cliente->patchEntity($cliente, $this->request->getData());
             $cliente->token=MD5(rand(1,9999).'');
+            $contrasena = MD5($this->request->getData('contrasenia'));
+            $cliente->contrasenia=$contrasena;
             $cliente->verificado=false;
             $cliente->fecha_registro=date("Y-m-d");
             $this->addPhoto($cliente);
@@ -120,7 +123,7 @@ class ClienteController extends AppController
 
     public function addPhoto($cliente){
         if(!$cliente->getErrors){
-            $image=$this->request->getData('foto');
+            $image=$this->request->getData('imagen');
             $nombre=$image->getClientFilename();
             $path=WWW_ROOT.'img'.DS.'clientes'.DS.$nombre;
             if($nombre){
@@ -132,7 +135,7 @@ class ClienteController extends AppController
 
     public function changePhoto($cliente, $anterior){
         if (!$cliente->getErrors) {
-            $image = $this->request->getData('foto');
+            $image = $this->request->getData('imagen');
             $nombre = $image->getClientFilename();
             if ($nombre){
                 $path=WWW_ROOT.'img'.DS.'clientes'.DS.$nombre;

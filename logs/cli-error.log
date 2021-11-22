@@ -80,3 +80,45 @@ Stack Trace:
 
 
 
+2021-11-22 00:55:17 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'aniphoria.direccion' doesn't exist in C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 142
+Stack Trace:
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Database\Schema\Collection.php:100
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php:84
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\Table.php:509
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\Table.php:649
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\bake\src\Command\ModelCommand.php:199
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\bake\src\Command\ModelCommand.php:122
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\bake\src\Command\ModelCommand.php:98
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\bake\src\Command\ModelCommand.php:81
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\bake\src\Command\AllCommand.php:115
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Console\BaseCommand.php:175
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Console\CommandRunner.php:336
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Console\CommandRunner.php:171
+- C:\xampp\htdocs\aniphoria-merch_v2\bin\cake.php:12
+
+Caused by: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'aniphoria.direccion' doesn't exist in C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php on line 39
+Stack Trace:
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php:39
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Database\Connection.php:359
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php:69
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Database\Connection.php:362
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Database\Connection.php:311
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php:69
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Database\Connection.php:315
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Database\Schema\Collection.php:140
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Database\Schema\Collection.php:100
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php:84
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\Table.php:509
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\ORM\Table.php:649
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\bake\src\Command\ModelCommand.php:199
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\bake\src\Command\ModelCommand.php:122
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\bake\src\Command\ModelCommand.php:98
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\bake\src\Command\ModelCommand.php:81
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\bake\src\Command\AllCommand.php:115
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Console\BaseCommand.php:175
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Console\CommandRunner.php:336
+- C:\xampp\htdocs\aniphoria-merch_v2\vendor\cakephp\cakephp\src\Console\CommandRunner.php:171
+- C:\xampp\htdocs\aniphoria-merch_v2\bin\cake.php:12
+
+
+
