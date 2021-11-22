@@ -95,6 +95,12 @@ $routes->prefix('Admin', function (RouteBuilder $routes) {
     $routes -> fallbacks(DashedRoute::class);
 });
 
+$routes->prefix('Cliente', function (RouteBuilder $routes) {
+    $routes -> connect('/login', ['controller' => 'cliente', 'action' => 'login'], ['_name' => 'loginClient']);
+    $routes -> connect('/add', ['controller' => 'cliente', 'action' => 'add'], ['_name' => 'registerCliente']);
+    $routes -> fallbacks(DashedRoute::class);
+});
+
 /*
  * If you need a different set of middleware or none at all,
  * open new scope and define routes there.

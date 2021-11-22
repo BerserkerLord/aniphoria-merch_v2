@@ -54,8 +54,7 @@ class ClienteController extends AppController
             $cliente->token=MD5(rand(1,9999).'');
             $cliente->verificado=false;
             $cliente->fecha_registro=date("Y-m-d");
-            $contrasena = $this->request->getData('contrasenia');
-            $cliente->contrasenia=$contrasena;
+            $cliente->contrasenia=MD5($this->request->getData('contrasenia'));
             $this->addPhoto($cliente);
             if ($this->Cliente->save($cliente)) {
                 $this->Flash->success(__('The cliente has been saved.'));
@@ -146,7 +145,7 @@ class ClienteController extends AppController
                     unlink($imgpath);
                 }
                 $cliente->foto=$nombre;
-            } 
+            }
             else{
                 $cliente->foto=$anterior;
             }

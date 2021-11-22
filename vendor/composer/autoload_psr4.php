@@ -66,6 +66,7 @@ return array(
     'CakePdf\\' => array($vendorDir . '/friendsofcake/cakepdf/src'),
     'CakePHP\\' => array($vendorDir . '/cakephp/cakephp-codesniffer/CakePHP'),
     'Bake\\' => array($vendorDir . '/cakephp/bake/src'),
+    'Authentication\\' => array($vendorDir . '/cakephp/authentication/src'),
     'Aura\\Intl\\' => array($vendorDir . '/aura/intl/src'),
     'App\\Test\\' => array($baseDir . '/tests'),
     'App\\' => array($baseDir . '/src'),
