@@ -115,7 +115,7 @@ a:focus {
 }
 
 #sidebar ul li a:hover {
-    color: #ffffff;
+    color: #ffffff !important;
     background: #ff1166;
     text-decoration: none;
 }

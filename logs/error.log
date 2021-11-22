@@ -23020,3 +23020,102 @@ Stack trace:
 #18 /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Http/Server.php(90): Cake\Http\Runner->run()
 #19 /mnt/d/Escritorio/aniphoria-merch_v2/webroot/index.php(40): Cake\Http\Server->run()
 #20 {main}
+2021-11-22 02:22:00 Error: [Cake\Http\Exception\MissingControllerException] Controller class Css could not be found. in /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 158
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:46
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Http/BaseApplication.php:227
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:128
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /mnt/d/Escritorio/aniphoria-merch_v2/webroot/index.php:40
+
+Request URL: /css/milligram.min.css.map
+Client IP: 127.0.0.1
+
+
+2021-11-22 02:22:03 Error: [Cake\Http\Exception\MissingControllerException] Controller class Css could not be found. in /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 158
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:46
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Http/BaseApplication.php:227
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:128
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /mnt/d/Escritorio/aniphoria-merch_v2/webroot/index.php:40
+
+Request URL: /css/bootstrap.min.css.map
+Client IP: 127.0.0.1
+
+
+2021-11-22 02:22:41 Error: [Cake\Http\Exception\MissingControllerException] Controller class Css could not be found. in /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 158
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:46
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Http/BaseApplication.php:227
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:128
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /mnt/d/Escritorio/aniphoria-merch_v2/webroot/index.php:40
+
+Request URL: /css/milligram.min.css.map
+Client IP: 127.0.0.1
+
+
