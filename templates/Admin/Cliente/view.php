@@ -14,7 +14,7 @@
             <?= $this->Html->link(__('New Cliente'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
         </div>
     </aside>
-    <div class="column-responsive column-80">
+    <div class="column-responsive justify-content-center">
         <div class="cliente view content">
             <h3><?= h($cliente->id) ?></h3>
             <table>

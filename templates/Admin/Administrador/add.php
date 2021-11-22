@@ -11,7 +11,7 @@
             <?= $this->Html->link(__('List Administrador'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
         </div>
     </aside>
-    <div class="column-responsive column-80">
+    <div class="column-responsive justify-content-center">
         <div class="administrador form content">
             <?= $this->Form->create($administrador, ['type' => 'file']) ?>
             <fieldset>

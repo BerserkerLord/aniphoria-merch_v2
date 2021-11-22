@@ -14,7 +14,7 @@
             <?= $this->Html->link(__('New Compra'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
         </div>
     </aside>
-    <div class="column-responsive column-80">
+    <div class="column-responsive justify-content-center">
         <div class="compra view content">
             <h3><?= h($compra->id) ?></h3>
             <table>

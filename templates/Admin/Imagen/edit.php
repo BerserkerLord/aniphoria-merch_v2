@@ -16,7 +16,7 @@
             <?= $this->Html->link(__('List Imagen'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
         </div>
     </aside>
-    <div class="column-responsive column-80">
+    <div class="column-responsive justify-content-center">
         <div class="imagen form content">
             <?= $this->Form->create($imagen) ?>
             <fieldset>
