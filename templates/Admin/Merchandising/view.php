@@ -53,6 +53,7 @@
                         <th><?= __('Acciones') ?></th>
                     </tr>
                     <?php foreach ($merchandising->imagen as $img) : ?>
+                        <?php $imageName=file_exists('/webroot/img/productos/'.$img->nombre)?$img->nombre:'default.png'; ?>
                         <tr>
                             <td><?= @$this->Html->image('/webroot/img/productos/'.$img->nombre, ['width' => '100', 'height' => '100']) ?></td>
                             <td>

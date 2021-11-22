@@ -35,8 +35,9 @@
                     <td><?= h($administrador->contrasenia) ?></td>
                 </tr>
                 <tr>
+                    <?php $imageName=empty($administrador->foto)?'default.jpg':$administrador->foto; ?>
                     <th><?= __('Foto') ?></th>
-                    <td><?= @$this->Html->image('/webroot/img/admins/'.$administrador->foto, ['width' => '100', 'height' => '100']) ?></td>
+                    <td><?= @$this->Html->image('/webroot/img/admins/'.$imageName, ['width' => '100', 'height' => '100']) ?></td>
                 </tr>
                 <tr>
                     <th><?= __('Id') ?></th>

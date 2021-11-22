@@ -40,7 +40,8 @@
                     <td><?= h($cliente->usuario) ?></td>
                     <td><?= h($cliente->correo) ?></td>
                     <td><?= h($cliente->contrasenia) ?></td>
-                    <td><?= @$this->Html->image('/webroot/img/clientes/'.$cliente->foto, ['width' => '100', 'height' => '100']) ?></td>
+                    <?php $imageName=empty($cliente->foto)?'default.jpg':$cliente->foto; ?>
+                    <td><?= @$this->Html->image('/webroot/img/clientes/'.$imageName, ['width' => '100', 'height' => '100']) ?></td>
                     <td class="actions">
                         <?= $this->Html->link(__('View'), ['action' => 'view', $cliente->id]) ?>
                         <?= $this->Html->link(__('Edit'), ['action' => 'edit', $cliente->id]) ?>

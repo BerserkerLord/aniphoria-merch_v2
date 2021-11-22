@@ -22,7 +22,7 @@
             <fieldset>
                 <legend><?= __('Edit Direccion') ?></legend>
                 <?php
-                    echo $this->Form->control('cliente_id');
+                    echo $this->Form->control('cliente_id', ['options' => $cliente]);
                     echo $this->Form->control('direccion');
                 ?>
             </fieldset>

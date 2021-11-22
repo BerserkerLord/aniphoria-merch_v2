@@ -85,7 +85,7 @@ class AdministradorTable extends Table
                 'message' => 'Por favor subir jpg o png.',
             ],
             'fileSize' => [
-                'rule' => [ 'fileSize', '<=', '1MB' ],
+                'rule' => [ 'fileSize', '<=', '2MB' ],
                 'message' => 'El tamaño del archivo debe de ser menor a 1MB.',
             ],
         ] );

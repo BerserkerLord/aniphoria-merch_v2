@@ -54,6 +54,8 @@ class ClienteController extends AppController
             $cliente->token=MD5(rand(1,9999).'');
             $cliente->verificado=false;
             $cliente->fecha_registro=date("Y-m-d");
+            $contrasena = $this->request->getData('contrasenia');
+            $cliente->contrasenia=$contrasena;
             $this->addPhoto($cliente);
             if ($this->Cliente->save($cliente)) {
                 $this->Flash->success(__('The cliente has been saved.'));
@@ -82,6 +84,8 @@ class ClienteController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $nombrePhoto=$cliente->foto;
             $cliente = $this->Cliente->patchEntity($cliente, $this->request->getData(), ['validate' => false]);
+            $contrasena = $this->request->getData('contrasenia');
+            $cliente->contrasenia=$contrasena;
             $cliente->verificado=$validado;
             $cliente->fecha_registro=$registro;
             $this->changePhoto($cliente, $nombrePhoto);
@@ -108,7 +112,7 @@ class ClienteController extends AppController
         $cliente = $this->Cliente->get($id);
         $imgpath=WWW_ROOT.'img'.DS.'clientes'.DS.$cliente->foto;
         if ($this->Cliente->delete($cliente)) {
-            if( file_exists($imgpath) ){
+            if(!empty($cliente->foto)){
                 unlink($imgpath);
             }
             $this->Flash->success(__('The cliente has been deleted.'));
@@ -120,7 +124,7 @@ class ClienteController extends AppController
 
     public function addPhoto($cliente){
         if(!$cliente->getErrors){
-            $image=$this->request->getData('foto');
+            $image=$this->request->getData('imagen');
             $nombre=$image->getClientFilename();
             $path=WWW_ROOT.'img'.DS.'clientes'.DS.$nombre;
             if($nombre){
@@ -132,13 +136,13 @@ class ClienteController extends AppController
 
     public function changePhoto($cliente, $anterior){
         if (!$cliente->getErrors) {
-            $image = $this->request->getData('foto');
+            $image = $this->request->getData('imagen');
             $nombre = $image->getClientFilename();
             if ($nombre){
                 $path=WWW_ROOT.'img'.DS.'clientes'.DS.$nombre;
                 $image->moveTo($path);
                 $imgpath=WWW_ROOT.'img'.DS.'clientes'.DS.$anterior;
-                if (file_exists($imgpath)) {
+                if(!empty($administrador->foto)){
                     unlink($imgpath);
                 }
                 $cliente->foto=$nombre;

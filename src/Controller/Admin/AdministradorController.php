@@ -52,6 +52,7 @@ class AdministradorController extends AppController
         if ($this->request->is('post')) {
             $administrador = $this->Administrador->patchEntity($administrador, $this->request->getData());
             $administrador->token=MD5(rand(1,9999).'');
+            $administrador->contrasenia=MD5($this->request->getData('contrasenia'));
             $this->addPhoto($administrador);
             if ($this->Administrador->save($administrador)) {
                 $this->Flash->success(__('The administrador has been saved.'));
@@ -78,6 +79,7 @@ class AdministradorController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $nombrePhoto=$administrador->foto;
             $administrador = $this->Administrador->patchEntity($administrador, $this->request->getData(), ['validate' => false]);
+            $administrador->contrasenia=MD5($this->request->getData('contrasenia'));
             $this->changePhoto($administrador, $nombrePhoto);
             if ($this->Administrador->save($administrador)) {
                 $this->Flash->success(__('The administrador has been saved.'));
@@ -101,12 +103,14 @@ class AdministradorController extends AppController
         $this->request->allowMethod(['post', 'delete']);
         $administrador = $this->Administrador->get($id);
         $imgpath=WWW_ROOT.'img'.DS.'admins'.DS.$administrador->foto;
+        
         if ($this->Administrador->delete($administrador)) {
-            if( file_exists($imgpath) ){
+            if(!empty($administrador->foto)){
                 unlink($imgpath);
             }
             $this->Flash->success(__('The administrador has been deleted.'));
-        } else {
+        } 
+        else {
             $this->Flash->error(__('The administrador could not be deleted. Please, try again.'));
         }
         return $this->redirect(['action' => 'index']);
@@ -114,7 +118,7 @@ class AdministradorController extends AppController
 
     public function addPhoto($administrador){
         if(!$administrador->getErrors){
-            $image=$this->request->getData('foto');
+            $image=$this->request->getData('imagen');
             $nombre=$image->getClientFilename();
             $path=WWW_ROOT.'img'.DS.'admins'.DS.$nombre;
             if($nombre){
@@ -126,13 +130,13 @@ class AdministradorController extends AppController
 
     public function changePhoto($administrador, $anterior){
         if (!$administrador->getErrors) {
-            $image = $this->request->getData('foto');
+            $image = $this->request->getData('imagen');
             $nombre = $image->getClientFilename();
             if ($nombre){
                 $path=WWW_ROOT.'img'.DS.'admins'.DS.$nombre;
                 $image->moveTo($path);
                 $imgpath=WWW_ROOT.'img'.DS.'admins'.DS.$anterior;
-                if (file_exists($imgpath)) {
+                if(!empty($administrador->foto)){
                     unlink($imgpath);
                 }
                 $administrador->foto=$nombre;

@@ -47,8 +47,9 @@
                     <td><?= h($cliente->contrasenia) ?></td>
                 </tr>
                 <tr>
-                    <th><?= __('Foto') ?></th>
-                    <td><?= h($cliente->foto) ?></td>
+                    <?php $imageName=empty($cliente->foto)?'default.jpg':$cliente->foto; ?>
+                    <th><?= __('Imagen') ?></th>
+                    <td><?= @$this->Html->image('/webroot/img/clientes/'.$imageName, ['width' => '100', 'height' => '100']) ?></td>
                 </tr>
                 <tr>
                     <th><?= __('Id') ?></th>
@@ -60,7 +61,7 @@
                 </tr>
                 <tr>
                     <th><?= __('Fecha Registro') ?></th>
-                    <td><?= @$this->Html->image('/webroot/img/clientes/'.$cliente->foto, ['width' => '100', 'height' => '100']) ?></td>
+                    <td><?= h($cliente->fecha_registro) ?></td>
                 </tr>
                 <tr>
                     <th><?= __('Verificado') ?></th>

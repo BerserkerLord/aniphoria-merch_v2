@@ -40,6 +40,7 @@ class ClienteTable extends Table
         $this->setTable('cliente');
         $this->setDisplayField('usuario');
         $this->setPrimaryKey('id');
+        $this->hasMany('Direccion', ['dependent' => true]);
     }
 
     /**
@@ -116,7 +117,7 @@ class ClienteTable extends Table
                 'message' => 'Por favor subir jpg o png.',
             ],
             'fileSize' => [
-                'rule' => [ 'fileSize', '<=', '1MB' ],
+                'rule' => [ 'fileSize', '<=', '2MB' ],
                 'message' => 'El tamaño del archivo debe de ser menor a 1MB.',
             ],
         ] );

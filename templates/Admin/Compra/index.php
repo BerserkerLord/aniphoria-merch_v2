@@ -22,8 +22,8 @@
                 <?php foreach ($compra as $compra): ?>
                 <tr>
                     <td><?= $this->Number->format($compra->id) ?></td>
-                    <td><?= $compra->has('estatus') ? $this->Html->link($compra->estatus->id, ['controller' => 'Estatus', 'action' => 'view', $compra->estatus->id]) : '' ?></td>
-                    <td><?= $compra->has('fabricante') ? $this->Html->link($compra->fabricante->id, ['controller' => 'Fabricante', 'action' => 'view', $compra->fabricante->id]) : '' ?></td>
+                    <td><?= $compra->has('estatus') ? $this->Html->link($compra->estatus->estatus, ['controller' => 'Estatus', 'action' => 'view', $compra->estatus->id]) : '' ?></td>
+                    <td><?= $compra->has('fabricante') ? $this->Html->link($compra->fabricante->razon_social, ['controller' => 'Fabricante', 'action' => 'view', $compra->fabricante->id]) : '' ?></td>
                     <td><?= h($compra->fecha) ?></td>
                     <td class="actions">
                         <?= $this->Html->link(__('View'), ['action' => 'view', $compra->id]) ?>

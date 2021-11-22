@@ -28,7 +28,8 @@
                     <td><?= h($administrador->usuario) ?></td>
                     <td><?= h($administrador->correo) ?></td>
                     <td><?= h($administrador->contrasenia) ?></td>
-                    <td><?= @$this->Html->image('/webroot/img/admins/'.$administrador->foto, ['width' => '100', 'height' => '100']) ?></td>
+                    <?php $imageName=empty($administrador->foto)?'default.jpg':$administrador->foto; ?>
+                    <td><?= @$this->Html->image('/webroot/img/admins/'.$imageName, ['width' => '100', 'height' => '100']) ?></td>
                     <td class="actions">
                         <?= $this->Html->link(__('View'), ['action' => 'view', $administrador->id]) ?>
                         <?= $this->Html->link(__('Edit'), ['action' => 'edit', $administrador->id]) ?>

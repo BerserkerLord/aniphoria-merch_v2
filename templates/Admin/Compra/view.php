@@ -36,6 +36,8 @@
                 </tr>
             </table>
             <div class="related">
+                
+           
                 <h4><?= __('Related Merchandising') ?></h4>
                 <?php if (!empty($compra->merchandising)) : ?>
                 <div class="table-responsive">
@@ -47,7 +49,7 @@
                             <th><?= __('Detalles') ?></th>
                             <th><?= __('Costo') ?></th>
                             <th><?= __('Precio') ?></th>
-                            <th class="actions"><?= __('Actions') ?></th>
+                            <th><?= __('Cantidad') ?></th>
                         </tr>
                         <?php foreach ($compra->merchandising as $merchandising) : ?>
                         <tr>
@@ -57,11 +59,7 @@
                             <td><?= h($merchandising->detalles) ?></td>
                             <td><?= h($merchandising->costo) ?></td>
                             <td><?= h($merchandising->precio) ?></td>
-                            <td class="actions">
-                                <?= $this->Html->link(__('View'), ['controller' => 'Merchandising', 'action' => 'view', $merchandising->id]) ?>
-                                <?= $this->Html->link(__('Edit'), ['controller' => 'Merchandising', 'action' => 'edit', $merchandising->id]) ?>
-                                <?= $this->Form->postLink(__('Delete'), ['controller' => 'Merchandising', 'action' => 'delete', $merchandising->id], ['confirm' => __('Are you sure you want to delete # {0}?', $merchandising->id)]) ?>
-                            </td>
+                            <td><?= h($merchandising->_joinData->cantidad) ?></td>
                         </tr>
                         <?php endforeach; ?>
                     </table>

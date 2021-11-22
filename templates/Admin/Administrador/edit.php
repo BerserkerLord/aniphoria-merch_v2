@@ -23,9 +23,9 @@
                 <legend><?= __('Edit Administrador') ?></legend>
                 <?php
                     echo $this->Form->control('usuario');
-                    echo $this->Form->control('correo');
-                    echo $this->Form->control('contrasenia');
-                    echo $this->Form->control('foto', ['type' => 'file']);
+                    echo $this->Form->control('correo', ['type' => 'email']);
+                    echo $this->Form->control('contrasenia', ['type' => 'password']);
+                    echo $this->Form->control('imagen', ['type' => 'file']);
                 ?>
             </fieldset>
             <?= $this->Form->button(__('Submit')) ?>
