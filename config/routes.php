@@ -85,11 +85,14 @@ $routes->scope('/', function (RouteBuilder $builder) {
     $builder->fallbacks();
 });
 $routes->prefix('Admin', function (RouteBuilder $routes) {
-    $routes->connect('/categories', ['controller' => 'categoria', 'action' => 'index'], ['_name' => 'viewCategories']);
-    $routes->connect('/merch', ['controller' => 'merchandising', 'action' => 'index'], ['_name' => 'viewMerchandising']);
-    $routes->connect('/manufacturer', ['controller' => 'fabricante', 'action' => 'index'], ['_name' => 'viewManufacturers']);
-    $routes->connect('/compra/cantidad/*', ['controller' => 'compra', 'action' => 'cantidad']);
-    $routes->fallbacks(DashedRoute::class);
+    $routes -> connect('/categories', ['controller' => 'categoria', 'action' => 'index'], ['_name' => 'viewCategories']);
+    $routes -> connect('/clients', ['controller' => 'cliente', 'action' => 'index'], ['_name' => 'viewClients']);
+    $routes -> connect('/compra', ['controller' => 'compra', 'action' => 'index'], ['_name' => 'viewCompras']);
+    $routes -> connect('/merch', ['controller' => 'merchandising', 'action' => 'index'], ['_name' => 'viewMerchandising']);
+    $routes -> connect('/manufacturer', ['controller' => 'fabricante', 'action' => 'index'], ['_name' => 'viewManufacturers']);
+    $routes -> connect('/addresses', ['controller' => 'direccion', 'action' => 'index'], ['_name' => 'viewAddresses']);
+    $routes -> connect('/admins', ['controller' => 'administrador', 'action' => 'index'], ['_name' => 'viewAdmins']);
+    $routes -> fallbacks(DashedRoute::class);
 });
 
 /*

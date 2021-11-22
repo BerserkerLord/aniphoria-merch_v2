@@ -23119,3 +23119,60 @@ Request URL: /css/milligram.min.css.map
 Client IP: 127.0.0.1
 
 
+2021-11-22 03:04:38 Error: [Cake\Routing\Exception\MissingRouteException] A route matching "viewAdmins" could not be found. in /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Routing/RouteCollection.php on line 326
+Exception Attributes: array (
+  'url' => 'viewAdmins',
+  'context' => 
+  array (
+    '_scheme' => 'http',
+    '_host' => 'localhost',
+    '_port' => 8765,
+    '_base' => '',
+    'params' => 
+    array (
+      'pass' => 
+      array (
+      ),
+      'controller' => 'Cliente',
+      'action' => 'index',
+      'prefix' => 'Admin',
+      'plugin' => NULL,
+      '_name' => 'viewClients',
+      '_matchedRoute' => '/admin/clients',
+      '_ext' => NULL,
+    ),
+  ),
+)
+Stack Trace:
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Routing/Router.php:495
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/View/Helper/UrlHelper.php:51
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/View/Helper/HtmlHelper.php:257
+- /mnt/d/Escritorio/aniphoria-merch_v2/templates/layout/default.php:63
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/View/View.php:1160
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/View/View.php:1121
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/View/View.php:803
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/View/View.php:762
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Controller/Controller.php:688
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Controller/Controller.php:530
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Http/BaseApplication.php:229
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:160
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /mnt/d/Escritorio/aniphoria-merch_v2/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /mnt/d/Escritorio/aniphoria-merch_v2/webroot/index.php:40
+
+Request URL: /admin/clients
+Referer URL: http://localhost:8765/admin/categories
+Client IP: 127.0.0.1
+
+
