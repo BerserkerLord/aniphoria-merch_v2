@@ -2,12 +2,14 @@
 body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 400;
+    background-color: #363637;
 }
 
 .top-nav-links,
 .side-nav,
 h1, h2, h3, h4, h5, h6 {
     font-family: "Raleway", sans-serif;
+    text-decoration: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -15,8 +17,9 @@ h1, h2, h3, h4, h5, h6 {
     color: #363637;
 }
 
-a {
-    color:#2f85ae;
+a:hover {
+    color: #ff1166 !important;
+    text-decoration: none !important;
     -webkit-transition:all 0.2s linear;
     transition:all 0.2s linear;
 }
@@ -24,23 +27,26 @@ a {
 a:hover,
 a:focus,
 a:active  {
-    color:#2a6496;
-    -webkit-transition:all 0.2s easeout;
+    color: #ff1166;
+    -webkit-transition:all 0.2s;
+    transition-property: easeout;
     transition:all 0.2s ease-out;
+    text-decoration: none;
 }
 
 .side-nav a,
 .top-nav-links a,
 th a,
 .actions a {
-    color: #606c76;
+    color: #000000;
 }
 
 .side-nav a:hover,
 .side-nav a:focus,
 .actions a:hover,
 .actions a:focus {
-    color:#2f85ae;
+    color: #ff1166;
+    text-decoration: none;
 }
 
 /* Utility */
@@ -53,12 +59,19 @@ th a,
 
 /* Main */
 body {
-    background: #f5f7fa;
+    font-size: 1.7rem !important;
+    background: #1f1f1f !important;
 }
+
+.container {
+    width: 80% !important;
+}
+
 .content {
     padding: 2rem;
-    background: #ffffff;
-    border-radius: 0.4rem;
+    margin-top: 10px;
+    width: 100% !important;
+    background: rgb(255, 255, 255);
     /* Thanks Stripe */
     box-shadow: 0 7px 14px 0 rgba(60, 66, 87, 0.1),
         0 3px 6px 0 rgba(0, 0, 0, 0.07);
@@ -76,16 +89,31 @@ th {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 112rem;
+    max-width: 100%;
     padding: 2rem;
-    margin: 0 auto 2rem;
+    height: 7rem;
+    background-color: #363636;
 }
 .top-nav-title a {
     font-size: 2.4rem;
-    color: #d33c43;
 }
-.top-nav-title span {
-    color: #404041;
+
+#phoria {
+    color: #ffffff;
+}
+
+#ani:hover + #phoria{
+    text-decoration: none;
+    color: #ff1166;
+}
+
+#phoria:hover {
+    text-decoration: none;
+    color: #ff1166;
+}
+
+#ani {
+    color: #ffffff;
 }
 .top-nav-links a {
     margin: 0 0.5rem;

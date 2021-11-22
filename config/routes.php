@@ -85,9 +85,9 @@ $routes->scope('/', function (RouteBuilder $builder) {
     $builder->fallbacks();
 });
 $routes->prefix('Admin', function (RouteBuilder $routes) {
-    $routes->connect('/categories', ['controller' => 'categoria', 'action' => 'index']);
-    $routes->connect('/merch', ['controller' => 'merchandising', 'action' => 'index']);
-    $routes->connect('/manufacturer', ['controller' => 'fabricante', 'action' => 'index']);
+    $routes->connect('/categories', ['controller' => 'categoria', 'action' => 'index'], ['_name' => 'viewCategories']);
+    $routes->connect('/merch', ['controller' => 'merchandising', 'action' => 'index'], ['_name' => 'viewMerchandising']);
+    $routes->connect('/manufacturer', ['controller' => 'fabricante', 'action' => 'index'], ['_name' => 'viewManufacturers']);
     $routes->fallbacks(DashedRoute::class);
 });
 

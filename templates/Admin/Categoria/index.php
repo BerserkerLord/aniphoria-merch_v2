@@ -5,7 +5,7 @@
  */
 ?>
 <div class="categoria index content">
-    <?= $this->Html->link(__('New Categorium'), ['action' => 'add'], ['class' => 'button float-right']) ?>
+    <?= $this->Html->link(__('New Category'), ['action' => 'add'], ['class' => 'button float-right']) ?>
     <h3><?= __('Categoria') ?></h3>
     <div class="table-responsive">
         <table>
