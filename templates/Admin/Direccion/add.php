@@ -17,7 +17,7 @@
             <fieldset>
                 <legend><?= __('Add Direccion') ?></legend>
                 <?php
-                    echo $this->Form->control('cliente_id');
+                    echo $this->Form->control('cliente_id', ['options' => $cliente]);
                     echo $this->Form->control('direccion');
                 ?>
             </fieldset>
