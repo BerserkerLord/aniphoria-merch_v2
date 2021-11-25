@@ -117,6 +117,8 @@ $routes->prefix('Cliente', function (RouteBuilder $routes) {
 $routes -> prefix('Api', function (RouteBuilder $routes) {
     $routes -> setExtensions('json');
     $routes -> connect('/view/{id}', ['controller' => 'api', 'action' => 'view']) -> setPass(['id']) -> setPatterns(['id' => '[0-9]+']);
+    $routes -> connect('/login', ['controller' => 'api', 'action' => 'login']);
+    $routes -> connect('/edit/{id}', ['controller' => 'api', 'action' => 'edit']) -> setPass(['id']) -> setPatterns(['id' => '[0-9]+']);
     $routes -> fallbacks(DashedRoute::class);
 });
 

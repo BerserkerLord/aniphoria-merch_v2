@@ -7,11 +7,10 @@ use App\Controller\AppController;
 use App\Model\Table\ClienteTable;
 use Cake\Event\EventInterface;
 use PHPUnit\Util\Json;
+use Cake\ORM\Locator\LocatorAwareTrait;
 
 /**
  * Api Controller
- *
- * @property \App\Model\Table\ClienteTable $Cliente
  * @method \App\Model\Entity\Api[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
  */
 
@@ -40,37 +39,54 @@ class ApiController extends AppController
     {
         $this -> Cliente = new ClienteTable();
         $cliente = $this -> Cliente -> get($id);
-        $this -> set(compact('cliente'));
-        echo json_encode($cliente);
+        $this->set('cliente', $cliente);
+        $this->viewBuilder()->setOption('serialize', ['cliente']);
     }
 
     public function login()
     {
+        $this -> Cliente = new ClienteTable();
+        $clienteValidation = $this->getTableLocator()->get('cliente');
         $this -> request -> allowMethod('post');
         $data = $this -> request -> getData();
+        $query = $clienteValidation->find()->select('id')->where(['correo' => $data['correo'], 'AND' => ['contrasenia' => $data['contrasenia']]])->count();
+        if($query == 1){
+            $id = $clienteValidation->find()->select('id')->where(['correo' => $data['correo'], 'AND' => ['contrasenia' => $data['contrasenia']]])->execute()->fetch('assoc');
+            $cliente = $this -> Cliente -> get($id['cliente__id'], ['contain' => ['Pedido' => ['Merchandising'], 'Direccion']]);
+            $this -> set(['status' => $query,
+                'cliente' => $cliente]);
+            $this->viewBuilder()->setOption('serialize', ['status', 'cliente']);
+        } else {
+            $this -> set(['status' => $query]);
+            $this->viewBuilder()->setOption('serialize', ['status']);
+        }
+    }
+
+    public function edit($id)
+    {
+        $this -> Cliente = new ClienteTable();
+        $this->request->allowMethod(['patch', 'post', 'put']);
+        $cliente = $this->Cliente->get($id);
+        $cliente = $this->Cliente->patchEntity($cliente, $this->request->getData());
+        if(!empty($this->request->getData('contrasenia'))){
+            $cliente->contrasenia=$this->request->getData('contrasenia');
+        }
+        if ($this->Cliente->save($cliente)) {
+            $message = 'Guardado';
+        } else {
+            $message = 'Error';
+        }
+        $this->set([
+            'message' => $message,
+            'cliente' => $cliente,
+        ]);
+        $this->viewBuilder()->setOption('serialize', ['cliente', 'message']);
     }
 
     public function add()
     {
         $this->request->allowMethod(['post', 'put']);
         $recipe = $this->Recipes->newEntity($this->request->getData());
-        if ($this->Recipes->save($recipe)) {
-            $message = 'Saved';
-        } else {
-            $message = 'Error';
-        }
-        $this->set([
-            'message' => $message,
-            'recipe' => $recipe,
-        ]);
-        $this->viewBuilder()->setOption('serialize', ['recipe', 'message']);
-    }
-
-    public function edit($id)
-    {
-        $this->request->allowMethod(['patch', 'post', 'put']);
-        $recipe = $this->Recipes->get($id);
-        $recipe = $this->Recipes->patchEntity($recipe, $this->request->getData());
         if ($this->Recipes->save($recipe)) {
             $message = 'Saved';
         } else {

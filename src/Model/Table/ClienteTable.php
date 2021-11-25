@@ -41,6 +41,9 @@ class ClienteTable extends Table
         $this->setDisplayField('usuario');
         $this->setPrimaryKey('id');
         $this->hasMany('Direccion', ['dependent' => true]);
+
+        $this->hasMany('Pedido')
+            ->setForeignKey('cliente_id');
     }
 
     /**
