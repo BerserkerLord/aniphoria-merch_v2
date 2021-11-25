@@ -13,6 +13,7 @@ use App\Controller\AppController;
  */
 class CategoriaController extends AppController
 {
+
     /**
      * Index method
      *

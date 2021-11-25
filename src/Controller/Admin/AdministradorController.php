@@ -2,6 +2,7 @@
 declare(strict_types=1);
 
 namespace App\Controller\Admin;
+use Cake\Event\EventInterface;
 
 use App\Controller\AppController;
 
@@ -13,6 +14,27 @@ use App\Controller\AppController;
  */
 class AdministradorController extends AppController
 {
+    public function beforeFilter(EventInterface $event)
+    {
+        parent::beforeFilter($event);
+
+        $this->Authentication->allowUnauthenticated(['login']);
+    }
+
+    public function login()
+    {
+        setcookie('rol', 'administrador');
+        $result = $this->Authentication->getResult();
+
+        if ($result->isValid()) {
+            $target = $this->Authentication->getLoginRedirect() ?? '/admin/administrador/add';
+            return $this->redirect($target);
+        }
+        if ($this->request->is('post') && !$result->isValid()) {
+            $this->Flash->error('Correo o contraseña inválidos');
+        }
+    }
+
     /**
      * Index method
      *
@@ -23,6 +45,12 @@ class AdministradorController extends AppController
         $administrador = $this->paginate($this->Administrador);
 
         $this->set(compact('administrador'));
+    }
+
+    public function logout()
+    {
+        $this->Authentication->logout();
+        return $this->redirect(['prefix' => 'Admin', 'controller' => 'administrador', 'action' => 'login']);
     }
 
     /**
@@ -103,13 +131,13 @@ class AdministradorController extends AppController
         $this->request->allowMethod(['post', 'delete']);
         $administrador = $this->Administrador->get($id);
         $imgpath=WWW_ROOT.'img'.DS.'admins'.DS.$administrador->foto;
-        
+
         if ($this->Administrador->delete($administrador)) {
             if(!empty($administrador->foto)){
                 unlink($imgpath);
             }
             $this->Flash->success(__('The administrador has been deleted.'));
-        } 
+        }
         else {
             $this->Flash->error(__('The administrador could not be deleted. Please, try again.'));
         }
@@ -140,7 +168,7 @@ class AdministradorController extends AppController
                     unlink($imgpath);
                 }
                 $administrador->foto=$nombre;
-            } 
+            }
             else{
                 $administrador->foto=$anterior;
             }

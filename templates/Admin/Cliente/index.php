@@ -18,10 +18,8 @@
                     <th><?= $this->Paginator->sort('amaterno') ?></th>
                     <th><?= $this->Paginator->sort('fecha_nacimiento') ?></th>
                     <th><?= $this->Paginator->sort('fecha_registro') ?></th>
-                    <th><?= $this->Paginator->sort('token') ?></th>
                     <th><?= $this->Paginator->sort('usuario') ?></th>
                     <th><?= $this->Paginator->sort('correo') ?></th>
-                    <th><?= $this->Paginator->sort('contrasenia') ?></th>
                     <th><?= $this->Paginator->sort('foto') ?></th>
                     <th class="actions"><?= __('Actions') ?></th>
                 </tr>
@@ -36,10 +34,8 @@
                     <td><?= h($cliente->amaterno) ?></td>
                     <td><?= h($cliente->fecha_nacimiento) ?></td>
                     <td><?= h($cliente->fecha_registro) ?></td>
-                    <td><?= h($cliente->token) ?></td>
                     <td><?= h($cliente->usuario) ?></td>
                     <td><?= h($cliente->correo) ?></td>
-                    <td><?= h($cliente->contrasenia) ?></td>
                     <?php $imageName=empty($cliente->foto)?'default.jpg':$cliente->foto; ?>
                     <td><?= @$this->Html->image('/webroot/img/clientes/'.$imageName, ['width' => '100', 'height' => '100']) ?></td>
                     <td class="actions">

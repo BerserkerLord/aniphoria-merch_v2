@@ -26,13 +26,13 @@
                                                         <tbody>
                                                             <tr>
                                                                 <td>
-                                                                    <br>RFC<?= ': ' . $compra['fabricante']['rfc'] ?> 
-                                                                    <br>Razón Social<?= ': ' . $compra['fabricante']['razon_social'] ?> 
-                                                                    <br>Dirección<?= ': ' . $compra['fabricante']['direccion'] ?> 
-                                                                    <br>Telefono<?= ': ' . $compra['fabricante']['telefono'] ?> 
+                                                                    <br>RFC<?= ': ' . $compra['fabricante']['rfc'] ?>
+                                                                    <br>Razón Social<?= ': ' . $compra['fabricante']['razon_social'] ?>
+                                                                    <br>Dirección<?= ': ' . $compra['fabricante']['direccion'] ?>
+                                                                    <br>Telefono<?= ': ' . $compra['fabricante']['telefono'] ?>
                                                                     <br>Factura<?= ' #' . $compra['id'] ?>
                                                                     <br><?= $compra['fecha'] ?>
-                                                                    <br>Estatus<?= ': ' . $compra['estatus']['estatus'] ?> 
+                                                                    <br>Estatus<?= ': ' . $compra['estatus']['estatus'] ?>
                                                                 </td>
                                                             </tr>
                                                             <tr>
@@ -43,15 +43,15 @@
                                                                             <td>Artículo</td>
                                                                             <td class="line0 alignright">Cantidad</td>
                                                                             <td class="line0 alignright">Costo</td>
-                                                                            <td class="line0 alignright">Monto</td>                                                                                                                                                                                                                                                                                                                                                                                                
-                                                                        </tr>    
+                                                                            <td class="line0 alignright">Monto</td>
+                                                                        </tr>
                                                                     </thead>
                                                                     <tbody>
                                                                         <?php
                                                                             $total = 0;
                                                                             foreach($compra['merchandising'] as $key=>$merch){
                                                                                 $total += $merch['costo'] * $merch['_joinData']['cantidad'];
-                                                                                $total_producto = $merch['costo'] * $merch['_joinData']['cantidad']; 
+                                                                                $total_producto = $merch['costo'] * $merch['_joinData']['cantidad'];
                                                                         ?>
                                                                         <tr>
                                                                             <td class="line0"><?= $merch['id'] ?></td>
@@ -60,7 +60,7 @@
                                                                             <td class="line0 alignright">$<?= $merch['costo'] ?></td>
                                                                             <td class="line0 alignright">$<?= $total_producto ?></td>
                                                                         </tr>
-                                                                        <?php 
+                                                                        <?php
                                                                             }
                                                                         ?>
                                                                         <tr class="total">
@@ -78,11 +78,11 @@
                                                 <td class="content-block">
                                                     Aniphoria Merch
                                                 </td>
-                                            </tr>        
-                                        </tbody>        
-                                    </table>        
-                                </td>        
-                            </tr>        
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -92,6 +92,6 @@
 </table>
 
 
-            
+
 
 

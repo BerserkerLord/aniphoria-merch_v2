@@ -40,7 +40,7 @@ class DireccionTable extends Table
         parent::initialize($config);
 
         $this->setTable('direccion');
-        $this->setDisplayField('');
+        $this->setDisplayField('direccion');
         $this->setPrimaryKey('id');
 
         $this->belongsTo('Cliente', [
