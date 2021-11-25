@@ -22,6 +22,7 @@
                     echo $this->Form->control('amaterno');
                     echo $this->Form->control('fecha_nacimiento');
                     echo $this->Form->control('usuario');
+                    echo $this->Form->control('telefono');
                     echo $this->Form->control('correo', ['type' => 'email']);
                     echo $this->Form->control('contrasenia', ['type' => 'password']);
                     echo $this->Form->control('imagen', ['type' => 'file']);

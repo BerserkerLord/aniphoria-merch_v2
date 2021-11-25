@@ -20,6 +20,7 @@ use Cake\ORM\Entity;
  * @property string $correo
  * @property string $contrasenia
  * @property string $foto
+ * @property string $telefono
  */
 class Cliente extends Entity
 {
@@ -44,6 +45,7 @@ class Cliente extends Entity
         'correo' => true,
         'contrasenia' => true,
         'foto' => true,
+        'telefono' => true
     ];
 
     /**

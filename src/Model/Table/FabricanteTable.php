@@ -76,7 +76,8 @@ class FabricanteTable extends Table
         $validator
             ->integer('telefono')
             ->requirePresence('telefono', 'create')
-            ->notEmptyString('telefono');
+            ->notEmptyString('telefono')
+            ->add('telefono', 'unique', ['rule' => 'validateUnique', 'provider' => 'table']);;
 
         return $validator;
     }

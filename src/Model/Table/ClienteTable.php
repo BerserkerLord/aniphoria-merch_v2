@@ -92,19 +92,22 @@ class ClienteTable extends Table
         $validator
             ->scalar('token')
             ->maxLength('token', 255)
-            ->allowEmptyString('token');
+            ->allowEmptyString('token')
+            ->add('token', 'unique', ['rule' => 'validateUnique', 'provider' => 'table']);;
 
         $validator
             ->scalar('usuario')
             ->maxLength('usuario', 100)
             ->requirePresence('usuario', 'create')
-            ->notEmptyString('usuario');
+            ->notEmptyString('usuario')
+            ->add('usuario', 'unique', ['rule' => 'validateUnique', 'provider' => 'table']);;
 
         $validator
             ->scalar('correo')
             ->maxLength('correo', 100)
             ->requirePresence('correo', 'create')
-            ->notEmptyString('correo');
+            ->notEmptyString('correo')
+            ->add('correo', 'unique', ['rule' => 'validateUnique', 'provider' => 'table']);;
 
         $validator
             ->scalar('contrasenia')
@@ -124,6 +127,13 @@ class ClienteTable extends Table
                 'message' => 'El tamaño del archivo debe de ser menor a 1MB.',
             ],
         ] );
+
+        $validator
+            ->scalar('telefono')
+            ->maxLength('telefono', 15)
+            ->requirePresence('telefono', 'create')
+            ->notEmptyString('telefono')
+            ->add('telefono', 'unique', ['rule' => 'validateUnique', 'provider' => 'table']);;
 
         return $validator;
     }
