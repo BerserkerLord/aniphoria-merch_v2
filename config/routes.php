@@ -84,6 +84,10 @@ $routes->scope('/', function (RouteBuilder $builder) {
      */
     $builder->fallbacks();
 });
+
+/*
+ * Rutas para administrador
+ */
 $routes->prefix('Admin', function (RouteBuilder $routes) {
     $routes -> connect('/administrador/login', ['controller' => 'administrador', 'action' => 'login'], ['_name' => 'loginAdmin']);
     $routes -> connect('/categories', ['controller' => 'categoria', 'action' => 'index'], ['_name' => 'viewCategories']);
@@ -97,21 +101,23 @@ $routes->prefix('Admin', function (RouteBuilder $routes) {
     $routes -> fallbacks(DashedRoute::class);
 });
 
+/*
+ * Rutas para Cliente
+ */
 $routes->prefix('Cliente', function (RouteBuilder $routes) {
     $routes -> connect('/login', ['controller' => 'cliente', 'action' => 'login'], ['_name' => 'loginClient']);
-    $routes -> connect('/add', ['controller' => 'cliente', 'action' => 'add'], ['_name' => 'registerCliente']);
+    $routes -> connect('/register', ['controller' => 'cliente', 'action' => 'add'], ['_name' => 'registerCliente']);
     $routes -> connect('/logout', ['controller' => 'cliente', 'action' => 'logout'], ['_name' => 'logoutClient']);
     $routes -> fallbacks(DashedRoute::class);
 });
 
 /*
- * If you need a different set of middleware or none at all,
- * open new scope and define routes there.
- *
- * ```
- * $routes->scope('/api', function (RouteBuilder $builder) {
- *     // No $builder->applyMiddleware() here.
- *     // Connect API actions here.
- * });
- * ```
+ * Rutas para acceder a la API
  */
+$routes -> prefix('Api', function (RouteBuilder $routes) {
+    $routes -> setExtensions('json');
+    $routes -> connect('/view/{id}', ['controller' => 'api', 'action' => 'view']) -> setPass(['id']) -> setPatterns(['id' => '[0-9]+']);
+    $routes -> fallbacks(DashedRoute::class);
+});
+
+

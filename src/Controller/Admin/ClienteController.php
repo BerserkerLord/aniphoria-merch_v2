@@ -13,34 +13,6 @@ use App\Controller\AppController;
  */
 class ClienteController extends AppController
 {
-
-    public function beforeFilter(EventInterface $event)
-    {
-        parent::beforeFilter($event);
-
-        $this->Authentication->allowUnauthenticated(['login']);
-    }
-
-    public function login()
-    {
-        setcookie('rol', 'cliente');
-        $result = $this->Authentication->getResult();
-
-        if ($result->isValid()) {
-            $target = $this->Authentication->getLoginRedirect() ?? '/cliente/add';
-            return $this->redirect($target);
-        }
-        if ($this->request->is('post') && !$result->isValid()) {
-            $this->Flash->error('Correo o contraseña inválidos');
-        }
-    }
-
-    public function logout()
-    {
-        $this->Authentication->logout();
-        return $this->redirect(['prefix' => 'Cliente', 'controller' => 'cliente', 'action' => 'login']);
-    }
-
     /**
      * Index method
      *
