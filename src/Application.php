@@ -110,11 +110,20 @@ class Application extends BaseApplication implements AuthenticationServiceProvid
 
     public function getAuthenticationService(ServerRequestInterface $request): AuthenticationServiceInterface
     {
+        $rout = 'loginClient';
+        $pref = 'Cliente';
+        $mod = 'Cliente';
+        if(isset($_COOKIE['rol'])){
+            if($_COOKIE['rol'] == 'admin'){
+                $rout = 'loginAdmin';
+                $pref = 'Admin';
+                $mod = 'Administrador';
+            }
+        }
         $service = new AuthenticationService();
-
         // Define where users should be redirected to when they are not authenticated
         $service->setConfig([
-            'unauthenticatedRedirect' => Router::url(['_name' => 'loginClient']),
+            'unauthenticatedRedirect' => Router::url(['_name' => $rout, 'prefix' => $pref]),
             'queryParam' => 'redirect',
         ]);
 
@@ -126,17 +135,17 @@ class Application extends BaseApplication implements AuthenticationServiceProvid
         $service->loadAuthenticator('Authentication.Session');
         $service->loadAuthenticator('Authentication.Form', [
             'fields' => $fields,
-            'loginUrl' => Router::url(['_name' => 'loginClient']),
+            'loginUrl' => Router::url(['_name' => $rout, 'prefix' => $pref]),
         ]);
 
         // Load identifiers
         $service->loadIdentifier('Authentication.Password', ['fields' => [
             'username' => 'correo',
             'password' => 'contrasenia',
-            ],
+        ],
             'resolver' => [
                 'className' => 'Authentication.Orm',
-                'userModel' => 'Cliente'
+                'userModel' => $mod
             ],
             'passwordHasher' => [
                 'className' => 'Authentication.Fallback',
@@ -150,7 +159,6 @@ class Application extends BaseApplication implements AuthenticationServiceProvid
                 ]
             ]
         ]);
-
         return $service;
     }
 }

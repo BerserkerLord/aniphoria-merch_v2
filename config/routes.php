@@ -85,9 +85,11 @@ $routes->scope('/', function (RouteBuilder $builder) {
     $builder->fallbacks();
 });
 $routes->prefix('Admin', function (RouteBuilder $routes) {
+    $routes -> connect('/administrador/login', ['controller' => 'administrador', 'action' => 'login'], ['_name' => 'loginAdmin']);
     $routes -> connect('/categories', ['controller' => 'categoria', 'action' => 'index'], ['_name' => 'viewCategories']);
     $routes -> connect('/clients', ['controller' => 'cliente', 'action' => 'index'], ['_name' => 'viewClients']);
     $routes -> connect('/compra', ['controller' => 'compra', 'action' => 'index'], ['_name' => 'viewCompras']);
+    $routes -> connect('/pedido', ['controller' => 'pedido', 'action' => 'index'], ['_name' => 'viewPedidos']);
     $routes -> connect('/merch', ['controller' => 'merchandising', 'action' => 'index'], ['_name' => 'viewMerchandising']);
     $routes -> connect('/manufacturer', ['controller' => 'fabricante', 'action' => 'index'], ['_name' => 'viewManufacturers']);
     $routes -> connect('/addresses', ['controller' => 'direccion', 'action' => 'index'], ['_name' => 'viewAddresses']);
@@ -98,6 +100,7 @@ $routes->prefix('Admin', function (RouteBuilder $routes) {
 $routes->prefix('Cliente', function (RouteBuilder $routes) {
     $routes -> connect('/login', ['controller' => 'cliente', 'action' => 'login'], ['_name' => 'loginClient']);
     $routes -> connect('/add', ['controller' => 'cliente', 'action' => 'add'], ['_name' => 'registerCliente']);
+    $routes -> connect('/logout', ['controller' => 'cliente', 'action' => 'logout'], ['_name' => 'logoutClient']);
     $routes -> fallbacks(DashedRoute::class);
 });
 

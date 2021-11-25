@@ -55,6 +55,12 @@ class MerchandisingTable extends Table
             'targetForeignKey' => 'compra_id',
             'joinTable' => 'compra_merchandising',
         ]);
+
+        $this->belongsToMany('Pedido', [
+            'foreignKey' => 'merchandising_id',
+            'targetForeignKey' => 'pedido_id',
+            'joinTable' => 'pedido_merchandising',
+        ]);
     }
 
     /**

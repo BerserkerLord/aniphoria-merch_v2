@@ -2,7 +2,6 @@
 declare(strict_types=1);
 
 namespace App\Controller\Admin;
-use Cake\ORM\Locator\LocatorAwareTrait;
 use Cake\Datasource\ConnectionManager;
 use App\Controller\AppController;
 
@@ -116,7 +115,6 @@ class CompraController extends AppController
         } else {
             $this->Flash->error(__('The compra could not be deleted. Please, try again.'));
         }
-
         return $this->redirect(['action' => 'index']);
     }
 
@@ -130,10 +128,10 @@ class CompraController extends AppController
             'pdfConfig',
             [
                 'orientation' => 'portrait',
-                'filename' => 'Factura_' . $id.'.pdf'
+                'filename' => 'Factura_Compra' . $id.'.pdf'
             ]
         );
-        
+
         $this->set('compra', $compra);
     }
 
@@ -160,7 +158,7 @@ class CompraController extends AppController
             /*$cantidades = $this->getTableLocator()->get('CompraMerchandising');
             $query = $cantidades->query();
             $count = 0;
-            foreach (json_decode($_COOKIE['compra'], true)['merchandising'] as $compra): 
+            foreach (json_decode($_COOKIE['compra'], true)['merchandising'] as $compra):
                 echo '<pre>';
                 debug($query->update()->set(['cantidad' => $this->request->getData()[$count]])->where(['AND' => [
                     'compra_id' => json_decode($_COOKIE['compra'], true)['id'],
@@ -169,7 +167,7 @@ class CompraController extends AppController
                 echo '</pre>';
                 $count++;
             endforeach;*/
-            
+
         }
     }
 }
