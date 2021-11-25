@@ -64,7 +64,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             <li><?= $this -> Html -> link('<i class="fas fa-map-signs pr-2"></i>Direcciones', ['_name' => 'viewAddresses'], ['escape' => false]) ?></li>
             <li><a href="#"><i class="fas fa-tag pr-2"></i>Discount coupons</a></li>
             <li><a href="#"><i class="fas fa-credit-card pr-2"></i>Paying Methods</a></li>
-            <li><?= $this -> Html -> link('<i class="fas fa-running pr-2"></i>Salir', ['_name' => 'loginClient', ['escape' => false]]) ?></li>
+            <li><?= $this -> Html -> link('<i class="fas fa-running pr-2"></i>Salir', ['_name' => 'loginClient'], ['escape' => false]]) ?></li>
         </ul>
     </nav>
     <main class="main">
