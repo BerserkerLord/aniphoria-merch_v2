@@ -124,8 +124,4 @@ class ClienteController extends AppController
 
         return $this->redirect(['action' => 'index']);
     }
-
-    public function index(){
-        return $this->redirect(['_name' => viewCategories]);
-    }
 }
