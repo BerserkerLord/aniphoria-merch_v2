@@ -98,6 +98,7 @@ $routes->prefix('Admin', function (RouteBuilder $routes) {
     $routes -> connect('/manufacturer', ['controller' => 'fabricante', 'action' => 'index'], ['_name' => 'viewManufacturers']);
     $routes -> connect('/addresses', ['controller' => 'direccion', 'action' => 'index'], ['_name' => 'viewAddresses']);
     $routes -> connect('/admins', ['controller' => 'administrador', 'action' => 'index'], ['_name' => 'viewAdmins']);
+    $routes -> connect('/comentario', ['controller' => 'comentario', 'action' => 'index'], ['_name' => 'viewComentarios']);
     $routes -> fallbacks(DashedRoute::class);
 });
 
