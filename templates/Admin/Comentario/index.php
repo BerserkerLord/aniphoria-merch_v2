@@ -10,18 +10,18 @@
         <table>
             <thead>
                 <tr>
-                    <th><?= $this->Paginator->sort('merchandising_id') ?></th>
-                    <th><?= $this->Paginator->sort('cliente_id') ?></th>
-                    <th><?= $this->Paginator->sort('calificacion', 'Calificación') ?></th>
+                    <th class="actions"><?= $this->Paginator->sort('merchandising_id') ?></th>
+                    <th class="actions"><?= $this->Paginator->sort('cliente_id') ?></th>
+                    <th class="actions"><?= $this->Paginator->sort('calificacion', 'Calificación') ?></th>
                     <th class="actions"><?= __('Acciones') ?></th>
                 </tr>
             </thead>
             <tbody>
                 <?php foreach ($comentario as $comentario): ?>
                 <tr>
-                    <td><?= $comentario->has('merchandising') ? $this->Html->link($comentario->merchandising->articulo, ['controller' => 'Merchandising', 'action' => 'view', $comentario->merchandising->id]) : '' ?></td>
-                    <td><?= $comentario->has('cliente') ? $this->Html->link($comentario->cliente->usuario, ['controller' => 'Cliente', 'action' => 'view', $comentario->cliente->id]) : '' ?></td>
-                    <td><?= $this->Number->format($comentario->calificacion).'/10' ?></td>
+                    <td class="tables-link"><?= $comentario->has('merchandising') ? $this->Html->link($comentario->merchandising->articulo, ['controller' => 'Merchandising', 'action' => 'view', $comentario->merchandising->id]) : '' ?></td>
+                    <td class="tables-link"><?= $comentario->has('cliente') ? $this->Html->link($comentario->cliente->usuario, ['controller' => 'Cliente', 'action' => 'view', $comentario->cliente->id]) : '' ?></td>
+                    <td class="actions"><?= $this->Number->format($comentario->calificacion).'/10' ?></td>
                     <td class="actions">
                         <?= $this->Html->link('<i class="fas fa-eye pr-2"></i>', ['action' => 'view', $comentario->id], ['escape' => false,]) ?>
                         <?= $this->Form->postLink('<i class="fas fa-trash pr-2"></i>', ['action' => 'delete', $comentario->id], ['confirm' => __('Are you sure you want to delete # {0}?', $comentario->id), 'escape' => false,]) ?>

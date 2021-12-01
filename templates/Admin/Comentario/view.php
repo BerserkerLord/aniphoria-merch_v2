@@ -12,11 +12,11 @@
                     <div class="row justify-content-center">
                         <div class="col-auto">
                             <table style="width: 100%">
-                                <tr>
+                                <tr class="tables-link">
                                     <th><?= __('Artículo') ?></th>
                                     <td><?= $comentario->has('merchandising') ? $this->Html->link($comentario->merchandising->articulo, ['controller' => 'Merchandising', 'action' => 'view', $comentario->merchandising->id]) : '' ?></td>
                                 </tr>
-                                <tr>
+                                <tr class="tables-link">
                                     <th><?= __('Cliente') ?></th>
                                     <td><?= $comentario->has('cliente') ? $this->Html->link($comentario->cliente->usuario, ['controller' => 'Cliente', 'action' => 'view', $comentario->cliente->id]) : '' ?></td>
                                 </tr>

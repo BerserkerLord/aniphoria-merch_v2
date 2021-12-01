@@ -11,8 +11,8 @@
         <table>
             <thead>
                 <tr>
-                    <th><?= $this->Paginator->sort('categoria') ?></th>
-                    <th><?= $this->Paginator->sort('estatus') ?></th>
+                    <th class="actions"><?= $this->Paginator->sort('categoria') ?></th>
+                    <th class="actions"><?= $this->Paginator->sort('estatus') ?></th>
                     <th class="actions"><?= __('Acciones') ?></th>
                 </tr>
             </thead>

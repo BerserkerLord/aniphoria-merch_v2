@@ -62,7 +62,7 @@ class CompraController extends AppController
                 //return $this->redirect(['action' => 'cantidad', $compra]);
             }
             else{
-                $this->Flash->error(__('The compra could not be saved. Please, try again.'));
+                $this->Flash->error(__('No se pudo guadar la nueva compra. Intentelo de nuevo.'));
                 return $this->redirect(['action' => 'index']);
             }
         }
@@ -87,11 +87,11 @@ class CompraController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $compra = $this->Compra->patchEntity($compra, $this->request->getData());
             if ($this->Compra->save($compra)) {
-                $this->Flash->success(__('The compra has been saved.'));
+                $this->Flash->success(__('La compra ha sido actualizada.'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The compra could not be saved. Please, try again.'));
+            $this->Flash->error(__('No se pudo actualizar la compra. Intentelo de nuevo.'));
         }
         $estatus = $this->Compra->Estatus->find('list', ['limit' => 200]);
         $fabricante = $this->Compra->Fabricante->find('list', ['limit' => 200]);
@@ -111,9 +111,9 @@ class CompraController extends AppController
         $this->request->allowMethod(['post', 'delete']);
         $compra = $this->Compra->get($id);
         if ($this->Compra->delete($compra)) {
-            $this->Flash->success(__('The compra has been deleted.'));
+            $this->Flash->success(__('La compra ha sido eliminada.'));
         } else {
-            $this->Flash->error(__('The compra could not be deleted. Please, try again.'));
+            $this->Flash->error(__('No se pudo eliminar la compra. Intentelo de nuevo.'));
         }
         return $this->redirect(['action' => 'index']);
     }
@@ -152,7 +152,7 @@ class CompraController extends AppController
             }
             else{
                 $conn -> execute('DELETE FROM compra_merchandising WHERE compra_id = :com_id', ['com_id' => json_decode($_COOKIE['compra'], true)['id']]);
-                $this->Flash->success(__('Se han agregado las cantidades.'));
+                $this->Flash->success(__('No se pudieron agregar las cantidades. Intentelo de nuevo.'));
             }
             return $this->redirect(['action' => 'index']);
             /*$cantidades = $this->getTableLocator()->get('CompraMerchandising');

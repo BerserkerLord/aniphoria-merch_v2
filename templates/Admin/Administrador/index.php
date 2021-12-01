@@ -11,9 +11,9 @@
         <table>
             <thead>
                 <tr>
-                    <th class="actions"><?= __('Fotografia') ?></th>
-                    <th><?= $this->Paginator->sort('usuario') ?></th>
-                    <th><?= $this->Paginator->sort('correo') ?></th>
+                    <th><?= __('Fotografia') ?></th>
+                    <th class="actions"><?= $this->Paginator->sort('usuario') ?></th>
+                    <th class="actions"><?= $this->Paginator->sort('correo') ?></th>
                     <th class="actions"><?= __('Acciones') ?></th>
                 </tr>
             </thead>

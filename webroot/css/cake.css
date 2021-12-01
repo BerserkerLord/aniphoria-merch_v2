@@ -42,6 +42,8 @@ th a,
     color: #FFFFFF;
 }
 
+.tables-link a:hover,
+.tables-link a:focus,
 .side-nav-actions a:hover,
 .side-nav-actions a:focus,
 .side-nav a:hover,
@@ -50,6 +52,10 @@ th a,
 .actions a:focus {
     color: #ff1166;
     text-decoration: none;
+}
+
+.tables-link a{
+    color: #000000;
 }
 
 /* Utility */

@@ -12,15 +12,15 @@
             <thead>
                 <tr>
                     <th class="actions"><?= __('Fotografía') ?></th>
-                    <th><?= $this->Paginator->sort('verificado') ?></th>
-                    <th><?= $this->Paginator->sort('nombre') ?></th>
-                    <th><?= $this->Paginator->sort('apaterno', 'A. Paterno') ?></th>
-                    <th><?= $this->Paginator->sort('amaterno', 'A. Materno') ?></th>
-                    <th><?= $this->Paginator->sort('fecha_nacimiento', 'F. de nacimiento') ?></th>
-                    <th><?= $this->Paginator->sort('fecha_registro', 'F. de registro') ?></th>
-                    <th><?= $this->Paginator->sort('usuario') ?></th>
-                    <th><?= $this->Paginator->sort('correo') ?></th>
-                    <th><?= $this->Paginator->sort('estatus') ?></th>
+                    <th class="actions"><?= $this->Paginator->sort('verificado') ?></th>
+                    <th class="actions"><?= $this->Paginator->sort('nombre') ?></th>
+                    <th class="actions"><?= $this->Paginator->sort('apaterno', 'A. Paterno') ?></th>
+                    <th class="actions"><?= $this->Paginator->sort('amaterno', 'A. Materno') ?></th>
+                    <th class="actions"><?= $this->Paginator->sort('fecha_nacimiento', 'F. de nacimiento') ?></th>
+                    <th class="actions"><?= $this->Paginator->sort('fecha_registro', 'F. de registro') ?></th>
+                    <th class="actions"><?= $this->Paginator->sort('usuario') ?></th>
+                    <th class="actions"><?= $this->Paginator->sort('correo') ?></th>
+                    <th class="actions"><?= $this->Paginator->sort('estatus') ?></th>
                     <th class="actions"><?= __('Acciones') ?></th>
                 </tr>
             </thead>
