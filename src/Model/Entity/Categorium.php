@@ -10,6 +10,7 @@ use Cake\ORM\Entity;
  *
  * @property int $id
  * @property string $categoria
+ * @property bool $estatus
  */
 class Categorium extends Entity
 {
@@ -24,5 +25,6 @@ class Categorium extends Entity
      */
     protected $_accessible = [
         'categoria' => true,
+        'estatus' => true
     ];
 }

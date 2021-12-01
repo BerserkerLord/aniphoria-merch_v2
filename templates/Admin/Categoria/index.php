@@ -12,6 +12,7 @@
             <thead>
                 <tr>
                     <th><?= $this->Paginator->sort('categoria') ?></th>
+                    <th><?= $this->Paginator->sort('estatus') ?></th>
                     <th class="actions"><?= __('Acciones') ?></th>
                 </tr>
             </thead>
@@ -19,9 +20,21 @@
                 <?php foreach ($categoria as $categorium): ?>
                 <tr>
                     <td><?= h($categorium->categoria) ?></td>
+                    <td><?= $categorium->estatus ? __('Activo') : __('Inactivo'); ?></td>
                     <td class="actions">
                         <?= $this->Html->link('<i class="fas fa-pen pr-2"></i>', ['action' => 'edit', $categorium->id], ['escape' => false, 'title' => 'Editar Categoría']) ?>
-                        <?= $this->Form->postLink('<i class="fas fa-trash pr-2"></i>', ['action' => 'delete', $categorium->id], ['confirm' => __('¿Seguro que desea hacer la eliminación?', $categorium->id), 'escape' => false,]) ?>
+                        <?= $this->Form->postLink('<i class="fas fa-trash pr-2"></i>', ['action' => 'delete', $categorium->id], ['confirm' => __('¿Seguro que desea hacer la eliminación?', $categorium->id), 'escape' => false,  'title' => 'Eliminar Categoría']) ?>
+                        <?php
+                            if($categorium['estatus'] == 1){
+                        ?>
+                            <?= $this->Form->postLink('<i class="fas fa-ban pr-2"></i>', ['action' => 'ban', $categorium->id], ['confirm' => __('¿Seguro que desea deshabilitar la categoria?', $categorium->id), 'escape' => false,  'title' => 'Deshabilitar Categoría']) ?>
+                        <?php
+                            } else {
+                        ?>
+                            <?= $this->Form->postLink('<i class="fas fa-arrow-circle-up pr-2"></i>', ['action' => 'enable', $categorium->id], ['confirm' => __('¿Seguro que desea habilitar la categoria?', $categorium->id), 'escape' => false,  'title' => 'Habilitar Categoría']) ?>
+                        <?php
+                            }
+                        ?>
                     </td>
                 </tr>
                 <?php endforeach; ?>

@@ -56,9 +56,9 @@ class ComentarioController extends AppController
         $this->request->allowMethod(['post', 'delete']);
         $comentario = $this->Comentario->get($id);
         if ($this->Comentario->delete($comentario)) {
-            $this->Flash->success(__('The comentario has been deleted.'));
+            $this->Flash->success(__('El comentario ha sido eliminado'));
         } else {
-            $this->Flash->error(__('The comentario could not be deleted. Please, try again.'));
+            $this->Flash->error(__('No se pudo eliminar el comentario. Intentelo de nuevo'));
         }
 
         return $this->redirect(['action' => 'index']);

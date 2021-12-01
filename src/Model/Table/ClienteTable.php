@@ -100,14 +100,14 @@ class ClienteTable extends Table
             ->maxLength('usuario', 100)
             ->requirePresence('usuario', 'create')
             ->notEmptyString('usuario')
-            ->add('usuario', 'unique', ['rule' => 'validateUnique', 'provider' => 'table']);;
+            ->add('usuario', 'unique', ['rule' => 'validateUnique', 'provider' => 'table', 'message' => 'El usuario ya existe, introduzca uno nuevo']);;
 
         $validator
             ->scalar('correo')
             ->maxLength('correo', 100)
             ->requirePresence('correo', 'create')
             ->notEmptyString('correo')
-            ->add('correo', 'unique', ['rule' => 'validateUnique', 'provider' => 'table']);;
+            ->add('correo', 'unique', ['rule' => 'validateUnique', 'provider' => 'table', 'message' => 'El correo ya existe, introduzca uno nuevo']);;
 
         $validator
             ->scalar('contrasenia')
@@ -120,7 +120,7 @@ class ClienteTable extends Table
             ->add( 'foto', [
             'mimeType' => [
                 'rule' => [ 'mimeType', [ 'image/jpg', 'image/png', 'image/jpeg' ] ],
-                'message' => 'Por favor subir jpg o png.',
+                'message' => 'Por favor subir jpg, png o jpeg.',
             ],
             'fileSize' => [
                 'rule' => [ 'fileSize', '<=', '2MB' ],
@@ -133,7 +133,7 @@ class ClienteTable extends Table
             ->maxLength('telefono', 15)
             ->requirePresence('telefono', 'create')
             ->notEmptyString('telefono')
-            ->add('telefono', 'unique', ['rule' => 'validateUnique', 'provider' => 'table']);;
+            ->add('telefono', 'unique', ['rule' => 'validateUnique', 'provider' => 'table', 'message' => 'Este telefono ya está registrado en otra cuenta. Introduzca uno nuevo']);;
 
         return $validator;
     }

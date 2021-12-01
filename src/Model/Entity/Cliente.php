@@ -45,7 +45,8 @@ class Cliente extends Entity
         'correo' => true,
         'contrasenia' => true,
         'foto' => true,
-        'telefono' => true
+        'telefono' => true,
+        'estatus' => true
     ];
 
     /**

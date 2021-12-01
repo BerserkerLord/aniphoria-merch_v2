@@ -57,11 +57,11 @@ class ClienteController extends AppController
             $cliente->contrasenia=MD5($this->request->getData('contrasenia'));
             $this->addPhoto($cliente);
             if ($this->Cliente->save($cliente)) {
-                $this->Flash->success(__('The cliente has been saved.'));
+                $this->Flash->success(__('Nueva cliente guardado.'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The cliente could not be saved. Please, try again.'));
+            $this->Flash->error(__('No se pudo guadar el nuevo cliente. Intentelo de nuevo.'));
         }
         $this->set(compact('cliente'));
     }
@@ -78,22 +78,20 @@ class ClienteController extends AppController
         $cliente = $this->Cliente->get($id, [
             'contain' => [],
         ]);
-        $validado=$cliente->verificado;
-        $registro=$cliente->echa_registro;
         if ($this->request->is(['patch', 'post', 'put'])) {
             $nombrePhoto=$cliente->foto;
-            $cliente = $this->Cliente->patchEntity($cliente, $this->request->getData(), ['validate' => false]);
-            $contrasena = $this->request->getData('contrasenia');
+            $cliente = $this->Cliente->patchEntity($cliente, $this->request->getData());
+            /*$contrasena = $this->request->getData('contrasenia');
             $cliente->contrasenia=$contrasena;
             $cliente->verificado=$validado;
-            $cliente->fecha_registro=$registro;
+            $cliente->fecha_registro=$registro;*/
             $this->changePhoto($cliente, $nombrePhoto);
             if ($this->Cliente->save($cliente)) {
-                $this->Flash->success(__('The cliente has been saved.'));
+                $this->Flash->success(__('El cliente ha sido actualizado'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The cliente could not be saved. Please, try again.'));
+            $this->Flash->error(__('No se pudo actualizar el cliente. Intentelo de nuevo.'));
         }
         $this->set(compact('cliente'));
     }
@@ -114,9 +112,9 @@ class ClienteController extends AppController
             if(!empty($cliente->foto)){
                 unlink($imgpath);
             }
-            $this->Flash->success(__('The cliente has been deleted.'));
+            $this->Flash->success(__('El cliente ha sido eliminado.'));
         } else {
-            $this->Flash->error(__('The cliente could not be deleted. Please, try again.'));
+            $this->Flash->error(__('No se pudo eliminar el cliente. Intentelo de nuevo.'));
         }
         return $this->redirect(['action' => 'index']);
     }
@@ -150,5 +148,33 @@ class ClienteController extends AppController
                 $cliente->foto=$anterior;
             }
         }
+    }
+
+    public function ban($id = null){
+
+        $this->request->allowMethod(['post', 'delete']);
+        $cliente = $this->Cliente->get($id);
+        $cliente->estatus=0;
+        if ($this->Cliente->save($cliente)) {
+            $this->Flash->success(__('La categoría ha sido inhabilitada.'));
+        } else {
+            $this->Flash->error(__('No se pudo inhabilitar la categoría. Intentelo de nuevo.'));
+        }
+
+        return $this->redirect(['action' => 'index']);
+    }
+
+    public function enable($id = null){
+
+        $this->request->allowMethod(['post', 'delete']);
+        $cliente = $this->Cliente->get($id);
+        $cliente->estatus=1;
+        if ($this->Cliente->save($cliente)) {
+            $this->Flash->success(__('La categoría ha sido inhabilitada.'));
+        } else {
+            $this->Flash->error(__('No se pudo inhabilitar la categoría. Intentelo de nuevo.'));
+        }
+
+        return $this->redirect(['action' => 'index']);
     }
 }

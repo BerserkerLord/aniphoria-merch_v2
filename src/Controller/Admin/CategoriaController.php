@@ -105,4 +105,32 @@ class CategoriaController extends AppController
 
         return $this->redirect(['action' => 'index']);
     }
+
+    public function ban($id = null){
+
+        $this->request->allowMethod(['post', 'delete']);
+        $categorium = $this->Categoria->get($id);
+        $categorium->estatus=0;
+        if ($this->Categoria->save($categorium)) {
+            $this->Flash->success(__('La categoría ha sido inhabilitada.'));
+        } else {
+            $this->Flash->error(__('No se pudo inhabilitar la categoría. Intentelo de nuevo.'));
+        }
+
+        return $this->redirect(['action' => 'index']);
+    }
+
+    public function enable($id = null){
+
+        $this->request->allowMethod(['post', 'delete']);
+        $categorium = $this->Categoria->get($id);
+        $categorium->estatus=1;
+        if ($this->Categoria->save($categorium)) {
+            $this->Flash->success(__('La categoría ha sido inhabilitada.'));
+        } else {
+            $this->Flash->error(__('No se pudo inhabilitar la categoría. Intentelo de nuevo.'));
+        }
+
+        return $this->redirect(['action' => 'index']);
+    }
 }

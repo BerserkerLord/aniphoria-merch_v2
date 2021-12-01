@@ -5,23 +5,23 @@
  */
 ?>
 <div class="row">
-    <aside class="column">
-    </aside>
     <div class="column-responsive justify-content-center">
         <div class="content">
             <div class="column-responsive justify-content-center">
-                <div class="text-center">
-                    <?php $imageName=empty($administrador->foto)?'default.jpg':$administrador->foto; ?>
-                    <?= @$this->Html->image('/webroot/img/admins/'.$imageName, ['width' => '250', 'height' => '250', 'alt' => 'Imagen Admin', 'class' => 'rounded-circle']) ?>
+                <div class="justify-content-center">
                     <div class="row justify-content-center">
                         <div class="col-auto">
                             <table style="width: 100%">
                                 <tr>
-                                    <td><b>Nombre de usuario</b></td>
+                                    <?php $imageName=empty($administrador->foto)?'default.jpg':$administrador->foto; ?>
+                                    <?= @$this->Html->image('/webroot/img/admins/'.$imageName, ['width' => '250', 'height' => '250', 'alt' => 'Imagen Admin', 'class' => 'rounded-circle']) ?>
+                                </tr>
+                                <tr>
+                                    <th><?= __('Nombre de usuario') ?></th>
                                     <td><?= h($administrador->usuario) ?></td>
                                 </tr>
                                 <tr>
-                                    <td><b>Correo electronico</b></td>
+                                    <th><?= __('Correo electrónico') ?></th>
                                     <td><?= h($administrador->correo) ?></td>
                                 </tr>
                             </table>

@@ -5,41 +5,39 @@
  */
 ?>
 <div class="row">
-    <aside class="column">
-        <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Html->link(__('Edit Comentario'), ['action' => 'edit', $comentario->id], ['class' => 'side-nav-item']) ?>
-            <?= $this->Form->postLink(__('Delete Comentario'), ['action' => 'delete', $comentario->id], ['confirm' => __('Are you sure you want to delete # {0}?', $comentario->id), 'class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('List Comentario'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('New Comentario'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
-        </div>
-    </aside>
-    <div class="column-responsive column-80">
-        <div class="comentario view content">
-            <h3><?= h($comentario->id) ?></h3>
-            <table>
-                <tr>
-                    <th><?= __('Merchandising') ?></th>
-                    <td><?= $comentario->has('merchandising') ? $this->Html->link($comentario->merchandising->articulo, ['controller' => 'Merchandising', 'action' => 'view', $comentario->merchandising->id]) : '' ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Cliente') ?></th>
-                    <td><?= $comentario->has('cliente') ? $this->Html->link($comentario->cliente->usuario, ['controller' => 'Cliente', 'action' => 'view', $comentario->cliente->id]) : '' ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Id') ?></th>
-                    <td><?= $this->Number->format($comentario->id) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Calificacion') ?></th>
-                    <td><?= $this->Number->format($comentario->calificacion) ?></td>
-                </tr>
-            </table>
-            <div class="text">
-                <strong><?= __('Comentario') ?></strong>
-                <blockquote>
-                    <?= $this->Text->autoParagraph(h($comentario->comentario)); ?>
-                </blockquote>
+    <div class="column-responsive justify-content-center">
+        <div class="content">
+            <div class="column-responsive justify-content-center">
+                <div class="justify-content-center">
+                    <div class="row justify-content-center">
+                        <div class="col-auto">
+                            <table style="width: 100%">
+                                <tr>
+                                    <th><?= __('Artículo') ?></th>
+                                    <td><?= $comentario->has('merchandising') ? $this->Html->link($comentario->merchandising->articulo, ['controller' => 'Merchandising', 'action' => 'view', $comentario->merchandising->id]) : '' ?></td>
+                                </tr>
+                                <tr>
+                                    <th><?= __('Cliente') ?></th>
+                                    <td><?= $comentario->has('cliente') ? $this->Html->link($comentario->cliente->usuario, ['controller' => 'Cliente', 'action' => 'view', $comentario->cliente->id]) : '' ?></td>
+                                </tr>
+                                <tr>
+                                    <th><?= __('Calificacion') ?></th>
+                                    <td><?= $this->Number->format($comentario->calificacion).'/10' ?></td>
+                                </tr>
+                                <tr>
+                                    <strong><?= __('Comentario') ?></strong>
+                                    <blockquote>
+                                        <?= $this->Text->autoParagraph(h($comentario->comentario)); ?>
+                                    </blockquote>
+                                </tr>
+                            </table>
+                            <div class="side-nav">
+                                <?= $this->Form->postLink('<i class="fas fa-trash pr-2"></i>Eliminar Comentario', ['action' => 'delete', $comentario->id], ['confirm' => __('¿Seguro que desea hacer la eliminación?', $comentario->id), 'escape' => false, 'class' => 'side-nav-item']) ?>
+                                <?= $this->Html->link('<i class="fas fa-list pr-2"></i>Ver Comentarios', ['action' => 'index'], ['escape' => false, 'class' => 'side-nav-item']) ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

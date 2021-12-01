@@ -5,29 +5,30 @@
  */
 ?>
 <div class="cliente index content">
-    <?= $this->Html->link(__('New Cliente'), ['action' => 'add'], ['class' => 'button float-right']) ?>
-    <h3><?= __('Cliente') ?></h3>
+    <?= $this->Html->link(__('Nuevo Cliente'), ['action' => 'add'], ['class' => 'button float-right']) ?>
+    <h2><?= __('Cliente') ?></h2>
     <div class="table-responsive">
         <table>
             <thead>
                 <tr>
-                    <th><?= $this->Paginator->sort('id') ?></th>
+                    <th class="actions"><?= __('Fotografía') ?></th>
                     <th><?= $this->Paginator->sort('verificado') ?></th>
                     <th><?= $this->Paginator->sort('nombre') ?></th>
-                    <th><?= $this->Paginator->sort('apaterno') ?></th>
-                    <th><?= $this->Paginator->sort('amaterno') ?></th>
-                    <th><?= $this->Paginator->sort('fecha_nacimiento') ?></th>
-                    <th><?= $this->Paginator->sort('fecha_registro') ?></th>
+                    <th><?= $this->Paginator->sort('apaterno', 'A. Paterno') ?></th>
+                    <th><?= $this->Paginator->sort('amaterno', 'A. Materno') ?></th>
+                    <th><?= $this->Paginator->sort('fecha_nacimiento', 'F. de nacimiento') ?></th>
+                    <th><?= $this->Paginator->sort('fecha_registro', 'F. de registro') ?></th>
                     <th><?= $this->Paginator->sort('usuario') ?></th>
                     <th><?= $this->Paginator->sort('correo') ?></th>
-                    <th><?= $this->Paginator->sort('foto') ?></th>
-                    <th class="actions"><?= __('Actions') ?></th>
+                    <th><?= $this->Paginator->sort('estatus') ?></th>
+                    <th class="actions"><?= __('Acciones') ?></th>
                 </tr>
             </thead>
             <tbody>
                 <?php foreach ($cliente as $cliente): ?>
                 <tr>
-                    <td><?= $this->Number->format($cliente->id) ?></td>
+                    <?php $imageName=empty($cliente->foto)?'default.jpg':$cliente->foto; ?>
+                    <td><?= @$this->Html->image('/webroot/img/clientes/'.$imageName, ['width' => '100', 'height' => '100', 'alt' => 'Imagen Cliente', 'class' => 'rounded-circle']) ?></td>
                     <td><?= $cliente->verificado ? __('Si') : __('No'); ?></td>
                     <td><?= h($cliente->nombre) ?></td>
                     <td><?= h($cliente->apaterno) ?></td>
@@ -36,12 +37,22 @@
                     <td><?= h($cliente->fecha_registro) ?></td>
                     <td><?= h($cliente->usuario) ?></td>
                     <td><?= h($cliente->correo) ?></td>
-                    <?php $imageName=empty($cliente->foto)?'default.jpg':$cliente->foto; ?>
-                    <td><?= @$this->Html->image('/webroot/img/clientes/'.$imageName, ['width' => '100', 'height' => '100']) ?></td>
+                    <td><?= $cliente->estatus ? __('Activo') : __('Inactivo'); ?></td>
                     <td class="actions">
-                        <?= $this->Html->link(__('View'), ['action' => 'view', $cliente->id]) ?>
-                        <?= $this->Html->link(__('Edit'), ['action' => 'edit', $cliente->id]) ?>
-                        <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $cliente->id], ['confirm' => __('Are you sure you want to delete # {0}?', $cliente->id)]) ?>
+                        <?= $this->Html->link('<i class="fas fa-eye pr-2"></i>', ['action' => 'view', $cliente->id], ['escape' => false, 'title' => 'Ver Cliente']) ?>
+                        <?= $this->Html->link('<i class="fas fa-pen pr-2"></i>', ['action' => 'edit', $cliente->id], ['escape' => false, 'title' => 'Editar Cliente']) ?>
+                        <?= $this->Form->postLink('<i class="fas fa-trash pr-2"></i>', ['action' => 'delete', $cliente->id], ['confirm' => __('Are you sure you want to delete # {0}?', $cliente->id), 'escape' => false]) ?>
+                        <?php
+                        if($cliente['estatus'] == 1){
+                            ?>
+                            <?= $this->Form->postLink('<i class="fas fa-ban pr-2"></i>', ['action' => 'ban', $cliente->id], ['confirm' => __('¿Seguro que desea inhabilitar al cliente?', $cliente->id), 'escape' => false,  'title' => 'Deshabilitar Cliente']) ?>
+                            <?php
+                        } else {
+                            ?>
+                            <?= $this->Form->postLink('<i class="fas fa-arrow-circle-up pr-2"></i>', ['action' => 'enable', $cliente->id], ['confirm' => __('¿Seguro que desea habilitar al cliente?', $cliente->id), 'escape' => false,  'title' => 'Habilitar Cliente']) ?>
+                            <?php
+                        }
+                        ?>
                     </td>
                 </tr>
                 <?php endforeach; ?>
@@ -50,12 +61,12 @@
     </div>
     <div class="paginator">
         <ul class="pagination">
-            <?= $this->Paginator->first('<< ' . __('first')) ?>
-            <?= $this->Paginator->prev('< ' . __('previous')) ?>
+            <?= $this->Paginator->first('<< ' . __('primero')) ?>
+            <?= $this->Paginator->prev('< ' . __('anterior')) ?>
             <?= $this->Paginator->numbers() ?>
-            <?= $this->Paginator->next(__('next') . ' >') ?>
-            <?= $this->Paginator->last(__('last') . ' >>') ?>
+            <?= $this->Paginator->next(__('siguiente') . ' >') ?>
+            <?= $this->Paginator->last(__('último') . ' >>') ?>
         </ul>
-        <p><?= $this->Paginator->counter(__('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')) ?></p>
+        <p><?= $this->Paginator->counter(__('Página{{page}} de {{pages}}, mostrando {{current}} registro(s) de {{count}} en total')) ?></p>
     </div>
 </div>

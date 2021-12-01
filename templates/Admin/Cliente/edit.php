@@ -6,34 +6,33 @@
 ?>
 <div class="row">
     <aside class="column">
-        <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
+        <div class="side-nav-actions">
             <?= $this->Form->postLink(
-                __('Delete'),
+                '<i class="fas fa-trash pr-2"></i>Eliminar Cliente',
                 ['action' => 'delete', $cliente->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $cliente->id), 'class' => 'side-nav-item']
+                ['confirm' => __('¿Seguro que desea hacer la eliminación?', $cliente->id), 'class' => 'side-nav-item', 'escape' => false]
             ) ?>
-            <?= $this->Html->link(__('List Cliente'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
+            <?= $this->Html->link('<i class="fas fa-list pr-2"></i>Ver Clientes', ['action' => 'index'], ['class' => 'side-nav-item', 'escape' => false]) ?>
         </div>
     </aside>
     <div class="column-responsive justify-content-center">
         <div class="cliente form content">
             <?= $this->Form->create($cliente, ['type' => 'file']) ?>
             <fieldset>
-                <legend><?= __('Edit Cliente') ?></legend>
+                <h2><?= __('Editar Cliente') ?></h2>
                 <?php
                     echo $this->Form->control('nombre');
-                    echo $this->Form->control('apaterno');
-                    echo $this->Form->control('amaterno');
-                    echo $this->Form->control('fecha_nacimiento');
+                    echo $this->Form->control('apaterno', ['label' => 'Apellido Paterno']);
+                    echo $this->Form->control('amaterno', ['label' => 'Apellido Materno']);
+                    echo $this->Form->control('fecha_nacimiento', ['label' => 'Fecha de Nacimiento']);
                     echo $this->Form->control('usuario');
                     echo $this->Form->control('telefono');
                     echo $this->Form->control('correo', ['type' => 'email']);
-                    echo $this->Form->control('contrasenia', ['type' => 'password']);
-                    echo $this->Form->control('imagen', ['type' => 'file']);
+                    //echo $this->Form->control('contrasenia', ['type' => 'password', 'label' => 'Contraseña']);
+                    echo $this->Form->control('imagen', ['type' => 'file', 'label' => 'Fotografia']);
                 ?>
             </fieldset>
-            <?= $this->Form->button(__('Submit')) ?>
+            <?= $this->Form->button(__('Guardar')) ?>
             <?= $this->Form->end() ?>
         </div>
     </div>

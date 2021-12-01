@@ -16,7 +16,6 @@
             <fieldset>
                 <h2><?= __('Añadir categoria') ?></h2>
                 <?php
-
                     echo $this->Form->control('categoria');
                 ?>
             </fieldset>
