@@ -5,27 +5,24 @@
  */
 ?>
 <div class="row">
-    <aside class="column">
-        <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Form->postLink(
-                __('Delete'),
-                ['action' => 'delete', $categorium->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $categorium->id), 'class' => 'side-nav-item']
-            ) ?>
-            <?= $this->Html->link(__('List Categoria'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
-        </div>
-    </aside>
     <div class="column-responsive justify-content-center">
+        <div class="side-nav-actions">
+            <?= $this->Form->postLink(
+                '<i class="fas fa-trash pr-2"></i>Eliminar Categoria',
+                ['action' => 'delete', $categorium->id],
+                ['confirm' => __('¿Seguro que desea hacer la eliminación?', $categorium->id), 'escape' => false, 'class' => 'side-nav-item']
+            ) ?>
+            <?= $this->Html->link('<i class="fas fa-list pr-2"></i>Ver Categorías', ['action' => 'index'], ['class' => 'side-nav-item', 'escape' => false]) ?>
+        </div>
         <div class="categoria form content">
             <?= $this->Form->create($categorium) ?>
             <fieldset>
-                <legend><?= __('Edit Categorium') ?></legend>
+                <h2><?= __('Editar Categoría') ?></h2>
                 <?php
                     echo $this->Form->control('categoria');
                 ?>
             </fieldset>
-            <?= $this->Form->button(__('Submit')) ?>
+            <?= $this->Form->button(__('Guardar')) ?>
             <?= $this->Form->end() ?>
         </div>
     </div>

@@ -6,22 +6,21 @@
 ?>
 <div class="row">
     <aside class="column">
-        <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Html->link(__('List Categoria'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
+        <div class="side-nav-actions">
+            <?= $this->Html->link('<i class="fas fa-list pr-2"></i>Ver Categorias', ['action' => 'index'], ['escape' => false, 'class' => 'side-nav-item']) ?>
         </div>
     </aside>
     <div class="column-responsive justify-content-center">
         <div class="categoria form content">
             <?= $this->Form->create($categorium) ?>
             <fieldset>
-                <legend><?= __('Add Categorium') ?></legend>
+                <h2><?= __('Añadir categoria') ?></h2>
                 <?php
 
                     echo $this->Form->control('categoria');
                 ?>
             </fieldset>
-            <?= $this->Form->button(__('Submit')) ?>
+            <?= $this->Form->button(__('Guardar')) ?>
             <?= $this->Form->end() ?>
         </div>
     </div>

@@ -14,7 +14,7 @@
         <div class="administrador form content">
             <?= $this->Form->create($administrador, ['type' => 'file']) ?>
             <fieldset>
-                <h2><?= __('Añadir administrador') ?></h2>
+                <h2><?= __('Añadir Administrador') ?></h2>
                 <?php
                     echo $this->Form->control('usuario');
                     echo $this->Form->control('correo', ['type' => 'email']);

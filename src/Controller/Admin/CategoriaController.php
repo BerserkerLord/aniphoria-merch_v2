@@ -53,11 +53,11 @@ class CategoriaController extends AppController
         if ($this->request->is('post')) {
             $categorium = $this->Categoria->patchEntity($categorium, $this->request->getData());
             if ($this->Categoria->save($categorium)) {
-                $this->Flash->success(__('The categorium has been saved.'));
+                $this->Flash->success(__('Nueva categoría guardada.'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The categorium could not be saved. Please, try again.'));
+            $this->Flash->error(__('No se pudo guadar la nueva categoría. Intentelo de nuevo.'));
         }
         $this->set(compact('categorium'));
     }
@@ -77,11 +77,11 @@ class CategoriaController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $categorium = $this->Categoria->patchEntity($categorium, $this->request->getData());
             if ($this->Categoria->save($categorium)) {
-                $this->Flash->success(__('The categorium has been saved.'));
+                $this->Flash->success(__('La categoría ha sido actualizada.'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The categorium could not be saved. Please, try again.'));
+            $this->Flash->error(__('No se pudo actualizar la categoría. Intentelo de nuevo.'));
         }
         $this->set(compact('categorium'));
     }
@@ -98,9 +98,9 @@ class CategoriaController extends AppController
         $this->request->allowMethod(['post', 'delete']);
         $categorium = $this->Categoria->get($id);
         if ($this->Categoria->delete($categorium)) {
-            $this->Flash->success(__('The categorium has been deleted.'));
+            $this->Flash->success(__('La categoría ha sido eliminada.'));
         } else {
-            $this->Flash->error(__('The categorium could not be deleted. Please, try again.'));
+            $this->Flash->error(__('No se pudo eliminar la categoría. Intentelo de nuevo.'));
         }
 
         return $this->redirect(['action' => 'index']);
