@@ -58,21 +58,21 @@ class AdministradorTable extends Table
             ->scalar('token')
             ->maxLength('token', 255)
             ->allowEmptyString('token')
-            ->add('token', 'unique', ['rule' => 'validateUnique', 'provider' => 'table']);;
+            ->add('token', 'unique', ['rule' => 'validateUnique', 'provider' => 'table']);
 
         $validator
             ->scalar('usuario')
             ->maxLength('usuario', 100)
             ->requirePresence('usuario', 'create')
             ->notEmptyString('usuario')
-            ->add('usuario', 'unique', ['rule' => 'validateUnique', 'provider' => 'table']);;
+            ->add('usuario', 'unique', ['rule' => 'validateUnique', 'provider' => 'table', 'message' => 'El usuario ya existe, introduzca uno nuevo']);;
 
         $validator
             ->scalar('correo')
             ->maxLength('correo', 100)
             ->requirePresence('correo', 'create')
             ->notEmptyString('correo')
-            ->add('correo', 'unique', ['rule' => 'validateUnique', 'provider' => 'table']);;
+            ->add('correo', 'unique', ['rule' => 'validateUnique', 'provider' => 'table', 'message' => 'El correo ya existe, introduzca uno nuevo']);;
 
         $validator
             ->scalar('contrasenia')
@@ -81,11 +81,11 @@ class AdministradorTable extends Table
             ->notEmptyString('contrasenia');
 
         $validator
-            ->allowEmptyFile('foto')
-            ->add( 'foto', [
+            ->allowEmptyFile('imagen')
+            ->add( 'imagen', [
             'mimeType' => [
                 'rule' => [ 'mimeType', [ 'image/jpg', 'image/png', 'image/jpeg' ] ],
-                'message' => 'Por favor subir jpg o png.',
+                'message' => 'Solo se admiten imagenes en png, jpg o jpeg.',
             ],
             'fileSize' => [
                 'rule' => [ 'fileSize', '<=', '2MB' ],

@@ -83,11 +83,11 @@ class AdministradorController extends AppController
             $administrador->contrasenia=MD5($this->request->getData('contrasenia'));
             $this->addPhoto($administrador);
             if ($this->Administrador->save($administrador)) {
-                $this->Flash->success(__('The administrador has been saved.'));
+                $this->Flash->success(__('Nuevo administrador guardado.'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The administrador could not be saved. Please, try again.'));
+            $this->Flash->error(__('No se pudo guadar el nuevo administrador. Intentelo de nuevo.'));
         }
         $this->set(compact('administrador'));
     }
@@ -107,14 +107,14 @@ class AdministradorController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $nombrePhoto=$administrador->foto;
             $administrador = $this->Administrador->patchEntity($administrador, $this->request->getData(), ['validate' => false]);
-            $administrador->contrasenia=MD5($this->request->getData('contrasenia'));
+            //$administrador->contrasenia=MD5($this->request->getData('contrasenia'));
             $this->changePhoto($administrador, $nombrePhoto);
             if ($this->Administrador->save($administrador)) {
-                $this->Flash->success(__('The administrador has been saved.'));
+                $this->Flash->success(__('El administrador ha sido actualizado.'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The administrador could not be saved. Please, try again.'));
+            $this->Flash->error(__('No se pudo actualizar el administrador. Intentelo de nuevo.'));
         }
         $this->set(compact('administrador'));
     }
@@ -136,10 +136,10 @@ class AdministradorController extends AppController
             if(!empty($administrador->foto)){
                 unlink($imgpath);
             }
-            $this->Flash->success(__('The administrador has been deleted.'));
+            $this->Flash->success(__('El administrador ha sido eliminado.'));
         }
         else {
-            $this->Flash->error(__('The administrador could not be deleted. Please, try again.'));
+            $this->Flash->error(__('No se pudo eliminar el administrador. Intentelo de nuevo.'));
         }
         return $this->redirect(['action' => 'index']);
     }

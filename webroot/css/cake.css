@@ -17,13 +17,6 @@ h1, h2, h3, h4, h5, h6 {
     color: #363637;
 }
 
-a:hover {
-    color: #ff1166 !important;
-    text-decoration: none !important;
-    -webkit-transition:all 0.2s linear;
-    transition:all 0.2s linear;
-}
-
 a:hover,
 a:focus,
 a:active  {
@@ -45,6 +38,12 @@ th a,
     color: #000000;
 }
 
+.side-nav-actions a {
+    color: #FFFFFF;
+}
+
+.side-nav-actions a:hover,
+.side-nav-actions a:focus,
 .side-nav a:hover,
 .side-nav a:focus,
 .actions a:hover,
@@ -130,6 +129,10 @@ th {
 .side-nav-item {
     display: block;
     padding: 0.5rem 0;
+}
+
+.error-message {
+    color:#ff1166;
 }
 
 /* View action */

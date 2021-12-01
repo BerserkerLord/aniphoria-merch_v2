@@ -6,44 +6,35 @@
 ?>
 <div class="row">
     <aside class="column">
-        <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Html->link(__('Edit Administrador'), ['action' => 'edit', $administrador->id], ['class' => 'side-nav-item']) ?>
-            <?= $this->Form->postLink(__('Delete Administrador'), ['action' => 'delete', $administrador->id], ['confirm' => __('Are you sure you want to delete # {0}?', $administrador->id), 'class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('List Administrador'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('New Administrador'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
-        </div>
     </aside>
     <div class="column-responsive justify-content-center">
-        <div class="administrador view content">
-            <h3><?= h($administrador->id) ?></h3>
-            <table>
-                <tr>
-                    <th><?= __('Token') ?></th>
-                    <td><?= h($administrador->token) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Usuario') ?></th>
-                    <td><?= h($administrador->usuario) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Correo') ?></th>
-                    <td><?= h($administrador->correo) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Contrasenia') ?></th>
-                    <td><?= h($administrador->contrasenia) ?></td>
-                </tr>
-                <tr>
+        <div class="content">
+            <div class="column-responsive justify-content-center">
+                <div class="text-center">
                     <?php $imageName=empty($administrador->foto)?'default.jpg':$administrador->foto; ?>
-                    <th><?= __('Foto') ?></th>
-                    <td><?= @$this->Html->image('/webroot/img/admins/'.$imageName, ['width' => '100', 'height' => '100']) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Id') ?></th>
-                    <td><?= $this->Number->format($administrador->id) ?></td>
-                </tr>
-            </table>
+                    <?= @$this->Html->image('/webroot/img/admins/'.$imageName, ['width' => '250', 'height' => '250', 'alt' => 'Imagen Admin', 'class' => 'rounded-circle']) ?>
+                    <div class="row justify-content-center">
+                        <div class="col-auto">
+                            <table style="width: 100%">
+                                <tr>
+                                    <td><b>Nombre de usuario</b></td>
+                                    <td><?= h($administrador->usuario) ?></td>
+                                </tr>
+                                <tr>
+                                    <td><b>Correo electronico</b></td>
+                                    <td><?= h($administrador->correo) ?></td>
+                                </tr>
+                            </table>
+                            <div class="side-nav">
+                                <?= $this->Html->link('<i class="fas fa-pen pr-2"></i>Editar Administrador', ['action' => 'edit', $administrador->id], ['escape' => false, 'class' => 'side-nav-item']) ?>
+                                <?= $this->Form->postLink('<i class="fas fa-trash pr-2"></i>Eliminar Administrador', ['action' => 'delete', $administrador->id], ['confirm' => __('¿Seguro que desea hacer la eliminación?', $administrador->id), 'escape' => false, 'class' => 'side-nav-item']) ?>
+                                <?= $this->Html->link('<i class="fas fa-list pr-2"></i>Ver Administradores', ['action' => 'index'], ['escape' => false, 'class' => 'side-nav-item']) ?>
+                                <?= $this->Html->link('<i class="fas fa-plus-circle pr-2"></i>Nuevo Administrador', ['action' => 'add'], ['escape' => false, 'class' => 'side-nav-item']) ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
