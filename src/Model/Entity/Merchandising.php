@@ -14,6 +14,7 @@ use Cake\ORM\Entity;
  * @property string|null $detalles
  * @property string $costo
  * @property string $precio
+ * @property bool $estatus
  *
  * @property \App\Model\Entity\Categorium $categorium
  */
@@ -36,5 +37,6 @@ class Merchandising extends Entity
         'precio' => true,
         'imagen' => true,
         'categorium' => true,
+        'estatus' => true
     ];
 }

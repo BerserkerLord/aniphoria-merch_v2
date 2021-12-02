@@ -21,6 +21,7 @@ use Cake\ORM\Entity;
  * @property string $contrasenia
  * @property string $foto
  * @property string $telefono
+ * @property bool $estatus
  */
 class Cliente extends Entity
 {

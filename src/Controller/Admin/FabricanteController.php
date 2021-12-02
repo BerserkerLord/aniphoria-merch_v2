@@ -26,22 +26,6 @@ class FabricanteController extends AppController
     }
 
     /**
-     * View method
-     *
-     * @param string|null $id Fabricante id.
-     * @return \Cake\Http\Response|null|void Renders view
-     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
-     */
-    public function view($id = null)
-    {
-        $fabricante = $this->Fabricante->get($id, [
-            'contain' => [],
-        ]);
-
-        $this->set(compact('fabricante'));
-    }
-
-    /**
      * Add method
      *
      * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
@@ -52,11 +36,11 @@ class FabricanteController extends AppController
         if ($this->request->is('post')) {
             $fabricante = $this->Fabricante->patchEntity($fabricante, $this->request->getData());
             if ($this->Fabricante->save($fabricante)) {
-                $this->Flash->success(__('The fabricante has been saved.'));
+                $this->Flash->success(__('Se ha guardado el nuevo fabricante.'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The fabricante could not be saved. Please, try again.'));
+            $this->Flash->error(__('Hubo un error al guardar el nuevo fabricante. Intentelo de nuevo'));
         }
         $this->set(compact('fabricante'));
     }
@@ -76,30 +60,38 @@ class FabricanteController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $fabricante = $this->Fabricante->patchEntity($fabricante, $this->request->getData());
             if ($this->Fabricante->save($fabricante)) {
-                $this->Flash->success(__('The fabricante has been saved.'));
+                $this->Flash->success(__('Se ha actualizado el fabricante.'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The fabricante could not be saved. Please, try again.'));
+            $this->Flash->error(__('Hubo un error al actualizar el fabricante. Intentelo de nuevo'));
         }
         $this->set(compact('fabricante'));
     }
 
-    /**
-     * Delete method
-     *
-     * @param string|null $id Fabricante id.
-     * @return \Cake\Http\Response|null|void Redirects to index.
-     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
-     */
-    public function delete($id = null)
-    {
+    public function ban($id = null){
+
         $this->request->allowMethod(['post', 'delete']);
         $fabricante = $this->Fabricante->get($id);
-        if ($this->Fabricante->delete($fabricante)) {
-            $this->Flash->success(__('The fabricante has been deleted.'));
+        $fabricante->estatus=0;
+        if ($this->Fabricante->save($fabricante)) {
+            $this->Flash->success(__('La dirección ha sido inhabilitada.'));
         } else {
-            $this->Flash->error(__('The fabricante could not be deleted. Please, try again.'));
+            $this->Flash->error(__('No se pudo inhabilitar la dirección. Intentelo de nuevo.'));
+        }
+
+        return $this->redirect(['action' => 'index']);
+    }
+
+    public function enable($id = null){
+
+        $this->request->allowMethod(['post', 'delete']);
+        $fabricante = $this->Fabricante->get($id);
+        $fabricante->estatus=1;
+        if ($this->Fabricante->save($fabricante)) {
+            $this->Flash->success(__('La dirección ha sido habilitada.'));
+        } else {
+            $this->Flash->error(__('No se pudo habilitar la dirección. Intentelo de nuevo.'));
         }
 
         return $this->redirect(['action' => 'index']);

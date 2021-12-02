@@ -106,9 +106,9 @@ class ImagenController extends AppController
         if ($this->Imagen->delete($imagen)) {
             $pathImagen = WWW_ROOT.'img/productos/'.$imagen['nombre'];
             unlink($pathImagen);
-            $this->Flash->success(__('The imagen has been deleted.'));
+            $this->Flash->success(__('La inmahen ha sido eliminada correctamente.'));
         } else {
-            $this->Flash->error(__('The imagen could not be deleted. Please, try again.'));
+            $this->Flash->error(__('Hubo un error al eliminar la imagen. Intentelo nuevamente'));
         }
 
         $this->redirect($this->referer());

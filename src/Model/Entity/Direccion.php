@@ -11,7 +11,7 @@ use Cake\ORM\Entity;
  * @property int $id
  * @property int $cliente_id
  * @property string $direccion
- *
+ * @property bool $estatus
  * @property \App\Model\Entity\Cliente $cliente
  */
 class Direccion extends Entity

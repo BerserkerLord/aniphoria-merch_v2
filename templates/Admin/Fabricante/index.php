@@ -5,32 +5,41 @@
  */
 ?>
 <div class="fabricante index content">
-    <?= $this->Html->link(__('New Fabricante'), ['action' => 'add'], ['class' => 'button float-right']) ?>
-    <h3><?= __('Fabricante') ?></h3>
+    <?= $this->Html->link(__('Nuevo Fabricante'), ['action' => 'add'], ['class' => 'button float-right']) ?>
+    <h2><?= __('Fabricantes') ?></h2>
     <div class="table-responsive">
         <table>
             <thead>
                 <tr>
-                    <th><?= $this->Paginator->sort('id') ?></th>
-                    <th><?= $this->Paginator->sort('rfc') ?></th>
-                    <th><?= $this->Paginator->sort('razon_social') ?></th>
-                    <th><?= $this->Paginator->sort('direccion') ?></th>
-                    <th><?= $this->Paginator->sort('telefono') ?></th>
-                    <th class="actions"><?= __('Actions') ?></th>
+                    <th class="actions"><?= $this->Paginator->sort('rfc', 'RFC') ?></th>
+                    <th class="actions"><?= $this->Paginator->sort('razon_social', 'Razón Social') ?></th>
+                    <th class="actions"><?= $this->Paginator->sort('direccion', 'Dirección') ?></th>
+                    <th class="actions"><?= $this->Paginator->sort('telefono', 'Teléfono') ?></th>
+                    <th class="actions"><?= $this->Paginator->sort('estatus', 'Estatús') ?></th>
+                    <th class="actions"><?= __('Acciones') ?></th>
                 </tr>
             </thead>
             <tbody>
                 <?php foreach ($fabricante as $fabricante): ?>
                 <tr>
-                    <td><?= $this->Number->format($fabricante->id) ?></td>
                     <td><?= h($fabricante->rfc) ?></td>
                     <td><?= h($fabricante->razon_social) ?></td>
                     <td><?= h($fabricante->direccion) ?></td>
-                    <td><?= $this->Number->format($fabricante->telefono) ?></td>
+                    <td><?= H($fabricante->telefono) ?></td>
+                    <td><?= $fabricante->estatus ? __('Activo') : __('Inactivo'); ?></td>
                     <td class="actions">
-                        <?= $this->Html->link(__('View'), ['action' => 'view', $fabricante->id]) ?>
-                        <?= $this->Html->link(__('Edit'), ['action' => 'edit', $fabricante->id]) ?>
-                        <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $fabricante->id], ['confirm' => __('Are you sure you want to delete # {0}?', $fabricante->id)]) ?>
+                        <?= $this->Html->link('<i class="fas fa-pen pr-2"></i>', ['action' => 'edit', $fabricante->id], ['escape' => false]) ?>
+                        <?php
+                            if($fabricante['estatus'] == 1){
+                                ?>
+                                <?= $this->Form->postLink('<i class="fas fa-ban pr-2"></i>', ['action' => 'ban', $fabricante->id], ['confirm' => __('¿Seguro que desea inhabilitar al fabricante?', $fabricante->id), 'escape' => false,  'title' => 'Deshabilitar Fabricante']) ?>
+                                <?php
+                            } else {
+                                ?>
+                                <?= $this->Form->postLink('<i class="fas fa-arrow-circle-up pr-2"></i>', ['action' => 'enable', $fabricante->id], ['confirm' => __('¿Seguro que desea habilitar al fabricante?', $fabricante->id), 'escape' => false,  'title' => 'Habilitar Fabricante']) ?>
+                                <?php
+                            }
+                        ?>
                     </td>
                 </tr>
                 <?php endforeach; ?>
@@ -39,12 +48,12 @@
     </div>
     <div class="paginator">
         <ul class="pagination">
-            <?= $this->Paginator->first('<< ' . __('first')) ?>
-            <?= $this->Paginator->prev('< ' . __('previous')) ?>
+            <?= $this->Paginator->first('<< ' . __('primero')) ?>
+            <?= $this->Paginator->prev('< ' . __('anterior')) ?>
             <?= $this->Paginator->numbers() ?>
-            <?= $this->Paginator->next(__('next') . ' >') ?>
-            <?= $this->Paginator->last(__('last') . ' >>') ?>
+            <?= $this->Paginator->next(__('siguiente') . ' >') ?>
+            <?= $this->Paginator->last(__('último') . ' >>') ?>
         </ul>
-        <p><?= $this->Paginator->counter(__('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')) ?></p>
+        <p><?= $this->Paginator->counter(__('Página {{page}} de {{pages}}, mostrando {{current}} registro(s) de {{count}} en total')) ?></p>
     </div>
 </div>

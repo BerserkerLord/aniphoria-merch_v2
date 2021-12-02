@@ -6,29 +6,23 @@
 ?>
 <div class="row">
     <aside class="column">
-        <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Form->postLink(
-                __('Delete'),
-                ['action' => 'delete', $fabricante->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $fabricante->id), 'class' => 'side-nav-item']
-            ) ?>
-            <?= $this->Html->link(__('List Fabricante'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
+        <div class="side-nav-actions">
+            <?= $this->Html->link('<i class="fas fa-list pr-2"></i>Ver Fabricantes', ['action' => 'index'], ['escape' => false, 'class' => 'side-nav-item']) ?>
         </div>
     </aside>
     <div class="column-responsive justify-content-center">
         <div class="fabricante form content">
             <?= $this->Form->create($fabricante) ?>
             <fieldset>
-                <legend><?= __('Edit Fabricante') ?></legend>
+                <h2><?= __('Editar Fabricante') ?></h2>
                 <?php
-                    echo $this->Form->control('rfc');
-                    echo $this->Form->control('razon_social');
-                    echo $this->Form->control('direccion');
-                    echo $this->Form->control('telefono');
+                    echo $this->Form->control('rfc', ['label' => 'RFC']);
+                    echo $this->Form->control('razon_social', ['label' => 'Razón Social']);
+                    echo $this->Form->control('direccion', ['label' => 'Dirección']);
+                    echo $this->Form->control('telefono', ['label' => 'Teléfono']);
                 ?>
             </fieldset>
-            <?= $this->Form->button(__('Submit')) ?>
+            <?= $this->Form->button(__('Guardar')) ?>
             <?= $this->Form->end() ?>
         </div>
     </div>

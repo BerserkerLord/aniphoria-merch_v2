@@ -57,7 +57,7 @@ class ClienteController extends AppController
             $cliente->contrasenia=MD5($this->request->getData('contrasenia'));
             $this->addPhoto($cliente);
             if ($this->Cliente->save($cliente)) {
-                $this->Flash->success(__('Nueva cliente guardado.'));
+                $this->Flash->success(__('Nuevo cliente guardado.'));
 
                 return $this->redirect(['action' => 'index']);
             }

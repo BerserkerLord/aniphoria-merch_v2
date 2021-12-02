@@ -6,26 +6,25 @@
 ?>
 <div class="row">
     <aside class="column">
-        <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Html->link(__('List Merchandising'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
+        <div class="side-nav-actions">
+            <?= $this->Html->link('<i class="fas fa-list pr-2"></i>Ver Mercancía', ['action' => 'index'], ['escape' => false, 'class' => 'side-nav-item']) ?>
         </div>
     </aside>
     <div class="column-responsive justify-content-center">
         <div class="merchandising form content">
             <?= $this->Form->create($merchandising, ['type' => 'file']) ?>
             <fieldset>
-                <legend><?= __('Add Merchandising') ?></legend>
+                <h2><?= __('Añadir Mercancia') ?></h2>
                 <?php
-                    echo $this->Form->control('categoria_id', ['options' => $categoria]);
-                    echo $this->Form->control('articulo');
+                    echo $this->Form->control('categoria_id', ['options' => $categoria, 'label' => 'Catregoría']);
+                    echo $this->Form->control('articulo', ['label' => 'Artículo']);
                     echo $this->Form->control('detalles');
                     echo $this->Form->control('costo');
                     echo $this->Form->control('precio');
-                    echo $this->Form->control('imagen[]', ['type' => 'file', 'multiple']);
+                    echo $this->Form->control('imagen[]', ['type' => 'file', 'multiple', 'label' => 'Imagenes']);
                 ?>
             </fieldset>
-            <?= $this->Form->button(__('Submit')) ?>
+            <?= $this->Form->button(__('Guardar')) ?>
             <?= $this->Form->end() ?>
         </div>
     </div>

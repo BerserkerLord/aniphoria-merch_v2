@@ -12,7 +12,8 @@ use Cake\ORM\Entity;
  * @property string $rfc
  * @property string $razon_social
  * @property string $direccion
- * @property int $telefono
+ * @property string $telefono
+ * @property bool $estatus
  */
 class Fabricante extends Entity
 {
@@ -30,5 +31,6 @@ class Fabricante extends Entity
         'razon_social' => true,
         'direccion' => true,
         'telefono' => true,
+        'estatus' => true,
     ];
 }
