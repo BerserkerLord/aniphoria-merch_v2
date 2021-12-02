@@ -106,7 +106,7 @@ class AdministradorController extends AppController
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $nombrePhoto=$administrador->foto;
-            $administrador = $this->Administrador->patchEntity($administrador, $this->request->getData(), ['validate' => false]);
+            $administrador = $this->Administrador->patchEntity($administrador, $this->request->getData());
             //$administrador->contrasenia=MD5($this->request->getData('contrasenia'));
             $this->changePhoto($administrador, $nombrePhoto);
             if ($this->Administrador->save($administrador)) {
@@ -133,7 +133,7 @@ class AdministradorController extends AppController
         $imgpath=WWW_ROOT.'img'.DS.'admins'.DS.$administrador->foto;
 
         if ($this->Administrador->delete($administrador)) {
-            if(!empty($administrador->foto)){
+            if(!empty($administrador->foto && file_exists($administrador->foto))){
                 unlink($imgpath);
             }
             $this->Flash->success(__('El administrador ha sido eliminado.'));

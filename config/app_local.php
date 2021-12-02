@@ -15,7 +15,7 @@ return [
      * Development Mode:
      * true: Errors and warnings shown.
      */
-    'debug' => filter_var(env('DEBUG', true), FILTER_VALIDATE_BOOLEAN),
+    'debug' => filter_var(env('DEBUG', false), FILTER_VALIDATE_BOOLEAN),
 
     /*
      * Security and encryption configuration
@@ -36,7 +36,7 @@ return [
      */
     'Datasources' => [
         'default' => [
-            'host' => '127.0.0.1',
+            'host' => 'aniphoria-instance.czhgdgiqgzbx.us-east-1.rds.amazonaws.com',
             /*
              * CakePHP will use the default DB port based on the driver selected
              * MySQL on MAMP uses port 8889, MAMP users will want to uncomment
@@ -45,7 +45,7 @@ return [
             //'port' => 'non_standard_port_number',
 
             'username' => 'anifora',
-            'password' => '123456',
+            'password' => '12345678',
 
             'database' => 'aniphoria',
             /**
