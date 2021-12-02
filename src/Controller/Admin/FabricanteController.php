@@ -75,7 +75,7 @@ class FabricanteController extends AppController
         $fabricante = $this->Fabricante->get($id);
         $fabricante->estatus=0;
         if ($this->Fabricante->save($fabricante)) {
-            $this->Flash->success(__('El fabricante ha sido inhabilitadO.'));
+            $this->Flash->success(__('El fabricante ha sido inhabilitado.'));
         } else {
             $this->Flash->error(__('No se pudo inhabilitar al fabricante. Intentelo de nuevo.'));
         }

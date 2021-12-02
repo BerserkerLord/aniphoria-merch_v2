@@ -28,7 +28,7 @@
                     <td><?= H($fabricante->telefono) ?></td>
                     <td><?= $fabricante->estatus ? __('Activo') : __('Inactivo'); ?></td>
                     <td class="actions">
-                        <?= $this->Html->link('<i class="fas fa-pen pr-2"></i>', ['action' => 'edit', $fabricante->id], ['escape' => false]) ?>
+                        <?= $this->Html->link('<i class="fas fa-pen pr-2"></i>', ['action' => 'edit', $fabricante->id], ['escape' => false,  'title' => 'Editar Fabricante']) ?>
                         <?php
                             if($fabricante['estatus'] == 1){
                                 ?>
