@@ -41,7 +41,6 @@
                     <td class="actions">
                         <?= $this->Html->link('<i class="fas fa-eye pr-2"></i>', ['action' => 'view', $cliente->id], ['escape' => false, 'title' => 'Ver Cliente']) ?>
                         <?= $this->Html->link('<i class="fas fa-pen pr-2"></i>', ['action' => 'edit', $cliente->id], ['escape' => false, 'title' => 'Editar Cliente']) ?>
-                        <?= $this->Form->postLink('<i class="fas fa-trash pr-2"></i>', ['action' => 'delete', $cliente->id], ['confirm' => __('Are you sure you want to delete # {0}?', $cliente->id), 'escape' => false]) ?>
                         <?php
                             if($cliente['estatus'] == 1){
                                 ?>

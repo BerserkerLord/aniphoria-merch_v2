@@ -11,10 +11,11 @@
                 <div class="justify-content-center">
                     <div class="row justify-content-center">
                         <div class="col-auto">
+                            <h1><?= h($cliente->usuario) ?></h1>
                             <table style="width: 100%">
                                 <tr>
                                     <?php $imageName=empty($cliente->foto)?'default.jpg':$cliente->foto; ?>
-                                    <?= @$this->Html->image('/webroot/img/admins/'.$imageName, ['width' => '250', 'height' => '250', 'alt' => 'Imagen Admin', 'class' => 'rounded-circle']) ?>
+                                    <?= @$this->Html->image('/webroot/img/clientes/'.$imageName, ['width' => '250', 'height' => '250', 'alt' => 'Imagen Admin', 'class' => 'rounded-circle']) ?>
                                 </tr>
                                 <tr>
                                     <th><?= __('Nombre') ?></th>
@@ -55,7 +56,6 @@
                             </table>
                             <div class="side-nav">
                                 <?= $this->Html->link('<i class="fas fa-pen pr-2"></i>Editar Cliente', ['action' => 'edit', $cliente->id], ['escape' => false, 'class' => 'side-nav-item']) ?>
-                                <?= $this->Form->postLink('<i class="fas fa-trash pr-2"></i>Eliminar Cliente', ['action' => 'delete', $cliente->id], ['confirm' => __('¿Seguro que desea hacer la eliminación?', $cliente->id), 'escape' => false, 'class' => 'side-nav-item']) ?>
                                 <?= $this->Html->link('<i class="fas fa-list pr-2"></i>Ver Clientes', ['action' => 'index'], ['escape' => false, 'class' => 'side-nav-item']) ?>
                                 <?= $this->Html->link('<i class="fas fa-plus-circle pr-2"></i>Nuevo Cliente', ['action' => 'add'], ['escape' => false, 'class' => 'side-nav-item']) ?>
                                 <?php

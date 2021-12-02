@@ -7,11 +7,6 @@
 <div class="row">
     <aside class="column">
         <div class="side-nav-actions">
-            <?= $this->Form->postLink(
-                '<i class="fas fa-trash pr-2"></i>Eliminar Cliente',
-                ['action' => 'delete', $cliente->id],
-                ['confirm' => __('¿Seguro que desea hacer la eliminación?', $cliente->id), 'class' => 'side-nav-item', 'escape' => false]
-            ) ?>
             <?= $this->Html->link('<i class="fas fa-list pr-2"></i>Ver Clientes', ['action' => 'index'], ['class' => 'side-nav-item', 'escape' => false]) ?>
         </div>
     </aside>

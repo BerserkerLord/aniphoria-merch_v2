@@ -109,7 +109,7 @@ class ClienteController extends AppController
         $cliente = $this->Cliente->get($id);
         $imgpath=WWW_ROOT.'img'.DS.'clientes'.DS.$cliente->foto;
         if ($this->Cliente->delete($cliente)) {
-            if(!empty($cliente->foto)){
+            if(!empty($cliente->foto) && file_exists($cliente->foto)){
                 unlink($imgpath);
             }
             $this->Flash->success(__('El cliente ha sido eliminado.'));
@@ -139,7 +139,7 @@ class ClienteController extends AppController
                 $path=WWW_ROOT.'img'.DS.'clientes'.DS.$nombre;
                 $image->moveTo($path);
                 $imgpath=WWW_ROOT.'img'.DS.'clientes'.DS.$anterior;
-                if(!empty($administrador->foto)){
+                if(!empty($anterior) && file_exists($imgpath)){
                     unlink($imgpath);
                 }
                 $cliente->foto=$nombre;
