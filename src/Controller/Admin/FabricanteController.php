@@ -75,9 +75,9 @@ class FabricanteController extends AppController
         $fabricante = $this->Fabricante->get($id);
         $fabricante->estatus=0;
         if ($this->Fabricante->save($fabricante)) {
-            $this->Flash->success(__('La dirección ha sido inhabilitada.'));
+            $this->Flash->success(__('El fabricante ha sido inhabilitadO.'));
         } else {
-            $this->Flash->error(__('No se pudo inhabilitar la dirección. Intentelo de nuevo.'));
+            $this->Flash->error(__('No se pudo inhabilitar al fabricante. Intentelo de nuevo.'));
         }
 
         return $this->redirect(['action' => 'index']);
@@ -89,9 +89,9 @@ class FabricanteController extends AppController
         $fabricante = $this->Fabricante->get($id);
         $fabricante->estatus=1;
         if ($this->Fabricante->save($fabricante)) {
-            $this->Flash->success(__('La dirección ha sido habilitada.'));
+            $this->Flash->success(__('El fabricante ha sido habilitado.'));
         } else {
-            $this->Flash->error(__('No se pudo habilitar la dirección. Intentelo de nuevo.'));
+            $this->Flash->error(__('No se pudo habilitar al fabricante. Intentelo de nuevo.'));
         }
 
         return $this->redirect(['action' => 'index']);

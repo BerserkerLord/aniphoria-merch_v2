@@ -59,7 +59,7 @@ class FabricanteTable extends Table
             ->maxLength('rfc', 13)
             ->requirePresence('rfc', 'create')
             ->notEmptyString('rfc')
-            ->add('rfc', 'unique', ['rule' => 'validateUnique', 'provider' => 'table', 'message' => 'El RFC ingresado ya existe. Introduzca uno nuevo.']);
+            ->add('rfc', 'unique', ['rule' => 'validateUnique', 'provider' => 'table', 'message' => 'El RFC ingresado ya existe.']);
 
         $validator
             ->scalar('razon_social')
@@ -78,7 +78,7 @@ class FabricanteTable extends Table
             ->maxLength('telefono', 15)
             ->requirePresence('telefono', 'create')
             ->notEmptyString('telefono')
-            ->add('telefono', 'unique', ['rule' => 'validateUnique', 'provider' => 'table', 'message' => 'El telefono ingresado ya existe. Introduzca uno nuevo.']);;
+            ->add('telefono', 'unique', ['rule' => 'validateUnique', 'provider' => 'table', 'message' => 'El telefono ingresado ya existe.']);;
 
         return $validator;
     }

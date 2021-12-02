@@ -24,7 +24,7 @@
                     <td><?= h($direccion->direccion) ?></td>
                     <td><?= $direccion->estatus ? __('Activa') : __('Inactiva'); ?></td>
                     <td class="actions">
-                        <?= $this->Html->link('<i class="fas fa-pen pr-2"></i>', ['action' => 'edit', $direccion->id], ['escape' => false]) ?>
+                        <?= $this->Html->link('<i class="fas fa-pen pr-2"></i>', ['action' => 'edit', $direccion->id], ['escape' => false, 'title' => 'Editar Dirección']) ?>
                         <?php
                             if($direccion['estatus'] == 1){
                                 ?>
@@ -50,6 +50,6 @@
             <?= $this->Paginator->next(__('siguiente') . ' >') ?>
             <?= $this->Paginator->last(__('último') . ' >>') ?>
         </ul>
-        <p><?= $this->Paginator->counter(__('Página{{page}} de {{pages}}, mostrando {{current}} registro(s) de {{count}} en total')) ?></p>
+        <p><?= $this->Paginator->counter(__('Página {{page}} de {{pages}}, mostrando {{current}} registro(s) de {{count}} en total')) ?></p>
     </div>
 </div>
