@@ -114,7 +114,7 @@ class DireccionController extends AppController
         $direccion = $this->Direccion->get($id);
         $direccion->estatus=1;
         if ($this->Direccion->save($direccion)) {
-            $this->Flash->success(__('La dirección ha sido inhabilitada.'));
+            $this->Flash->success(__('La dirección ha sido habilitada.'));
         } else {
             $this->Flash->error(__('No se pudo habilitar la dirección. Intentelo de nuevo.'));
         }
