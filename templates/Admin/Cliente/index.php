@@ -43,15 +43,15 @@
                         <?= $this->Html->link('<i class="fas fa-pen pr-2"></i>', ['action' => 'edit', $cliente->id], ['escape' => false, 'title' => 'Editar Cliente']) ?>
                         <?= $this->Form->postLink('<i class="fas fa-trash pr-2"></i>', ['action' => 'delete', $cliente->id], ['confirm' => __('Are you sure you want to delete # {0}?', $cliente->id), 'escape' => false]) ?>
                         <?php
-                        if($cliente['estatus'] == 1){
-                            ?>
-                            <?= $this->Form->postLink('<i class="fas fa-ban pr-2"></i>', ['action' => 'ban', $cliente->id], ['confirm' => __('¿Seguro que desea inhabilitar al cliente?', $cliente->id), 'escape' => false,  'title' => 'Deshabilitar Cliente']) ?>
-                            <?php
-                        } else {
-                            ?>
-                            <?= $this->Form->postLink('<i class="fas fa-arrow-circle-up pr-2"></i>', ['action' => 'enable', $cliente->id], ['confirm' => __('¿Seguro que desea habilitar al cliente?', $cliente->id), 'escape' => false,  'title' => 'Habilitar Cliente']) ?>
-                            <?php
-                        }
+                            if($cliente['estatus'] == 1){
+                                ?>
+                                <?= $this->Form->postLink('<i class="fas fa-ban pr-2"></i>', ['action' => 'ban', $cliente->id], ['confirm' => __('¿Seguro que desea inhabilitar al cliente?', $cliente->id), 'escape' => false,  'title' => 'Deshabilitar Cliente']) ?>
+                                <?php
+                            } else {
+                                ?>
+                                <?= $this->Form->postLink('<i class="fas fa-arrow-circle-up pr-2"></i>', ['action' => 'enable', $cliente->id], ['confirm' => __('¿Seguro que desea habilitar al cliente?', $cliente->id), 'escape' => false,  'title' => 'Habilitar Cliente']) ?>
+                                <?php
+                            }
                         ?>
                     </td>
                 </tr>

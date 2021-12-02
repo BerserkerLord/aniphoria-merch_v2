@@ -5,34 +5,31 @@
  */
 ?>
 <div class="cupon index content">
-    <?= $this->Html->link(__('New Cupon'), ['action' => 'add'], ['class' => 'button float-right']) ?>
-    <h3><?= __('Cupon') ?></h3>
+    <?= $this->Html->link(__('Nuevo Cupón'), ['action' => 'add'], ['class' => 'button float-right']) ?>
+    <h2><?= __('Cupones') ?></h2>
     <div class="table-responsive">
         <table>
             <thead>
                 <tr>
-                    <th><?= $this->Paginator->sort('id') ?></th>
-                    <th><?= $this->Paginator->sort('codigo') ?></th>
-                    <th><?= $this->Paginator->sort('fecha_lanzamiento') ?></th>
-                    <th><?= $this->Paginator->sort('fecha_expiracion') ?></th>
-                    <th><?= $this->Paginator->sort('porcentaje') ?></th>
-                    <th><?= $this->Paginator->sort('minimo') ?></th>
-                    <th class="actions"><?= __('Actions') ?></th>
+                    <th class="actions"><?= $this->Paginator->sort('codigo') ?></th>
+                    <th class="actions"><?= $this->Paginator->sort('fecha_lanzamiento') ?></th>
+                    <th class="actions"><?= $this->Paginator->sort('fecha_expiracion') ?></th>
+                    <th class="actions"><?= $this->Paginator->sort('porcentaje', 'Porcentaje de descuento') ?></th>
+                    <th class="actions"><?= $this->Paginator->sort('minimo', 'Mínimo de compra') ?></th>
+                    <th class="actions"><?= __('Acciones') ?></th>
                 </tr>
             </thead>
             <tbody>
                 <?php foreach ($cupon as $cupon): ?>
                 <tr>
-                    <td><?= $this->Number->format($cupon->id) ?></td>
                     <td><?= h($cupon->codigo) ?></td>
                     <td><?= h($cupon->fecha_lanzamiento) ?></td>
                     <td><?= h($cupon->fecha_expiracion) ?></td>
-                    <td><?= $this->Number->format($cupon->porcentaje) ?></td>
-                    <td><?= $this->Number->format($cupon->minimo) ?></td>
+                    <td><?= $this->Number->format($cupon->porcentaje).'%' ?></td>
+                    <td><?= '$'.$this->Number->format($cupon->minimo) ?></td>
                     <td class="actions">
-                        <?= $this->Html->link(__('View'), ['action' => 'view', $cupon->id]) ?>
-                        <?= $this->Html->link(__('Edit'), ['action' => 'edit', $cupon->id]) ?>
-                        <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $cupon->id], ['confirm' => __('Are you sure you want to delete # {0}?', $cupon->id)]) ?>
+                        <?= $this->Html->link('<i class="fas fa-eye pr-2"></i>', ['action' => 'view', $cupon->id], ['escape' => false]) ?>
+                        <?= $this->Html->link('<i class="fas fa-pen pr-2"></i>', ['action' => 'edit', $cupon->id], ['escape' => false]) ?>
                     </td>
                 </tr>
                 <?php endforeach; ?>
@@ -41,12 +38,12 @@
     </div>
     <div class="paginator">
         <ul class="pagination">
-            <?= $this->Paginator->first('<< ' . __('first')) ?>
-            <?= $this->Paginator->prev('< ' . __('previous')) ?>
+            <?= $this->Paginator->first('<< ' . __('primero')) ?>
+            <?= $this->Paginator->prev('< ' . __('anterior')) ?>
             <?= $this->Paginator->numbers() ?>
-            <?= $this->Paginator->next(__('next') . ' >') ?>
-            <?= $this->Paginator->last(__('last') . ' >>') ?>
+            <?= $this->Paginator->next(__('siguiente') . ' >') ?>
+            <?= $this->Paginator->last(__('último') . ' >>') ?>
         </ul>
-        <p><?= $this->Paginator->counter(__('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')) ?></p>
+        <p><?= $this->Paginator->counter(__('Página {{page}} de {{pages}}, mostrando {{current}} registro(s) de {{count}} en total')) ?></p>
     </div>
 </div>

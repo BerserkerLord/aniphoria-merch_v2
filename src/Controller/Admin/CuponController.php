@@ -36,7 +36,7 @@ class CuponController extends AppController
     public function view($id = null)
     {
         $cupon = $this->Cupon->get($id, [
-            'contain' => ['Pedido'],
+            'contain' => ['Pedido' => ['Cliente']],
         ]);
 
         $this->set(compact('cupon'));
@@ -91,25 +91,5 @@ class CuponController extends AppController
             $this->Flash->error(__('Hubo un error al actualizar el cupón. Intentelo nuevamente.'));
         }
         $this->set(compact('cupon'));
-    }
-
-    /**
-     * Delete method
-     *
-     * @param string|null $id Cupon id.
-     * @return \Cake\Http\Response|null|void Redirects to index.
-     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
-     */
-    public function delete($id = null)
-    {
-        $this->request->allowMethod(['post', 'delete']);
-        $cupon = $this->Cupon->get($id);
-        if ($this->Cupon->delete($cupon)) {
-            $this->Flash->success(__('El cupón se ha eliminado correctamente.'));
-        } else {
-            $this->Flash->error(__('Hubo un error al eliminar el cupón. Intentelo nuevamente.'));
-        }
-
-        return $this->redirect(['action' => 'index']);
     }
 }

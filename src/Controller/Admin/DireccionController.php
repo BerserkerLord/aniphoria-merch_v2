@@ -29,22 +29,6 @@ class DireccionController extends AppController
     }
 
     /**
-     * View method
-     *
-     * @param string|null $id Direccion id.
-     * @return \Cake\Http\Response|null|void Renders view
-     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
-     */
-    public function view($id = null)
-    {
-        $direccion = $this->Direccion->get($id, [
-            'contain' => ['Cliente'],
-        ]);
-
-        $this->set(compact('direccion'));
-    }
-
-    /**
      * Add method
      *
      * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
@@ -55,11 +39,11 @@ class DireccionController extends AppController
         if ($this->request->is('post')) {
             $direccion = $this->Direccion->patchEntity($direccion, $this->request->getData());
             if ($this->Direccion->save($direccion)) {
-                $this->Flash->success(__('The direccion has been saved.'));
+                $this->Flash->success(__('La dirección ha sido registrada correctamente.'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The direccion could not be saved. Please, try again.'));
+            $this->Flash->error(__('Hubo un error al registrar la dirección. Intentelo nuevamente'));
         }
         $cliente = $this->Direccion->Cliente->find('list', ['limit' => 200]);
         $this->set(compact('direccion', 'cliente'));
@@ -80,11 +64,11 @@ class DireccionController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $direccion = $this->Direccion->patchEntity($direccion, $this->request->getData());
             if ($this->Direccion->save($direccion)) {
-                $this->Flash->success(__('The direccion has been saved.'));
+                $this->Flash->success(__('La se ha actualizado correctamente'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The direccion could not be saved. Please, try again.'));
+            $this->Flash->error(__('Hubo un error al actualizar la dirección. Intentelo nuevamente.'));
         }
         $cliente = $this->Direccion->Cliente->find('list', ['limit' => 200]);
         $this->set(compact('direccion', 'cliente'));
@@ -102,9 +86,37 @@ class DireccionController extends AppController
         $this->request->allowMethod(['post', 'delete']);
         $direccion = $this->Direccion->get($id);
         if ($this->Direccion->delete($direccion)) {
-            $this->Flash->success(__('The direccion has been deleted.'));
+            $this->Flash->success(__('La dirección ha sido eliminada correctamente.'));
         } else {
-            $this->Flash->error(__('The direccion could not be deleted. Please, try again.'));
+            $this->Flash->error(__('Hubo un error al eliminar la dirección. Intentelo nuevamente.'));
+        }
+
+        return $this->redirect(['action' => 'index']);
+    }
+
+    public function ban($id = null){
+
+        $this->request->allowMethod(['post', 'delete']);
+        $direccion = $this->Direccion->get($id);
+        $direccion->estatus=0;
+        if ($this->Direccion->save($direccion)) {
+            $this->Flash->success(__('La dirección ha sido inhabilitada.'));
+        } else {
+            $this->Flash->error(__('No se pudo inhabilitar la dirección. Intentelo de nuevo.'));
+        }
+
+        return $this->redirect(['action' => 'index']);
+    }
+
+    public function enable($id = null){
+
+        $this->request->allowMethod(['post', 'delete']);
+        $direccion = $this->Direccion->get($id);
+        $direccion->estatus=1;
+        if ($this->Direccion->save($direccion)) {
+            $this->Flash->success(__('La dirección ha sido inhabilitada.'));
+        } else {
+            $this->Flash->error(__('No se pudo habilitar la dirección. Intentelo de nuevo.'));
         }
 
         return $this->redirect(['action' => 'index']);

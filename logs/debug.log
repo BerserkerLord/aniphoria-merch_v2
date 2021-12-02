@@ -15562,3 +15562,1368 @@ Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
 
 
 
+2021-12-02 01:25:03 Notice: Notice (8): Array to string conversion in [C:\xampp\htdocs\aniphoria-merch_v2\templates\Admin\Cupon\index.php, line 31]
+Request URL: /admin/cupones
+Referer URL: http://localhost/aniphoria-merch_v2/admin/cupon/edit/2
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+include - ROOT\templates\Admin\Cupon\index.php, line 31
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1160
+Cake\View\View::_render() - CORE\src\View\View.php, line 1121
+Cake\View\View::render() - CORE\src\View\View.php, line 751
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 688
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 530
+Cake\Controller\ControllerFactory::invoke() - CORE\src\Controller\ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE\src\Http\BaseApplication.php, line 229
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 77
+Authentication\Middleware\AuthenticationMiddleware::process() - ROOT\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php, line 124
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE\src\Http\Middleware\BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 160
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 119
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2021-12-02 01:25:03 Notice: Notice (8): Array to string conversion in [C:\xampp\htdocs\aniphoria-merch_v2\templates\Admin\Cupon\index.php, line 31]
+Request URL: /admin/cupones
+Referer URL: http://localhost/aniphoria-merch_v2/admin/cupon/edit/2
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+include - ROOT\templates\Admin\Cupon\index.php, line 31
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1160
+Cake\View\View::_render() - CORE\src\View\View.php, line 1121
+Cake\View\View::render() - CORE\src\View\View.php, line 751
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 688
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 530
+Cake\Controller\ControllerFactory::invoke() - CORE\src\Controller\ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE\src\Http\BaseApplication.php, line 229
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 77
+Authentication\Middleware\AuthenticationMiddleware::process() - ROOT\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php, line 124
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE\src\Http\Middleware\BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 160
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 119
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2021-12-02 01:25:03 Notice: Notice (8): Array to string conversion in [C:\xampp\htdocs\aniphoria-merch_v2\templates\Admin\Cupon\index.php, line 32]
+Request URL: /admin/cupones
+Referer URL: http://localhost/aniphoria-merch_v2/admin/cupon/edit/2
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+include - ROOT\templates\Admin\Cupon\index.php, line 32
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1160
+Cake\View\View::_render() - CORE\src\View\View.php, line 1121
+Cake\View\View::render() - CORE\src\View\View.php, line 751
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 688
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 530
+Cake\Controller\ControllerFactory::invoke() - CORE\src\Controller\ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE\src\Http\BaseApplication.php, line 229
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 77
+Authentication\Middleware\AuthenticationMiddleware::process() - ROOT\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php, line 124
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE\src\Http\Middleware\BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 160
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 119
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2021-12-02 01:25:03 Notice: Notice (8): Array to string conversion in [C:\xampp\htdocs\aniphoria-merch_v2\templates\Admin\Cupon\index.php, line 32]
+Request URL: /admin/cupones
+Referer URL: http://localhost/aniphoria-merch_v2/admin/cupon/edit/2
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+include - ROOT\templates\Admin\Cupon\index.php, line 32
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1160
+Cake\View\View::_render() - CORE\src\View\View.php, line 1121
+Cake\View\View::render() - CORE\src\View\View.php, line 751
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 688
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 530
+Cake\Controller\ControllerFactory::invoke() - CORE\src\Controller\ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE\src\Http\BaseApplication.php, line 229
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 77
+Authentication\Middleware\AuthenticationMiddleware::process() - ROOT\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php, line 124
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE\src\Http\Middleware\BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 160
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 119
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2021-12-02 01:26:31 Notice: Notice (8): Undefined variable: administrador in [C:\xampp\htdocs\aniphoria-merch_v2\templates\Admin\Cupon\view.php, line 103]
+Request URL: /admin/cupon/view/2
+Referer URL: http://localhost/aniphoria-merch_v2/admin/cupones
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+include - ROOT\templates\Admin\Cupon\view.php, line 103
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1160
+Cake\View\View::_render() - CORE\src\View\View.php, line 1121
+Cake\View\View::render() - CORE\src\View\View.php, line 751
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 688
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 530
+Cake\Controller\ControllerFactory::invoke() - CORE\src\Controller\ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE\src\Http\BaseApplication.php, line 229
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 77
+Authentication\Middleware\AuthenticationMiddleware::process() - ROOT\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php, line 124
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE\src\Http\Middleware\BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 160
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 119
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2021-12-02 01:26:31 Notice: Notice (8): Trying to get property 'id' of non-object in [C:\xampp\htdocs\aniphoria-merch_v2\templates\Admin\Cupon\view.php, line 103]
+Request URL: /admin/cupon/view/2
+Referer URL: http://localhost/aniphoria-merch_v2/admin/cupones
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+include - ROOT\templates\Admin\Cupon\view.php, line 103
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1160
+Cake\View\View::_render() - CORE\src\View\View.php, line 1121
+Cake\View\View::render() - CORE\src\View\View.php, line 751
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 688
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 530
+Cake\Controller\ControllerFactory::invoke() - CORE\src\Controller\ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE\src\Http\BaseApplication.php, line 229
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 77
+Authentication\Middleware\AuthenticationMiddleware::process() - ROOT\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php, line 124
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE\src\Http\Middleware\BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 160
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 119
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2021-12-02 01:26:31 Notice: Notice (8): Undefined variable: administrador in [C:\xampp\htdocs\aniphoria-merch_v2\templates\Admin\Cupon\view.php, line 104]
+Request URL: /admin/cupon/view/2
+Referer URL: http://localhost/aniphoria-merch_v2/admin/cupones
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+include - ROOT\templates\Admin\Cupon\view.php, line 104
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1160
+Cake\View\View::_render() - CORE\src\View\View.php, line 1121
+Cake\View\View::render() - CORE\src\View\View.php, line 751
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 688
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 530
+Cake\Controller\ControllerFactory::invoke() - CORE\src\Controller\ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE\src\Http\BaseApplication.php, line 229
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 77
+Authentication\Middleware\AuthenticationMiddleware::process() - ROOT\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php, line 124
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE\src\Http\Middleware\BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 160
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 119
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2021-12-02 01:26:31 Notice: Notice (8): Trying to get property 'id' of non-object in [C:\xampp\htdocs\aniphoria-merch_v2\templates\Admin\Cupon\view.php, line 104]
+Request URL: /admin/cupon/view/2
+Referer URL: http://localhost/aniphoria-merch_v2/admin/cupones
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+include - ROOT\templates\Admin\Cupon\view.php, line 104
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1160
+Cake\View\View::_render() - CORE\src\View\View.php, line 1121
+Cake\View\View::render() - CORE\src\View\View.php, line 751
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 688
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 530
+Cake\Controller\ControllerFactory::invoke() - CORE\src\Controller\ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE\src\Http\BaseApplication.php, line 229
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 77
+Authentication\Middleware\AuthenticationMiddleware::process() - ROOT\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php, line 124
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE\src\Http\Middleware\BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 160
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 119
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2021-12-02 01:26:31 Notice: Notice (8): Undefined variable: administrador in [C:\xampp\htdocs\aniphoria-merch_v2\templates\Admin\Cupon\view.php, line 104]
+Request URL: /admin/cupon/view/2
+Referer URL: http://localhost/aniphoria-merch_v2/admin/cupones
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+include - ROOT\templates\Admin\Cupon\view.php, line 104
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1160
+Cake\View\View::_render() - CORE\src\View\View.php, line 1121
+Cake\View\View::render() - CORE\src\View\View.php, line 751
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 688
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 530
+Cake\Controller\ControllerFactory::invoke() - CORE\src\Controller\ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE\src\Http\BaseApplication.php, line 229
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 77
+Authentication\Middleware\AuthenticationMiddleware::process() - ROOT\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php, line 124
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE\src\Http\Middleware\BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 160
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 119
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2021-12-02 01:26:31 Notice: Notice (8): Trying to get property 'id' of non-object in [C:\xampp\htdocs\aniphoria-merch_v2\templates\Admin\Cupon\view.php, line 104]
+Request URL: /admin/cupon/view/2
+Referer URL: http://localhost/aniphoria-merch_v2/admin/cupones
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+include - ROOT\templates\Admin\Cupon\view.php, line 104
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1160
+Cake\View\View::_render() - CORE\src\View\View.php, line 1121
+Cake\View\View::render() - CORE\src\View\View.php, line 751
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 688
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 530
+Cake\Controller\ControllerFactory::invoke() - CORE\src\Controller\ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE\src\Http\BaseApplication.php, line 229
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 77
+Authentication\Middleware\AuthenticationMiddleware::process() - ROOT\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php, line 124
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE\src\Http\Middleware\BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 160
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 119
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2021-12-02 01:27:01 Notice: Notice (8): Undefined variable: administrador in [C:\xampp\htdocs\aniphoria-merch_v2\templates\Admin\Cupon\view.php, line 118]
+Request URL: /admin/cupon/view/2
+Referer URL: http://localhost/aniphoria-merch_v2/admin/cupones
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+include - ROOT\templates\Admin\Cupon\view.php, line 118
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1160
+Cake\View\View::_render() - CORE\src\View\View.php, line 1121
+Cake\View\View::render() - CORE\src\View\View.php, line 751
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 688
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 530
+Cake\Controller\ControllerFactory::invoke() - CORE\src\Controller\ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE\src\Http\BaseApplication.php, line 229
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 77
+Authentication\Middleware\AuthenticationMiddleware::process() - ROOT\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php, line 124
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE\src\Http\Middleware\BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 160
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 119
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2021-12-02 01:27:01 Notice: Notice (8): Trying to get property 'id' of non-object in [C:\xampp\htdocs\aniphoria-merch_v2\templates\Admin\Cupon\view.php, line 118]
+Request URL: /admin/cupon/view/2
+Referer URL: http://localhost/aniphoria-merch_v2/admin/cupones
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+include - ROOT\templates\Admin\Cupon\view.php, line 118
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1160
+Cake\View\View::_render() - CORE\src\View\View.php, line 1121
+Cake\View\View::render() - CORE\src\View\View.php, line 751
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 688
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 530
+Cake\Controller\ControllerFactory::invoke() - CORE\src\Controller\ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE\src\Http\BaseApplication.php, line 229
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 77
+Authentication\Middleware\AuthenticationMiddleware::process() - ROOT\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php, line 124
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE\src\Http\Middleware\BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 160
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 119
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2021-12-02 01:27:01 Notice: Notice (8): Undefined variable: administrador in [C:\xampp\htdocs\aniphoria-merch_v2\templates\Admin\Cupon\view.php, line 119]
+Request URL: /admin/cupon/view/2
+Referer URL: http://localhost/aniphoria-merch_v2/admin/cupones
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+include - ROOT\templates\Admin\Cupon\view.php, line 119
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1160
+Cake\View\View::_render() - CORE\src\View\View.php, line 1121
+Cake\View\View::render() - CORE\src\View\View.php, line 751
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 688
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 530
+Cake\Controller\ControllerFactory::invoke() - CORE\src\Controller\ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE\src\Http\BaseApplication.php, line 229
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 77
+Authentication\Middleware\AuthenticationMiddleware::process() - ROOT\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php, line 124
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE\src\Http\Middleware\BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 160
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 119
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2021-12-02 01:27:01 Notice: Notice (8): Trying to get property 'id' of non-object in [C:\xampp\htdocs\aniphoria-merch_v2\templates\Admin\Cupon\view.php, line 119]
+Request URL: /admin/cupon/view/2
+Referer URL: http://localhost/aniphoria-merch_v2/admin/cupones
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+include - ROOT\templates\Admin\Cupon\view.php, line 119
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1160
+Cake\View\View::_render() - CORE\src\View\View.php, line 1121
+Cake\View\View::render() - CORE\src\View\View.php, line 751
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 688
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 530
+Cake\Controller\ControllerFactory::invoke() - CORE\src\Controller\ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE\src\Http\BaseApplication.php, line 229
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 77
+Authentication\Middleware\AuthenticationMiddleware::process() - ROOT\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php, line 124
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE\src\Http\Middleware\BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 160
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 119
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2021-12-02 01:27:01 Notice: Notice (8): Undefined variable: administrador in [C:\xampp\htdocs\aniphoria-merch_v2\templates\Admin\Cupon\view.php, line 119]
+Request URL: /admin/cupon/view/2
+Referer URL: http://localhost/aniphoria-merch_v2/admin/cupones
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+include - ROOT\templates\Admin\Cupon\view.php, line 119
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1160
+Cake\View\View::_render() - CORE\src\View\View.php, line 1121
+Cake\View\View::render() - CORE\src\View\View.php, line 751
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 688
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 530
+Cake\Controller\ControllerFactory::invoke() - CORE\src\Controller\ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE\src\Http\BaseApplication.php, line 229
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 77
+Authentication\Middleware\AuthenticationMiddleware::process() - ROOT\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php, line 124
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE\src\Http\Middleware\BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 160
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 119
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2021-12-02 01:27:01 Notice: Notice (8): Trying to get property 'id' of non-object in [C:\xampp\htdocs\aniphoria-merch_v2\templates\Admin\Cupon\view.php, line 119]
+Request URL: /admin/cupon/view/2
+Referer URL: http://localhost/aniphoria-merch_v2/admin/cupones
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+include - ROOT\templates\Admin\Cupon\view.php, line 119
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1160
+Cake\View\View::_render() - CORE\src\View\View.php, line 1121
+Cake\View\View::render() - CORE\src\View\View.php, line 751
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 688
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 530
+Cake\Controller\ControllerFactory::invoke() - CORE\src\Controller\ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE\src\Http\BaseApplication.php, line 229
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 77
+Authentication\Middleware\AuthenticationMiddleware::process() - ROOT\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php, line 124
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE\src\Http\Middleware\BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 160
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 119
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2021-12-02 01:27:12 Notice: Notice (8): Undefined variable: administrador in [C:\xampp\htdocs\aniphoria-merch_v2\templates\Admin\Cupon\view.php, line 114]
+Request URL: /admin/cupon/view/2
+Referer URL: http://localhost/aniphoria-merch_v2/admin/cupones
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+include - ROOT\templates\Admin\Cupon\view.php, line 114
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1160
+Cake\View\View::_render() - CORE\src\View\View.php, line 1121
+Cake\View\View::render() - CORE\src\View\View.php, line 751
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 688
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 530
+Cake\Controller\ControllerFactory::invoke() - CORE\src\Controller\ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE\src\Http\BaseApplication.php, line 229
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 77
+Authentication\Middleware\AuthenticationMiddleware::process() - ROOT\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php, line 124
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE\src\Http\Middleware\BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 160
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 119
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2021-12-02 01:27:12 Notice: Notice (8): Trying to get property 'id' of non-object in [C:\xampp\htdocs\aniphoria-merch_v2\templates\Admin\Cupon\view.php, line 114]
+Request URL: /admin/cupon/view/2
+Referer URL: http://localhost/aniphoria-merch_v2/admin/cupones
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+include - ROOT\templates\Admin\Cupon\view.php, line 114
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1160
+Cake\View\View::_render() - CORE\src\View\View.php, line 1121
+Cake\View\View::render() - CORE\src\View\View.php, line 751
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 688
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 530
+Cake\Controller\ControllerFactory::invoke() - CORE\src\Controller\ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE\src\Http\BaseApplication.php, line 229
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 77
+Authentication\Middleware\AuthenticationMiddleware::process() - ROOT\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php, line 124
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE\src\Http\Middleware\BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 160
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 119
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2021-12-02 01:27:12 Notice: Notice (8): Undefined variable: administrador in [C:\xampp\htdocs\aniphoria-merch_v2\templates\Admin\Cupon\view.php, line 115]
+Request URL: /admin/cupon/view/2
+Referer URL: http://localhost/aniphoria-merch_v2/admin/cupones
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+include - ROOT\templates\Admin\Cupon\view.php, line 115
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1160
+Cake\View\View::_render() - CORE\src\View\View.php, line 1121
+Cake\View\View::render() - CORE\src\View\View.php, line 751
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 688
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 530
+Cake\Controller\ControllerFactory::invoke() - CORE\src\Controller\ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE\src\Http\BaseApplication.php, line 229
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 77
+Authentication\Middleware\AuthenticationMiddleware::process() - ROOT\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php, line 124
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE\src\Http\Middleware\BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 160
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 119
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2021-12-02 01:27:12 Notice: Notice (8): Trying to get property 'id' of non-object in [C:\xampp\htdocs\aniphoria-merch_v2\templates\Admin\Cupon\view.php, line 115]
+Request URL: /admin/cupon/view/2
+Referer URL: http://localhost/aniphoria-merch_v2/admin/cupones
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+include - ROOT\templates\Admin\Cupon\view.php, line 115
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1160
+Cake\View\View::_render() - CORE\src\View\View.php, line 1121
+Cake\View\View::render() - CORE\src\View\View.php, line 751
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 688
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 530
+Cake\Controller\ControllerFactory::invoke() - CORE\src\Controller\ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE\src\Http\BaseApplication.php, line 229
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 77
+Authentication\Middleware\AuthenticationMiddleware::process() - ROOT\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php, line 124
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE\src\Http\Middleware\BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 160
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 119
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2021-12-02 01:27:12 Notice: Notice (8): Undefined variable: administrador in [C:\xampp\htdocs\aniphoria-merch_v2\templates\Admin\Cupon\view.php, line 115]
+Request URL: /admin/cupon/view/2
+Referer URL: http://localhost/aniphoria-merch_v2/admin/cupones
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+include - ROOT\templates\Admin\Cupon\view.php, line 115
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1160
+Cake\View\View::_render() - CORE\src\View\View.php, line 1121
+Cake\View\View::render() - CORE\src\View\View.php, line 751
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 688
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 530
+Cake\Controller\ControllerFactory::invoke() - CORE\src\Controller\ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE\src\Http\BaseApplication.php, line 229
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 77
+Authentication\Middleware\AuthenticationMiddleware::process() - ROOT\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php, line 124
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE\src\Http\Middleware\BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 160
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 119
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2021-12-02 01:27:12 Notice: Notice (8): Trying to get property 'id' of non-object in [C:\xampp\htdocs\aniphoria-merch_v2\templates\Admin\Cupon\view.php, line 115]
+Request URL: /admin/cupon/view/2
+Referer URL: http://localhost/aniphoria-merch_v2/admin/cupones
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+include - ROOT\templates\Admin\Cupon\view.php, line 115
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1160
+Cake\View\View::_render() - CORE\src\View\View.php, line 1121
+Cake\View\View::render() - CORE\src\View\View.php, line 751
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 688
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 530
+Cake\Controller\ControllerFactory::invoke() - CORE\src\Controller\ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE\src\Http\BaseApplication.php, line 229
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 77
+Authentication\Middleware\AuthenticationMiddleware::process() - ROOT\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php, line 124
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE\src\Http\Middleware\BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 160
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 119
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2021-12-02 01:35:20 Notice: Notice (8): Trying to get property 'usuario' of non-object in [C:\xampp\htdocs\aniphoria-merch_v2\templates\Admin\Cupon\view.php, line 48]
+Request URL: /admin/cupon/view/2
+Referer URL: http://localhost/aniphoria-merch_v2/admin/cupones
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+include - ROOT\templates\Admin\Cupon\view.php, line 48
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1160
+Cake\View\View::_render() - CORE\src\View\View.php, line 1121
+Cake\View\View::render() - CORE\src\View\View.php, line 751
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 688
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 530
+Cake\Controller\ControllerFactory::invoke() - CORE\src\Controller\ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE\src\Http\BaseApplication.php, line 229
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 77
+Authentication\Middleware\AuthenticationMiddleware::process() - ROOT\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php, line 124
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE\src\Http\Middleware\BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 160
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 119
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2021-12-02 01:36:36 Notice: Notice (8): Trying to get property 'usuario' of non-object in [C:\xampp\htdocs\aniphoria-merch_v2\templates\Admin\Cupon\view.php, line 48]
+Request URL: /admin/cupon/view/2
+Referer URL: http://localhost/aniphoria-merch_v2/admin/cupones
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+include - ROOT\templates\Admin\Cupon\view.php, line 48
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1160
+Cake\View\View::_render() - CORE\src\View\View.php, line 1121
+Cake\View\View::render() - CORE\src\View\View.php, line 751
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 688
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 530
+Cake\Controller\ControllerFactory::invoke() - CORE\src\Controller\ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE\src\Http\BaseApplication.php, line 229
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 77
+Authentication\Middleware\AuthenticationMiddleware::process() - ROOT\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php, line 124
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE\src\Http\Middleware\BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 160
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 119
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2021-12-02 01:36:53 Notice: Notice (8): Trying to get property 'usuario' of non-object in [C:\xampp\htdocs\aniphoria-merch_v2\templates\Admin\Cupon\view.php, line 48]
+Request URL: /admin/cupon/view/2
+Referer URL: http://localhost/aniphoria-merch_v2/admin/cupones
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+include - ROOT\templates\Admin\Cupon\view.php, line 48
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1160
+Cake\View\View::_render() - CORE\src\View\View.php, line 1121
+Cake\View\View::render() - CORE\src\View\View.php, line 751
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 688
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 530
+Cake\Controller\ControllerFactory::invoke() - CORE\src\Controller\ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE\src\Http\BaseApplication.php, line 229
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 77
+Authentication\Middleware\AuthenticationMiddleware::process() - ROOT\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php, line 124
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE\src\Http\Middleware\BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 160
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 119
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2021-12-02 02:12:31 Notice: Notice (8): Undefined variable: comentario in [C:\xampp\htdocs\aniphoria-merch_v2\templates\Admin\Direccion\view.php, line 64]
+Request URL: /admin/direccion/view/5
+Referer URL: http://localhost/aniphoria-merch_v2/admin/direcciones
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+include - ROOT\templates\Admin\Direccion\view.php, line 64
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1160
+Cake\View\View::_render() - CORE\src\View\View.php, line 1121
+Cake\View\View::render() - CORE\src\View\View.php, line 751
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 688
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 530
+Cake\Controller\ControllerFactory::invoke() - CORE\src\Controller\ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE\src\Http\BaseApplication.php, line 229
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 77
+Authentication\Middleware\AuthenticationMiddleware::process() - ROOT\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php, line 124
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE\src\Http\Middleware\BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 160
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 119
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2021-12-02 02:12:31 Notice: Notice (8): Trying to get property 'id' of non-object in [C:\xampp\htdocs\aniphoria-merch_v2\templates\Admin\Direccion\view.php, line 64]
+Request URL: /admin/direccion/view/5
+Referer URL: http://localhost/aniphoria-merch_v2/admin/direcciones
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+include - ROOT\templates\Admin\Direccion\view.php, line 64
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1160
+Cake\View\View::_render() - CORE\src\View\View.php, line 1121
+Cake\View\View::render() - CORE\src\View\View.php, line 751
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 688
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 530
+Cake\Controller\ControllerFactory::invoke() - CORE\src\Controller\ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE\src\Http\BaseApplication.php, line 229
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 77
+Authentication\Middleware\AuthenticationMiddleware::process() - ROOT\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php, line 124
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE\src\Http\Middleware\BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 160
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 119
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2021-12-02 02:12:31 Notice: Notice (8): Undefined variable: comentario in [C:\xampp\htdocs\aniphoria-merch_v2\templates\Admin\Direccion\view.php, line 64]
+Request URL: /admin/direccion/view/5
+Referer URL: http://localhost/aniphoria-merch_v2/admin/direcciones
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+include - ROOT\templates\Admin\Direccion\view.php, line 64
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1160
+Cake\View\View::_render() - CORE\src\View\View.php, line 1121
+Cake\View\View::render() - CORE\src\View\View.php, line 751
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 688
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 530
+Cake\Controller\ControllerFactory::invoke() - CORE\src\Controller\ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE\src\Http\BaseApplication.php, line 229
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 77
+Authentication\Middleware\AuthenticationMiddleware::process() - ROOT\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php, line 124
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE\src\Http\Middleware\BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 160
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 119
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2021-12-02 02:12:31 Notice: Notice (8): Trying to get property 'id' of non-object in [C:\xampp\htdocs\aniphoria-merch_v2\templates\Admin\Direccion\view.php, line 64]
+Request URL: /admin/direccion/view/5
+Referer URL: http://localhost/aniphoria-merch_v2/admin/direcciones
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+include - ROOT\templates\Admin\Direccion\view.php, line 64
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1160
+Cake\View\View::_render() - CORE\src\View\View.php, line 1121
+Cake\View\View::render() - CORE\src\View\View.php, line 751
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 688
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 530
+Cake\Controller\ControllerFactory::invoke() - CORE\src\Controller\ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE\src\Http\BaseApplication.php, line 229
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 77
+Authentication\Middleware\AuthenticationMiddleware::process() - ROOT\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php, line 124
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE\src\Http\Middleware\BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 160
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 119
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2021-12-02 02:14:29 Notice: Notice (8): Undefined variable: comentario in [C:\xampp\htdocs\aniphoria-merch_v2\templates\Admin\Direccion\view.php, line 68]
+Request URL: /admin/direccion/view/5
+Referer URL: http://localhost/aniphoria-merch_v2/admin/direcciones
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+include - ROOT\templates\Admin\Direccion\view.php, line 68
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1160
+Cake\View\View::_render() - CORE\src\View\View.php, line 1121
+Cake\View\View::render() - CORE\src\View\View.php, line 751
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 688
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 530
+Cake\Controller\ControllerFactory::invoke() - CORE\src\Controller\ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE\src\Http\BaseApplication.php, line 229
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 77
+Authentication\Middleware\AuthenticationMiddleware::process() - ROOT\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php, line 124
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE\src\Http\Middleware\BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 160
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 119
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2021-12-02 02:14:29 Notice: Notice (8): Trying to get property 'id' of non-object in [C:\xampp\htdocs\aniphoria-merch_v2\templates\Admin\Direccion\view.php, line 68]
+Request URL: /admin/direccion/view/5
+Referer URL: http://localhost/aniphoria-merch_v2/admin/direcciones
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+include - ROOT\templates\Admin\Direccion\view.php, line 68
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1160
+Cake\View\View::_render() - CORE\src\View\View.php, line 1121
+Cake\View\View::render() - CORE\src\View\View.php, line 751
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 688
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 530
+Cake\Controller\ControllerFactory::invoke() - CORE\src\Controller\ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE\src\Http\BaseApplication.php, line 229
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 77
+Authentication\Middleware\AuthenticationMiddleware::process() - ROOT\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php, line 124
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE\src\Http\Middleware\BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 160
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 119
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2021-12-02 02:14:29 Notice: Notice (8): Undefined variable: comentario in [C:\xampp\htdocs\aniphoria-merch_v2\templates\Admin\Direccion\view.php, line 68]
+Request URL: /admin/direccion/view/5
+Referer URL: http://localhost/aniphoria-merch_v2/admin/direcciones
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+include - ROOT\templates\Admin\Direccion\view.php, line 68
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1160
+Cake\View\View::_render() - CORE\src\View\View.php, line 1121
+Cake\View\View::render() - CORE\src\View\View.php, line 751
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 688
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 530
+Cake\Controller\ControllerFactory::invoke() - CORE\src\Controller\ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE\src\Http\BaseApplication.php, line 229
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 77
+Authentication\Middleware\AuthenticationMiddleware::process() - ROOT\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php, line 124
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE\src\Http\Middleware\BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 160
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 119
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2021-12-02 02:14:29 Notice: Notice (8): Trying to get property 'id' of non-object in [C:\xampp\htdocs\aniphoria-merch_v2\templates\Admin\Direccion\view.php, line 68]
+Request URL: /admin/direccion/view/5
+Referer URL: http://localhost/aniphoria-merch_v2/admin/direcciones
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+include - ROOT\templates\Admin\Direccion\view.php, line 68
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1160
+Cake\View\View::_render() - CORE\src\View\View.php, line 1121
+Cake\View\View::render() - CORE\src\View\View.php, line 751
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 688
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 530
+Cake\Controller\ControllerFactory::invoke() - CORE\src\Controller\ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE\src\Http\BaseApplication.php, line 229
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 77
+Authentication\Middleware\AuthenticationMiddleware::process() - ROOT\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php, line 124
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE\src\Http\Middleware\BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 160
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 119
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2021-12-02 02:15:24 Notice: Notice (8): Undefined variable: comentario in [C:\xampp\htdocs\aniphoria-merch_v2\templates\Admin\Direccion\view.php, line 68]
+Request URL: /admin/direccion/view/5
+Referer URL: http://localhost/aniphoria-merch_v2/admin/direcciones
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+include - ROOT\templates\Admin\Direccion\view.php, line 68
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1160
+Cake\View\View::_render() - CORE\src\View\View.php, line 1121
+Cake\View\View::render() - CORE\src\View\View.php, line 751
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 688
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 530
+Cake\Controller\ControllerFactory::invoke() - CORE\src\Controller\ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE\src\Http\BaseApplication.php, line 229
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 77
+Authentication\Middleware\AuthenticationMiddleware::process() - ROOT\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php, line 124
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE\src\Http\Middleware\BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 160
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 119
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2021-12-02 02:15:24 Notice: Notice (8): Trying to get property 'id' of non-object in [C:\xampp\htdocs\aniphoria-merch_v2\templates\Admin\Direccion\view.php, line 68]
+Request URL: /admin/direccion/view/5
+Referer URL: http://localhost/aniphoria-merch_v2/admin/direcciones
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+include - ROOT\templates\Admin\Direccion\view.php, line 68
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1160
+Cake\View\View::_render() - CORE\src\View\View.php, line 1121
+Cake\View\View::render() - CORE\src\View\View.php, line 751
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 688
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 530
+Cake\Controller\ControllerFactory::invoke() - CORE\src\Controller\ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE\src\Http\BaseApplication.php, line 229
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 77
+Authentication\Middleware\AuthenticationMiddleware::process() - ROOT\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php, line 124
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE\src\Http\Middleware\BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 160
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 119
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2021-12-02 02:15:24 Notice: Notice (8): Undefined variable: comentario in [C:\xampp\htdocs\aniphoria-merch_v2\templates\Admin\Direccion\view.php, line 68]
+Request URL: /admin/direccion/view/5
+Referer URL: http://localhost/aniphoria-merch_v2/admin/direcciones
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+include - ROOT\templates\Admin\Direccion\view.php, line 68
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1160
+Cake\View\View::_render() - CORE\src\View\View.php, line 1121
+Cake\View\View::render() - CORE\src\View\View.php, line 751
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 688
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 530
+Cake\Controller\ControllerFactory::invoke() - CORE\src\Controller\ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE\src\Http\BaseApplication.php, line 229
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 77
+Authentication\Middleware\AuthenticationMiddleware::process() - ROOT\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php, line 124
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE\src\Http\Middleware\BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 160
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 119
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2021-12-02 02:15:24 Notice: Notice (8): Trying to get property 'id' of non-object in [C:\xampp\htdocs\aniphoria-merch_v2\templates\Admin\Direccion\view.php, line 68]
+Request URL: /admin/direccion/view/5
+Referer URL: http://localhost/aniphoria-merch_v2/admin/direcciones
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+include - ROOT\templates\Admin\Direccion\view.php, line 68
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1160
+Cake\View\View::_render() - CORE\src\View\View.php, line 1121
+Cake\View\View::render() - CORE\src\View\View.php, line 751
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 688
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 530
+Cake\Controller\ControllerFactory::invoke() - CORE\src\Controller\ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE\src\Http\BaseApplication.php, line 229
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 77
+Authentication\Middleware\AuthenticationMiddleware::process() - ROOT\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php, line 124
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE\src\Http\Middleware\BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 160
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 119
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2021-12-02 02:39:18 Notice: Notice (8): Undefined variable: cliente in [C:\xampp\htdocs\aniphoria-merch_v2\templates\Admin\Direccion\index.php, line 25]
+Request URL: /admin/direcciones
+Referer URL: http://localhost/aniphoria-merch_v2/admin/direcciones
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+include - ROOT\templates\Admin\Direccion\index.php, line 25
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1160
+Cake\View\View::_render() - CORE\src\View\View.php, line 1121
+Cake\View\View::render() - CORE\src\View\View.php, line 751
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 688
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 530
+Cake\Controller\ControllerFactory::invoke() - CORE\src\Controller\ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE\src\Http\BaseApplication.php, line 229
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 77
+Authentication\Middleware\AuthenticationMiddleware::process() - ROOT\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php, line 124
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE\src\Http\Middleware\BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 160
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 119
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2021-12-02 02:39:18 Notice: Notice (8): Trying to get property 'estatus' of non-object in [C:\xampp\htdocs\aniphoria-merch_v2\templates\Admin\Direccion\index.php, line 25]
+Request URL: /admin/direcciones
+Referer URL: http://localhost/aniphoria-merch_v2/admin/direcciones
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+include - ROOT\templates\Admin\Direccion\index.php, line 25
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1160
+Cake\View\View::_render() - CORE\src\View\View.php, line 1121
+Cake\View\View::render() - CORE\src\View\View.php, line 751
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 688
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 530
+Cake\Controller\ControllerFactory::invoke() - CORE\src\Controller\ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE\src\Http\BaseApplication.php, line 229
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 77
+Authentication\Middleware\AuthenticationMiddleware::process() - ROOT\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php, line 124
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE\src\Http\Middleware\BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 160
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 119
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
+[main] - ROOT\webroot\index.php, line 40
+
+
+

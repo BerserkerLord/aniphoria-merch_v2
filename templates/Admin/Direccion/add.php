@@ -6,22 +6,21 @@
 ?>
 <div class="row">
     <aside class="column">
-        <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Html->link(__('List Direccion'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
+        <div class="side-nav-actions">
+            <?= $this->Html->link('<i class="fas fa-list pr-2"></i>Ver Direcciones', ['action' => 'index'], ['escape' => false, 'class' => 'side-nav-item']) ?>
         </div>
     </aside>
     <div class="column-responsive justify-content-center">
         <div class="direccion form content">
             <?= $this->Form->create($direccion) ?>
             <fieldset>
-                <legend><?= __('Add Direccion') ?></legend>
+                <h2><?= __('Añadir Direccion') ?></h2>
                 <?php
                     echo $this->Form->control('cliente_id', ['options' => $cliente]);
-                    echo $this->Form->control('direccion');
+                    echo $this->Form->control('direccion', ['label' => 'Dirección']);
                 ?>
             </fieldset>
-            <?= $this->Form->button(__('Submit')) ?>
+            <?= $this->Form->button(__('Guardar')) ?>
             <?= $this->Form->end() ?>
         </div>
     </div>

@@ -29,5 +29,6 @@ class Direccion extends Entity
         'cliente_id' => true,
         'direccion' => true,
         'cliente' => true,
+        'estatus' => true
     ];
 }
