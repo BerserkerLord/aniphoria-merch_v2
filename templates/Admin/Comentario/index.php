@@ -10,7 +10,7 @@
         <table>
             <thead>
                 <tr>
-                    <th class="actions"><?= $this->Paginator->sort('merchandising_id') ?></th>
+                    <th class="actions"><?= $this->Paginator->sort('merchandising_id', 'Artículo') ?></th>
                     <th class="actions"><?= $this->Paginator->sort('cliente_id') ?></th>
                     <th class="actions"><?= $this->Paginator->sort('calificacion', 'Calificación') ?></th>
                     <th class="actions"><?= __('Acciones') ?></th>
@@ -23,8 +23,8 @@
                     <td class="tables-link"><?= $comentario->has('cliente') ? $this->Html->link($comentario->cliente->usuario, ['controller' => 'Cliente', 'action' => 'view', $comentario->cliente->id]) : '' ?></td>
                     <td class="actions"><?= $this->Number->format($comentario->calificacion).'/10' ?></td>
                     <td class="actions">
-                        <?= $this->Html->link('<i class="fas fa-eye pr-2"></i>', ['action' => 'view', $comentario->id], ['escape' => false,]) ?>
-                        <?= $this->Form->postLink('<i class="fas fa-trash pr-2"></i>', ['action' => 'delete', $comentario->id], ['confirm' => __('Are you sure you want to delete # {0}?', $comentario->id), 'escape' => false,]) ?>
+                        <?= $this->Html->link('<i class="fas fa-eye pr-2"></i>', ['action' => 'view', $comentario->id], ['escape' => false, 'title' => 'Ver Comentario']) ?>
+                        <?= $this->Form->postLink('<i class="fas fa-trash pr-2"></i>', ['action' => 'delete', $comentario->id], ['confirm' => __('¿Seguro qué desea hacer la eliminación?', $comentario->id), 'escape' => false, 'title' => 'Eliminar Comentarío']) ?>
                     </td>
                 </tr>
                 <?php endforeach; ?>
