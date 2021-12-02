@@ -56,7 +56,7 @@ class CompraController extends AppController
         if ($this->request->is('post')) {
             $compra = $this->Compra->patchEntity($compra, $this->request->getData());
             if ($this->Compra->save($compra)) {
-                $this->Flash->success(__('The compra has been saved.'));
+                $this->Flash->success(__('Compra agregada, selecciones las cantidades.'));
                 setcookie('compra', json_encode($compra -> toArray()), time()+60);
                 return $this->redirect(['action' => 'cantidad']);
                 //return $this->redirect(['action' => 'cantidad', $compra]);
@@ -97,25 +97,6 @@ class CompraController extends AppController
         $fabricante = $this->Compra->Fabricante->find('list', ['limit' => 200]);
         $merchandising = $this->Compra->Merchandising->find('list', ['limit' => 200]);
         $this->set(compact('compra', 'estatus', 'fabricante', 'merchandising'));
-    }
-
-    /**
-     * Delete method
-     *
-     * @param string|null $id Compra id.
-     * @return \Cake\Http\Response|null|void Redirects to index.
-     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
-     */
-    public function delete($id = null)
-    {
-        $this->request->allowMethod(['post', 'delete']);
-        $compra = $this->Compra->get($id);
-        if ($this->Compra->delete($compra)) {
-            $this->Flash->success(__('La compra ha sido eliminada.'));
-        } else {
-            $this->Flash->error(__('No se pudo eliminar la compra. Intentelo de nuevo.'));
-        }
-        return $this->redirect(['action' => 'index']);
     }
 
     public function factura($id = null)

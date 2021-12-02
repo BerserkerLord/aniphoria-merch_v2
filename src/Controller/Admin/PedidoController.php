@@ -21,7 +21,7 @@ class PedidoController extends AppController
     public function index()
     {
         $this->paginate = [
-            'contain' => ['Estatus', 'Cliente', 'Direccion', 'Cupon'],
+            'contain' => ['Estatus', 'Cliente', 'Direccion', 'Cupon', 'Merchandising'],
         ];
         $pedido = $this->paginate($this->Pedido);
 
@@ -38,7 +38,7 @@ class PedidoController extends AppController
     public function view($id = null)
     {
         $pedido = $this->Pedido->get($id, [
-            'contain' => ['Estatus', 'Cliente', 'Direccion', 'Cupon', 'Merchandising'],
+            'contain' => ['Estatus', 'Cliente', 'Direccion', 'Cupon', 'Merchandising' => ['Categoria']],
         ]);
 
         $this->set(compact('pedido'));
@@ -56,10 +56,10 @@ class PedidoController extends AppController
             $pedido = $this->Pedido->patchEntity($pedido, $this->request->getData());
             if ($this->Pedido->save($pedido)) {
                 setcookie('pedido', json_encode($pedido -> toArray()), time()+60);
-                $this->Flash->success(__('The pedido has been saved.'));
+                $this->Flash->success(__('Pedido agregado, selecciones las cantidades.'));
                 return $this->redirect(['action' => 'cantidad']);
             }
-            $this->Flash->error(__('The pedido could not be saved. Please, try again.'));
+            $this->Flash->error(__('No se pudo guadar el nuevo pedido. Intentelo de nuevo.'));
         }
         $estatus = $this->Pedido->Estatus->find('list', ['limit' => 200]);
         $cliente = $this->Pedido->Cliente->find('list', ['limit' => 200]);
@@ -84,11 +84,11 @@ class PedidoController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $pedido = $this->Pedido->patchEntity($pedido, $this->request->getData());
             if ($this->Pedido->save($pedido)) {
-                $this->Flash->success(__('The pedido has been saved.'));
+                $this->Flash->success(__('Estatús correctamente actualizado'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The pedido could not be saved. Please, try again.'));
+            $this->Flash->error(__('Ha ocurrido un error al guardar el estatús. Intentelo de nuevo'));
         }
         $estatus = $this->Pedido->Estatus->find('list', ['limit' => 200]);
         $cliente = $this->Pedido->Cliente->find('list', ['limit' => 200]);
@@ -96,26 +96,6 @@ class PedidoController extends AppController
         $cupon = $this->Pedido->Cupon->find('list', ['limit' => 200]);
         $merchandising = $this->Pedido->Merchandising->find('list', ['limit' => 200]);
         $this->set(compact('pedido', 'estatus', 'cliente', 'direccion', 'cupon', 'merchandising'));
-    }
-
-    /**
-     * Delete method
-     *
-     * @param string|null $id Pedido id.
-     * @return \Cake\Http\Response|null|void Redirects to index.
-     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
-     */
-    public function delete($id = null)
-    {
-        $this->request->allowMethod(['post', 'delete']);
-        $pedido = $this->Pedido->get($id);
-        if ($this->Pedido->delete($pedido)) {
-            $this->Flash->success(__('The pedido has been deleted.'));
-        } else {
-            $this->Flash->error(__('The pedido could not be deleted. Please, try again.'));
-        }
-
-        return $this->redirect(['action' => 'index']);
     }
 
     public function factura($id = null)
@@ -152,7 +132,7 @@ class PedidoController extends AppController
                 $this->Flash->success(__('Se han agregado las cantidades.'));
             } else {
                 $conn->execute('DELETE FROM pedido_merchandising WHERE pedido_id = :com_id', ['com_id' => json_decode($_COOKIE['pedido'], true)['id']]);
-                $this->Flash->success(__('Se han agregado las cantidades.'));
+                $this->Flash->success(__('Ocurrió un error al agregar las cantidades.'));
             }
             return $this->redirect(['action' => 'index']);
         }

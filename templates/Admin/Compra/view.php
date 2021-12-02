@@ -12,10 +12,13 @@
                     <div class="row justify-content-center">
                         <div class="col-auto">
                             <table style="width: 100%">
+                                <?php
+                                    $total = 0;
+                                    foreach($compra['merchandising'] as $key=>$merch){ $total += $merch['costo'] * $merch['_joinData']['cantidad']; }
+                                ?>
                                 <tr>
                                     <th><?= __('No. de Factura') ?></th>
                                     <td><?= $this->Number->format($compra->id) ?></td>
-
                                 </tr>
                                 <tr>
                                     <th><?= __('Estatus') ?></th>
@@ -28,6 +31,10 @@
                                 <tr>
                                     <th><?= __('Fecha') ?></th>
                                     <td><?= h($compra->fecha) ?></td>
+                                </tr>
+                                <tr>
+                                    <th><?= __('Total') ?></th>
+                                    <td><?= '$'.h($total) ?></td>
                                 </tr>
                             </table>
                             <div class="related">

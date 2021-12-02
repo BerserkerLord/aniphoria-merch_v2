@@ -6,26 +6,20 @@
 ?>
 <div class="row">
     <aside class="column">
-        <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Form->postLink(
-                __('Delete'),
-                ['action' => 'delete', $pedido->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $pedido->id), 'class' => 'side-nav-item']
-            ) ?>
-            <?= $this->Html->link(__('List Pedido'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
+        <div class="side-nav-actions">
+            <?= $this->Html->link('<i class="fas fa-list pr-2"></i>Ver Pedidos', ['action' => 'index'], ['escape' => false, 'class' => 'side-nav-item']) ?>
         </div>
     </aside>
-    <div class="column-responsive column-80">
+    <div class="column-responsive justify-content-center">
         <div class="pedido form content">
             <?= $this->Form->create($pedido) ?>
             <fieldset>
-                <legend><?= __('Edit Pedido') ?></legend>
+                <h2><?= __('Cambiar estatus de venta') ?></h2>
                 <?php
-                    echo $this->Form->control('estatus_id', ['options' => $estatus]);
+                    echo $this->Form->control('estatus_id', ['options' => $estatus, 'label' => 'Estatús']);
                 ?>
             </fieldset>
-            <?= $this->Form->button(__('Submit')) ?>
+            <?= $this->Form->button(__('Guardar')) ?>
             <?= $this->Form->end() ?>
         </div>
     </div>

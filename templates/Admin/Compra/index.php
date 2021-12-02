@@ -11,7 +11,7 @@
         <table>
             <thead>
                 <tr>
-                    <th class="actions"><?= $this->Paginator->sort('id', 'No. Factura') ?></th>
+                    <th class="actions"><?= $this->Paginator->sort('id', 'No. Compra') ?></th>
                     <th class="actions"><?= $this->Paginator->sort('estatus_id') ?></th>
                     <th class="actions"><?= $this->Paginator->sort('fabricante_id') ?></th>
                     <th class="actions"><?= $this->Paginator->sort('fecha') ?></th>

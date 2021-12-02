@@ -5,35 +5,46 @@
  */
 ?>
 <div class="pedido index content">
-    <?= $this->Html->link(__('New Pedido'), ['action' => 'add'], ['class' => 'button float-right']) ?>
-    <h3><?= __('Pedido') ?></h3>
+    <?= $this->Html->link(__('Nuevo Pedido'), ['action' => 'add'], ['class' => 'button float-right']) ?>
+    <h2><?= __('Pedidos de clientes') ?></h2>
     <div class="table-responsive">
         <table>
             <thead>
                 <tr>
-                    <th><?= $this->Paginator->sort('id') ?></th>
-                    <th><?= $this->Paginator->sort('estatus_id') ?></th>
-                    <th><?= $this->Paginator->sort('cliente_id') ?></th>
-                    <th><?= $this->Paginator->sort('direccion_id') ?></th>
-                    <th><?= $this->Paginator->sort('cupon_id') ?></th>
+                    <th class="actions"><?= $this->Paginator->sort('id', 'No. Venta') ?></th>
+                    <th><?= __('Estatús') ?></th>
+                    <th><?= __('Cliente') ?></th>
+                    <th><?= __('Dirección') ?></th>
+                    <th><?= __('Cupón') ?></th>
                     <th><?= $this->Paginator->sort('fecha') ?></th>
-                    <th class="actions"><?= __('Actions') ?></th>
+                    <th class="actions"><?= __('Subtotal') ?></th>
+                    <th class="actions"><?= __('Total') ?></th>
+                    <th class="actions"><?= __('Acciones') ?></th>
                 </tr>
             </thead>
             <tbody>
                 <?php foreach ($pedido as $pedido): ?>
                 <tr>
                     <td><?= $this->Number->format($pedido->id) ?></td>
-                    <td><?= $pedido->has('estatus') ? $this->Html->link($pedido->estatus->estatus, ['controller' => 'Estatus', 'action' => 'view', $pedido->estatus->id]) : '' ?></td>
-                    <td><?= $pedido->has('cliente') ? $this->Html->link($pedido->cliente->usuario, ['controller' => 'Cliente', 'action' => 'view', $pedido->cliente->id]) : '' ?></td>
-                    <td><?= $pedido->has('direccion') ? $this->Html->link($pedido->direccion->direccion, ['controller' => 'Direccion', 'action' => 'view', $pedido->direccion->id]) : '' ?></td>
-                    <td><?= $pedido->has('cupon') ? $this->Html->link($pedido->cupon->id, ['controller' => 'Cupon', 'action' => 'view', $pedido->cupon->id]) : '' ?></td>
+                    <td><?= h($pedido->estatus->estatus) ?></td>
+                    <td class="tables-link"><?= $pedido->has('cliente') ? $this->Html->link($pedido->cliente->nombre.' '.$pedido->cliente->apaterno.' '.$pedido->cliente->amaterno, ['controller' => 'Cliente', 'action' => 'view', $pedido->cliente->id]) : '' ?></td>
+                    <td class="tables-link"><?= $pedido->has('direccion') ? $this->Html->link($pedido->direccion->direccion, ['controller' => 'Direccion', 'action' => 'view', $pedido->direccion->id]) : '' ?></td>
+                    <td class="tables-link"><?= $pedido->has('cupon') ? $this->Html->link($pedido->cupon->codigo, ['controller' => 'Cupon', 'action' => 'view', $pedido->cupon->id]) : '' ?></td>
                     <td><?= h($pedido->fecha) ?></td>
+                    <?php
+                        $subtotal = 0;
+                        $total = 0;
+                        $descuento = 0;
+                        foreach($pedido['merchandising'] as $key=>$merch){ $subtotal += $merch['costo'] * $merch['_joinData']['cantidad']; }
+                        if(isset($pedido['cupon'])){ $descuento = ($subtotal*$pedido['cupon']['porcentaje'])/100; }
+                        $total = $subtotal - $descuento;
+                    ?>
+                    <td>$<?= $subtotal ?></td>
+                    <td>$<?= $total ?></td>
                     <td class="actions">
-                        <?= $this->Html->link(__('View'), ['action' => 'view', $pedido->id]) ?>
-                        <?= $this->Html->link(__('Edit'), ['action' => 'edit', $pedido->id]) ?>
-                        <?= $this->Html->link(__('Factura'), ['action' => 'factura', $pedido->id]) ?>
-                        <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $pedido->id], ['confirm' => __('Are you sure you want to delete # {0}?', $pedido->id)]) ?>
+                        <?= $this->Html->link('<i class="fas fa-eye pr-2"></i>', ['action' => 'view', $pedido->id], ['escape' => false, 'title' => 'Ver Pedido']) ?>
+                        <?= $this->Html->link('<i class="fas fa-check pr-2"></i>', ['action' => 'edit', $pedido->id], ['escape' => false, 'title' => 'Cambiar estatus']) ?>
+                        <?= $this->Html->link('<i class="fas fa-file-alt pr-2"></i>', ['action' => 'factura', $pedido->id], ['escape' => false, 'title' => 'Factura']) ?>
                     </td>
                 </tr>
                 <?php endforeach; ?>
@@ -42,12 +53,12 @@
     </div>
     <div class="paginator">
         <ul class="pagination">
-            <?= $this->Paginator->first('<< ' . __('first')) ?>
-            <?= $this->Paginator->prev('< ' . __('previous')) ?>
+            <?= $this->Paginator->first('<< ' . __('primero')) ?>
+            <?= $this->Paginator->prev('< ' . __('anterior')) ?>
             <?= $this->Paginator->numbers() ?>
-            <?= $this->Paginator->next(__('next') . ' >') ?>
-            <?= $this->Paginator->last(__('last') . ' >>') ?>
+            <?= $this->Paginator->next(__('siguiente') . ' >') ?>
+            <?= $this->Paginator->last(__('último') . ' >>') ?>
         </ul>
-        <p><?= $this->Paginator->counter(__('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')) ?></p>
+        <p><?= $this->Paginator->counter(__('Página {{page}} de {{pages}}, mostrando {{current}} registro(s) de {{count}} en total')) ?></p>
     </div>
 </div>
