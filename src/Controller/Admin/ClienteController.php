@@ -156,9 +156,9 @@ class ClienteController extends AppController
         $cliente = $this->Cliente->get($id);
         $cliente->estatus=0;
         if ($this->Cliente->save($cliente)) {
-            $this->Flash->success(__('La categoría ha sido inhabilitada.'));
+            $this->Flash->success(__('El cliente ha sido inhabilitado.'));
         } else {
-            $this->Flash->error(__('No se pudo inhabilitar la categoría. Intentelo de nuevo.'));
+            $this->Flash->error(__('No se pudo inhabilitar al cliente. Intentelo de nuevo.'));
         }
 
         return $this->redirect(['action' => 'index']);
@@ -170,9 +170,9 @@ class ClienteController extends AppController
         $cliente = $this->Cliente->get($id);
         $cliente->estatus=1;
         if ($this->Cliente->save($cliente)) {
-            $this->Flash->success(__('La categoría ha sido inhabilitada.'));
+            $this->Flash->success(__('El cliente ha sido habilitado.'));
         } else {
-            $this->Flash->error(__('No se pudo inhabilitar la categoría. Intentelo de nuevo.'));
+            $this->Flash->error(__('No se pudo habilitar al cliente. Intentelo de nuevo.'));
         }
 
         return $this->redirect(['action' => 'index']);
