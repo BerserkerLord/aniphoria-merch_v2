@@ -48,6 +48,7 @@
                                                 <th><?= __('Costo') ?></th>
                                                 <th><?= __('Precio') ?></th>
                                                 <th><?= __('Cantidad') ?></th>
+                                                <th><?= __('Total por producto') ?></th>
                                             </tr>
                                             <?php foreach ($compra->merchandising as $merchandising) : ?>
                                                 <tr>
@@ -56,6 +57,8 @@
                                                     <td><?= '$'.h($merchandising->costo) ?></td>
                                                     <td><?= '$'.h($merchandising->precio) ?></td>
                                                     <td><?= h($merchandising->_joinData->cantidad).' unidades' ?></td>
+                                                    <?php $total_producto = $merchandising->costo * $merchandising->_joinData->cantidad; ?>
+                                                    <td><?= '$'.$total_producto ?></td>
                                                 </tr>
                                             <?php endforeach; ?>
                                         </table>

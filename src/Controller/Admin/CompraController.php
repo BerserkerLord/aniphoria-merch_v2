@@ -51,7 +51,6 @@ class CompraController extends AppController
      */
     public function add()
     {
-        $id = 5;
         $compra = $this->Compra->newEmptyEntity();
         if ($this->request->is('post')) {
             $compra = $this->Compra->patchEntity($compra, $this->request->getData());
