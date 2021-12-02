@@ -21,16 +21,18 @@
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($merchandising as $merchandising): print_r($merchandising); ?>
+                <?php foreach ($merchandising as $merchandising): ?>
                 <tr>
+                    <?php $imageName=empty($merchandising->imagen[0]->nombre)?'default.png':$merchandising->imagen[0]->nombre; ?>
+                    <td><?= @$this->Html->image('/webroot/img/productos/'.$imageName, ['width' => '100', 'height' => '100', 'alt' => 'Imagen Admin']) ?></td>
                     <td class="tables-link"><?= $merchandising->has('categorium') ? $this->Html->link($merchandising->categorium->categoria, ['controller' => 'Categoria', 'action' => 'view', $merchandising->categorium->id]) : '' ?></td>
                     <td><?= h($merchandising->articulo) ?></td>
                     <td><?= '$'.$this->Number->format($merchandising->costo) ?></td>
                     <td><?= '$'.$this->Number->format($merchandising->precio) ?></td>
                     <td><?= $merchandising->estatus ? __('Activo') : __('Inactivo'); ?></td>
                     <td class="actions">
-                        <?= $this->Html->link('<i class="fas fa-eye pr-2"></i>', ['action' => 'view', $merchandising->id], ['escape' => false]) ?>
-                        <?= $this->Html->link('<i class="fas fa-pen pr-2"></i>', ['action' => 'edit', $merchandising->id], ['escape' => false]) ?>
+                        <?= $this->Html->link('<i class="fas fa-eye pr-2"></i>', ['action' => 'view', $merchandising->id], ['escape' => false, 'title' => 'Ver Artículo']) ?>
+                        <?= $this->Html->link('<i class="fas fa-pen pr-2"></i>', ['action' => 'edit', $merchandising->id], ['escape' => false, 'title' => 'Editar Artículo']) ?>
                         <?php
                             if($merchandising['estatus'] == 1){
                                 ?>

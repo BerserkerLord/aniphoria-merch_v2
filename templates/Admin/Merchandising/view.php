@@ -56,6 +56,7 @@
                                 <?php endif; ?>
                             </div>
                             <div class="side-nav related">
+                                <?= $this->Html->link('<i class="fas fa-pen pr-2"></i>Editar Artículo', ['action' => 'edit', $merchandising->id], ['escape' => false, 'class' => 'side-nav-item']) ?>
                                 <?= $this->Html->link('<i class="fas fa-list pr-2"></i>Ver Artículos', ['action' => 'index'], ['escape' => false, 'class' => 'side-nav-item']) ?>
                                 <?= $this->Html->link('<i class="fas fa-plus-circle pr-2"></i>Nuevo Artículo', ['action' => 'add'], ['escape' => false, 'class' => 'side-nav-item']) ?>
                                 <?php
