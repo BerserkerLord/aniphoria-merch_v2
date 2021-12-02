@@ -11,6 +11,7 @@
         <table>
             <thead>
                 <tr>
+                    <th><?= __('Imagen') ?></th>
                     <th class="actions"><?= __('Categoría') ?></th>
                     <th class="actions"><?= $this->Paginator->sort('articulo', 'Artículo') ?></th>
                     <th class="actions"><?= $this->Paginator->sort('costo') ?></th>
@@ -20,7 +21,7 @@
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($merchandising as $merchandising): ?>
+                <?php foreach ($merchandising as $merchandising): print_r($merchandising); ?>
                 <tr>
                     <td class="tables-link"><?= $merchandising->has('categorium') ? $this->Html->link($merchandising->categorium->categoria, ['controller' => 'Categoria', 'action' => 'view', $merchandising->categorium->id]) : '' ?></td>
                     <td><?= h($merchandising->articulo) ?></td>

@@ -23,7 +23,6 @@
                     <td><?= $categorium->estatus ? __('Activo') : __('Inactivo'); ?></td>
                     <td class="actions">
                         <?= $this->Html->link('<i class="fas fa-pen pr-2"></i>', ['action' => 'edit', $categorium->id], ['escape' => false, 'title' => 'Editar Categoría']) ?>
-                        <?= $this->Form->postLink('<i class="fas fa-trash pr-2"></i>', ['action' => 'delete', $categorium->id], ['confirm' => __('¿Seguro que desea hacer la eliminación?', $categorium->id), 'escape' => false,  'title' => 'Eliminar Categoría']) ?>
                         <?php
                             if($categorium['estatus'] == 1){
                         ?>

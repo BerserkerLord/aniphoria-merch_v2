@@ -86,26 +86,6 @@ class CategoriaController extends AppController
         $this->set(compact('categorium'));
     }
 
-    /**
-     * Delete method
-     *
-     * @param string|null $id Categorium id.
-     * @return \Cake\Http\Response|null|void Redirects to index.
-     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
-     */
-    public function delete($id = null)
-    {
-        $this->request->allowMethod(['post', 'delete']);
-        $categorium = $this->Categoria->get($id);
-        if ($this->Categoria->delete($categorium)) {
-            $this->Flash->success(__('La categoría ha sido eliminada.'));
-        } else {
-            $this->Flash->error(__('No se pudo eliminar la categoría. Intentelo de nuevo.'));
-        }
-
-        return $this->redirect(['action' => 'index']);
-    }
-
     public function ban($id = null){
 
         $this->request->allowMethod(['post', 'delete']);
