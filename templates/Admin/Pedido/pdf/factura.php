@@ -17,7 +17,8 @@
                                 <tbody>
                                 <tr>
                                     <td class="content-block">
-                                        <h2>Factura de Servicios</h2>
+                                        <span id="ani" size="50px">Ani</span><span id="phoria">Phoria</span>
+                                        <h2>Factura de Pedido</h2>
                                     </td>
                                 </tr>
                                 <tr>
@@ -37,7 +38,7 @@
                                             <tr>
                                                 <table class="invoice-items" cellpadding="0" cellspacing="0" style="padding-top: 3rem">
                                                     <thead>
-                                                    <tr style="background-color: #e6eaee">
+                                                    <tr style="background-color: #FFFFFF">
                                                         <td>Código</td>
                                                         <td>Artículo</td>
                                                         <td class="line0 alignright">Cantidad</td>

@@ -11,7 +11,7 @@
                 <div class="justify-content-center">
                     <div class="row justify-content-center">
                         <div class="col-auto">
-                            <h1><?= h($cliente->usuario) ?></h1>
+                            <h1><?= 'Cliente: '.h($cliente->usuario) ?></h1>
                             <table style="width: 100%">
                                 <tr>
                                     <?php $imageName=empty($cliente->foto)?'default.jpg':$cliente->foto; ?>

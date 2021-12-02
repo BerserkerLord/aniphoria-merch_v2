@@ -11,6 +11,7 @@
                 <div class="justify-content-center">
                     <div class="row justify-content-center">
                         <div class="col-auto">
+                            <h1><?= 'Administrador: '.$administrador->usuario ?></h1>
                             <table style="width: 100%">
                                 <tr>
                                     <?php $imageName=empty($administrador->foto)?'default.jpg':$administrador->foto; ?>

@@ -11,6 +11,7 @@
                 <div class="justify-content-center">
                     <div class="row justify-content-center">
                         <div class="col-auto">
+                            <h1><?= 'Venta No. '.$pedido->id ?></h1>
                             <table style="width: 100%">
                                 <?php
                                     $subtotal = 0;
@@ -60,6 +61,7 @@
                                                 <th><?= __('Costo') ?></th>
                                                 <th><?= __('Precio') ?></th>
                                                 <th><?= __('Cantidad') ?></th>
+                                                <th><?= __('Total por producto') ?></th>
                                             </tr>
                                             <?php foreach ($pedido->merchandising as $merchandising) : ?>
                                                 <tr>
@@ -68,6 +70,8 @@
                                                     <td><?= '$'.h($merchandising->costo) ?></td>
                                                     <td><?= '$'.h($merchandising->precio) ?></td>
                                                     <td><?= h($merchandising->_joinData->cantidad).' unidades' ?></td>
+                                                    <?php $total_producto = $merchandising->precio * $merchandising->_joinData->cantidad; ?>
+                                                    <td><?= '$'.$total_producto ?></td>
                                                 </tr>
                                             <?php endforeach; ?>
                                         </table>

@@ -11,6 +11,7 @@
                 <div class="justify-content-center">
                     <div class="row justify-content-center">
                         <div class="col-auto">
+                            <h1><?= 'Artículo: '.$merchandising->articulo ?></h1>
                             <table style="width: 100%">
                                 <tr>
                                     <th><?= __('Categoría') ?></th>
