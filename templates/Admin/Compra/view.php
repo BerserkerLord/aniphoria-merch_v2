@@ -5,66 +5,65 @@
  */
 ?>
 <div class="row">
-    <aside class="column">
-        <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Html->link(__('Edit Compra'), ['action' => 'edit', $compra->id], ['class' => 'side-nav-item']) ?>
-            <?= $this->Form->postLink(__('Delete Compra'), ['action' => 'delete', $compra->id], ['confirm' => __('Are you sure you want to delete # {0}?', $compra->id), 'class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('List Compra'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('New Compra'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
-        </div>
-    </aside>
     <div class="column-responsive justify-content-center">
-        <div class="compra view content">
-            <h3><?= h($compra->id) ?></h3>
-            <table>
-                <tr>
-                    <th><?= __('Estatus') ?></th>
-                    <td><?= $compra->has('estatus') ? $this->Html->link($compra->estatus->id, ['controller' => 'Estatus', 'action' => 'view', $compra->estatus->id]) : '' ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Fabricante') ?></th>
-                    <td><?= $compra->has('fabricante') ? $this->Html->link($compra->fabricante->id, ['controller' => 'Fabricante', 'action' => 'view', $compra->fabricante->id]) : '' ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Id') ?></th>
-                    <td><?= $this->Number->format($compra->id) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Fecha') ?></th>
-                    <td><?= h($compra->fecha) ?></td>
-                </tr>
-            </table>
-            <div class="related">
-                
-           
-                <h4><?= __('Related Merchandising') ?></h4>
-                <?php if (!empty($compra->merchandising)) : ?>
-                <div class="table-responsive">
-                    <table>
-                        <tr>
-                            <th><?= __('Id') ?></th>
-                            <th><?= __('Categoria Id') ?></th>
-                            <th><?= __('Articulo') ?></th>
-                            <th><?= __('Detalles') ?></th>
-                            <th><?= __('Costo') ?></th>
-                            <th><?= __('Precio') ?></th>
-                            <th><?= __('Cantidad') ?></th>
-                        </tr>
-                        <?php foreach ($compra->merchandising as $merchandising) : ?>
-                        <tr>
-                            <td><?= h($merchandising->id) ?></td>
-                            <td><?= h($merchandising->categoria_id) ?></td>
-                            <td><?= h($merchandising->articulo) ?></td>
-                            <td><?= h($merchandising->detalles) ?></td>
-                            <td><?= h($merchandising->costo) ?></td>
-                            <td><?= h($merchandising->precio) ?></td>
-                            <td><?= h($merchandising->_joinData->cantidad) ?></td>
-                        </tr>
-                        <?php endforeach; ?>
-                    </table>
+        <div class="content">
+            <div class="column-responsive justify-content-center">
+                <div class="justify-content-center">
+                    <div class="row justify-content-center">
+                        <div class="col-auto">
+                            <table style="width: 100%">
+                                <tr>
+                                    <th><?= __('No. de Factura') ?></th>
+                                    <td><?= $this->Number->format($compra->id) ?></td>
+
+                                </tr>
+                                <tr>
+                                    <th><?= __('Estatus') ?></th>
+                                    <td><?= h($compra->estatus->estatus) ?></td>
+                                </tr>
+                                <tr>
+                                    <th><?= __('Fabricante') ?></th>
+                                    <td class="tables-link"><?= $compra->has('fabricante') ? $this->Html->link($compra->fabricante->razon_social, ['controller' => 'Fabricante', 'action' => 'view', $compra->fabricante->id]) : '' ?></td>
+                                </tr>
+                                <tr>
+                                    <th><?= __('Fecha') ?></th>
+                                    <td><?= h($compra->fecha) ?></td>
+                                </tr>
+                            </table>
+                            <div class="related">
+                                <h2><?= __('Articulos Comprados') ?></h2>
+                                <?php if (!empty($compra->merchandising)) : ?>
+                                    <div class="table-responsive">
+                                        <table>
+                                            <tr>
+                                                <th><?= __('Categoría') ?></th>
+                                                <th><?= __('Articulo') ?></th>
+                                                <th><?= __('Costo') ?></th>
+                                                <th><?= __('Precio') ?></th>
+                                                <th><?= __('Cantidad') ?></th>
+                                            </tr>
+                                            <?php foreach ($compra->merchandising as $merchandising) : ?>
+                                                <tr>
+                                                    <td><?= h($merchandising->categorium->categoria) ?></td>
+                                                    <td><?= h($merchandising->articulo) ?></td>
+                                                    <td><?= '$'.h($merchandising->costo) ?></td>
+                                                    <td><?= '$'.h($merchandising->precio) ?></td>
+                                                    <td><?= h($merchandising->_joinData->cantidad).' unidades' ?></td>
+                                                </tr>
+                                            <?php endforeach; ?>
+                                        </table>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
+                            <div class="side-nav related">
+                                <?= $this->Html->link('<i class="fas fa-check pr-2"></i>Cambiar estatús', ['action' => 'edit', $compra->id], ['escape' => false, 'class' => 'side-nav-item']) ?>
+                                <?= $this->Form->postLink('<i class="fas fa-file-alt pr-2"></i>Generar Factura', ['action' => 'factura', $compra->id], ['escape' => false, 'class' => 'side-nav-item']) ?>
+                                <?= $this->Html->link('<i class="fas fa-list pr-2"></i>Ver Compras', ['action' => 'index'], ['escape' => false, 'class' => 'side-nav-item']) ?>
+                                <?= $this->Html->link('<i class="fas fa-plus-circle pr-2"></i>Nueva Compra', ['action' => 'add'], ['escape' => false, 'class' => 'side-nav-item']) ?>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <?php endif; ?>
             </div>
         </div>
     </div>

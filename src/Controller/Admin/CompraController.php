@@ -21,7 +21,7 @@ class CompraController extends AppController
     public function index()
     {
         $this->paginate = [
-            'contain' => ['Estatus', 'Fabricante'],
+            'contain' => ['Estatus', 'Fabricante', 'Merchandising'],
         ];
         $compra = $this->paginate($this->Compra);
 
@@ -38,7 +38,7 @@ class CompraController extends AppController
     public function view($id = null)
     {
         $compra = $this->Compra->get($id, [
-            'contain' => ['Estatus', 'Fabricante', 'Merchandising'],
+            'contain' => ['Estatus', 'Fabricante', 'Merchandising' => ['Categoria']],
         ]);
 
         $this->set(compact('compra'));
@@ -87,11 +87,11 @@ class CompraController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $compra = $this->Compra->patchEntity($compra, $this->request->getData());
             if ($this->Compra->save($compra)) {
-                $this->Flash->success(__('La compra ha sido actualizada.'));
+                $this->Flash->success(__('El estatús de la compra ha sido cambiado.'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('No se pudo actualizar la compra. Intentelo de nuevo.'));
+            $this->Flash->error(__('No se puede cambiar el estatús de la compra. Intentelo de nuevo.'));
         }
         $estatus = $this->Compra->Estatus->find('list', ['limit' => 200]);
         $fabricante = $this->Compra->Fabricante->find('list', ['limit' => 200]);

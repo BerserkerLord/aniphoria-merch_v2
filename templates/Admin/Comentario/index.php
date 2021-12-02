@@ -33,7 +33,7 @@
     </div>
     <div class="paginator">
         <ul class="pagination">
-            <?= $this->Paginator->first('<< ' . __('primeri')) ?>
+            <?= $this->Paginator->first('<< ' . __('primero')) ?>
             <?= $this->Paginator->prev('< ' . __('anterior')) ?>
             <?= $this->Paginator->numbers() ?>
             <?= $this->Paginator->next(__('siguiente') . ' >') ?>

@@ -6,24 +6,23 @@
 ?>
 <div class="row">
     <aside class="column">
-        <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Html->link(__('List Compra'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
+        <div class="side-nav-actions">
+            <?= $this->Html->link('<i class="fas fa-list pr-2"></i>Ver Compras', ['action' => 'index'], ['escape' => false, 'class' => 'side-nav-item']) ?>
         </div>
     </aside>
     <div class="column-responsive justify-content-center">
         <div class="compra form content">
             <?= $this->Form->create($compra) ?>
             <fieldset>
-                <legend><?= __('Add Compra') ?></legend>
+                <h2><?= __('Añadir Compra') ?></h2>
                 <?php
                     echo $this->Form->control('estatus_id', ['options' => $estatus]);
-                    echo $this->Form->control('fabricante_id', ['options' => $fabricante, 'empty' => true]);
+                    echo $this->Form->control('fabricante_id', ['options' => $fabricante]);
                     echo $this->Form->control('fecha');
-                    echo $this->Form->control('merchandising._ids', ['options' => $merchandising]);
+                    echo $this->Form->control('merchandising._ids', ['options' => $merchandising, 'label' => 'Articulos']);
                 ?>
             </fieldset>
-            <?= $this->Form->button(__('Submit')) ?>
+            <?= $this->Form->button(__('Cantidades')) ?>
             <?= $this->Form->end() ?>
         </div>
     </div>

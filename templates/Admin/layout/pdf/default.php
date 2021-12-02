@@ -25,38 +25,38 @@
                         font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
                         font-size: 10px;
                     }
-    
+
                     body {
                         width: 100%;
                         height: 100%;
                         line-height: 2;
                     }
-                    
+
                     body {
                         background-color: #f6f6f6;
                     }
-                    
+
                     .content {
                         max-width: 1000px;
                         margin: 0 auto;
                         display: block;
                         padding: 20px;
                     }
-                    
+
                     .main {
                         background: #fff;
                         border: 1px solid #e9e9e9;
                         border-radius: 3px;
                     }
-                    
+
                     .content-wrap {
                         padding: 20px;
                     }
-                    
+
                     .content-block {
                         padding: 0 0 20px;
                     }
-                    
+
                     h2{
                         font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
                         color: #000;
@@ -64,22 +64,30 @@
                         line-height: 1.2;
                         font-weight: 400;
                         font-size: 24px;
-                    } 
-                    
+                    }
+
                     .alignright {
                         text-align: right;
                     }
-                    
+
                     .alignleft {
                         text-align: left;
                     }
-                    
-                    .invoice {
+
+                    #phoria {
+                        color: #ff1166;
+                    }
+
+                    #ani {
+                        color: #000000;
+                    }
+
+                    invoice {
                         margin: 40px auto;
                         text-align: left;
                         width: 80%;
                     }
-                   
+
                     .invoice .invoice-items {
                         width: 100%;
                     }
@@ -91,7 +99,7 @@
                         border-bottom: 2px solid #333;
                         font-weight: 700;
                     }
-                    
+
                     .line0{
                         line-height: 2;
                     }

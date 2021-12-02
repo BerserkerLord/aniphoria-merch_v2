@@ -8,19 +8,17 @@
         <div class="compra form content">
             <?= $this->Form->create() ?>
             <fieldset>
-                <legend><?= __('Cantidades') ?></legend>
+                <h2><?= __('Cantidades') ?></h2>
                 <?php
-
                     foreach (json_decode($_COOKIE['compra'], true)['merchandising'] as $key=>$compra):
-                        echo $this->Form->label('cantidadlbl', 'Cantidad '.$compra['articulo']);
+                        echo $this->Form->label('cantidadlbl', 'Cantidad de '.$compra['articulo']);
                         echo $this->Form->number(''.$key);
                     endforeach;
                     setcookie('merch', $_COOKIE['compra'], time()+10);
                 ?>
             </fieldset>
-            <?= $this->Form->button(__('Submit')) ?>
+            <?= $this->Form->button(__('Guardar')) ?>
             <?= $this->Form->end() ?>
         </div>
-
     </div>
 </div>

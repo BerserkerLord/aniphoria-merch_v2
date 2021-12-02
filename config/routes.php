@@ -96,9 +96,10 @@ $routes->prefix('Admin', function (RouteBuilder $routes) {
     $routes -> connect('/pedido', ['controller' => 'pedido', 'action' => 'index'], ['_name' => 'viewPedidos']);
     $routes -> connect('/merch', ['controller' => 'merchandising', 'action' => 'index'], ['_name' => 'viewMerchandising']);
     $routes -> connect('/manufacturer', ['controller' => 'fabricante', 'action' => 'index'], ['_name' => 'viewManufacturers']);
-    $routes -> connect('/addresses', ['controller' => 'direccion', 'action' => 'index'], ['_name' => 'viewAddresses']);
+    $routes -> connect('/direcciones', ['controller' => 'direccion', 'action' => 'index'], ['_name' => 'viewAddresses']);
     $routes -> connect('/admins', ['controller' => 'administrador', 'action' => 'index'], ['_name' => 'viewAdmins']);
     $routes -> connect('/comentario', ['controller' => 'comentario', 'action' => 'index'], ['_name' => 'viewComentarios']);
+    $routes -> connect('/cupones', ['controller' => 'cupon', 'action' => 'index'], ['_name' => 'viewCupones']);
     $routes -> fallbacks(DashedRoute::class);
 });
 

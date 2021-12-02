@@ -60,11 +60,11 @@ class CuponController extends AppController
             $cupon->codigo=$code;
             $cupon->fecha_lanzamiento=date("Y-m-d");
             if ($this->Cupon->save($cupon)) {
-                $this->Flash->success(__('The cupon has been saved.'));
+                $this->Flash->success(__('El cupón se ha agregado correctamente.'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The cupon could not be saved. Please, try again.'));
+            $this->Flash->error(__('Hubo un error al agregar el cupón. Intentelo nuevamente'));
         }
         $this->set(compact('cupon'));
     }
@@ -84,11 +84,11 @@ class CuponController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $cupon = $this->Cupon->patchEntity($cupon, $this->request->getData());
             if ($this->Cupon->save($cupon)) {
-                $this->Flash->success(__('The cupon has been saved.'));
+                $this->Flash->success(__('El cupón se ha actializado correctamente.'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The cupon could not be saved. Please, try again.'));
+            $this->Flash->error(__('Hubo un error al actualizar el cupón. Intentelo nuevamente.'));
         }
         $this->set(compact('cupon'));
     }
@@ -105,9 +105,9 @@ class CuponController extends AppController
         $this->request->allowMethod(['post', 'delete']);
         $cupon = $this->Cupon->get($id);
         if ($this->Cupon->delete($cupon)) {
-            $this->Flash->success(__('The cupon has been deleted.'));
+            $this->Flash->success(__('El cupón se ha eliminado correctamente.'));
         } else {
-            $this->Flash->error(__('The cupon could not be deleted. Please, try again.'));
+            $this->Flash->error(__('Hubo un error al eliminar el cupón. Intentelo nuevamente.'));
         }
 
         return $this->redirect(['action' => 'index']);
