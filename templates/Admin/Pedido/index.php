@@ -35,7 +35,7 @@
                         $subtotal = 0;
                         $total = 0;
                         $descuento = 0;
-                        foreach($pedido['merchandising'] as $key=>$merch){ $subtotal += $merch['costo'] * $merch['_joinData']['cantidad']; }
+                        foreach($pedido['merchandising'] as $key=>$merch){ $subtotal += $merch['precio'] * $merch['_joinData']['cantidad']; }
                         if(isset($pedido['cupon'])){ $descuento = ($subtotal*$pedido['cupon']['porcentaje'])/100; }
                         $total = $subtotal - $descuento;
                     ?>

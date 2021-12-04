@@ -101,6 +101,7 @@ $routes->prefix('Admin', function (RouteBuilder $routes) {
     $routes -> connect('/comentario', ['controller' => 'comentario', 'action' => 'index'], ['_name' => 'viewComentarios']);
     $routes -> connect('/cupones', ['controller' => 'cupon', 'action' => 'index'], ['_name' => 'viewCupones']);
     $routes -> connect('/logout', ['controller' => 'administrador', 'action' => 'logout'], ['_name' => 'logoutAdmin']);
+    $routes -> connect('/dashboard', ['controller' => 'dashboard', 'action' => 'index'], ['_name' => 'dashAdmin']);
     $routes -> fallbacks(DashedRoute::class);
 });
 
