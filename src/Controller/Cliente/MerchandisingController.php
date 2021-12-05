@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace App\Controller\Cliente;
 
 use App\Controller\AppController;
+use App\Controller\Cliente\Cart;
 
 /**
  * Merchandising Controller
@@ -18,6 +19,8 @@ class MerchandisingController extends AppController
      *
      * @return \Cake\Http\Response|null|void Renders view
      */
+
+
     public function index()
     {
         $key = $this->request->getQuery('key');
@@ -41,6 +44,9 @@ class MerchandisingController extends AppController
      */
     public function view($id = null)
     {
+        if(isset($_POST['add'])){
+            $this->cart()
+;        }
         $merchandising = $this->Merchandising->get($id, [
             'contain' => ['Categoria', 'Imagen'],
         ]);
@@ -49,5 +55,68 @@ class MerchandisingController extends AppController
         $related = $this->paginate($query);
 
         $this->set(compact('merchandising', 'related'));
+    }
+    public function cart(){
+        $cart = new Cart([
+            // Maximum item can added to cart, 0 = Unlimited
+            'cartMaxItem' => 0,
+
+            // Maximum quantity of a item can be added to cart, 0 = Unlimited
+            'itemMaxQuantity' => 10,
+
+            // Do not use cookie, cart items will gone after browser closed
+            'useCookie' => true,
+        ]);
+        $query = $this->Merchandising->find('all')->contain(['Categoria', 'Imagen']);
+        $merchandising = $this->paginate(($query));
+
+        // Empty the cart
+        if (isset($_POST['empty'])) {
+            $cart->clear();
+        }
+
+        // Add item
+        if (isset($_POST['add'])) {
+            foreach ($merchandising as $merch) {
+                if ($_POST['id'] == $merch->id) {
+                    break;
+                }
+            }
+
+            $cart->add($merch->id, $_POST['qty'], [
+                'price' => $merch->precio,
+                'imagen' => $_POST['imagen']
+            ]);
+            $this->Flash->success(__('Producto agregado al carrito de compras.'));
+        }
+
+        // Update item
+        if (isset($_POST['update'])) {
+            foreach ($merchandising as $merch) {
+                if ($_POST['id'] == $merch->id) {
+                    break;
+                }
+            }
+
+            $cart->update($merch->id, $_POST['qty'], [
+                'price' => $merch->price,
+                'color' => (isset($_POST['color'])) ? $_POST['color'] : '',
+            ]);
+        }
+
+        // Remove item
+        if (isset($_POST['remove'])) {
+            foreach ($merchandising as $merch) {
+                if ($_POST['id'] == $merch->id) {
+                    break;
+                }
+            }
+
+            $cart->remove($merch->id, [
+                'price' => $merch->price,
+                'color' => (isset($_POST['color'])) ? $_POST['color'] : '',
+            ]);
+        }
+        $this->set(compact('cart', 'merchandising'));
     }
 }

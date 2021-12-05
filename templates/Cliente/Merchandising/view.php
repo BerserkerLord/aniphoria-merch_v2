@@ -39,12 +39,17 @@
                                 <td><?= '$'.$this->Number->format($merchandising->precio) ?></td>
                             </tr>
                         </table>
-                        <h6>Cantidad :</h6>
-                        <input type="number" class="form-control text-center" value="1">
                         <div class="row">
                             <div class="col-lg-6">
                                 <a href="#" class="btn btn-success">Comprar</a>
-                                <a href="#" class="btn btn-danger">Añadir al carrito</a>
+                                <div class="col-lg-6">
+                                    <?= $this->Form->create(null); ?>
+                                    <?= $this->Form->control('qty', ['type' => 'number', 'label' => 'Cantidad', 'value' => 1, 'class' => 'text-center']); ?>
+                                    <?= $this->Form->control('imagen', ['type' => 'hidden', 'value' => $merchandising->imagen[0]->nombre]) ?>
+                                    <?= $this->Form->control('id', ['type' => 'hidden', 'value' => $merchandising->id]) ?>
+                                    <?= $this->Form->postButton('Añadir al carrito', ['controller' => 'Merchandising', 'action' => 'shopCart'], ['name' => 'add']) ?>
+                                    <?= $this->Form->end(); ?>
+                                </div>
                             </div>
                         </div>
                     </div>

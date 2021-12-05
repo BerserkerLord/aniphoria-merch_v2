@@ -49,16 +49,19 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             if (isset($_SESSION['Auth'])) {
                 if($_COOKIE['rol'] == 'cliente'){
                     $imageName = empty($_SESSION["Auth"]["foto"]) ? "default.jpg" : $_SESSION["Auth"]["foto"];
-                    echo '<div class="input-group search-bar pr-5">'?>
-                    <?= $this->Form->create(null, ['type' => 'get']) ?>
-                    <?= $this->Form->control('key', ['class' => 'form-control', 'id' => 'search-input', 'placeholder' => 'Buscar productos, categorias, etc...', 'label' => false, 'value' => $this->request->getQuery('key')]) ?>
-                    <?php echo '<div class="input-group-append"' ?>
-                    <?= $this->Form->postButton('Buscar', ['controller' => 'Merchandising', 'action' => 'index']) ?>
-                    <?php echo '</div>' ?>
-                        <?= $this->Form->end() ?>
-                        <?php echo '</div>'?>
-                        <?= @$this->Html->image("/webroot/img/clientes/" . $imageName, ["width" => "40", "height" => "40", "alt" => "Imagen Admin", "class" => "rounded-circle"]) ?>
-                        <?php echo '<div>
+                    if(!$this->request->getParam('action')=='view'){ ?>
+                        <div class="input-group search-bar pr-5">
+                            <?= $this->Form->create(null, ['type' => 'get']) ?>
+                            <?= $this->Form->control('key', ['class' => 'form-control', 'id' => 'search-input', 'placeholder' => 'Buscar productos, categorias, etc...', 'label' => false, 'value' => $this->request->getQuery('key')]) ?>
+                            <div class="input-group-append">
+                                <?= $this->Form->postButton('Buscar', ['controller' => 'Merchandising', 'action' => 'index']) ?>
+                            </div>
+                            <?= $this->Form->end() ?>
+                        </div>
+                    <?php } ?>
+                    <?= $this->Html->link('<i class="fas fa-shopping-cart pr-2"></i>', ['_name' => 'shoppingCart'], ['escape' => false, 'title' => 'Ver Administrador']) ?>
+                    <?= @$this->Html->image("/webroot/img/clientes/" . $imageName, ["width" => "40", "height" => "40", "alt" => "Imagen Admin", "class" => "rounded-circle"]) ?>
+                    <?php echo '<div>
                     </div>';
                 }
             }
