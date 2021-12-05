@@ -112,6 +112,7 @@ $routes->prefix('Cliente', function (RouteBuilder $routes) {
     $routes -> connect('/login', ['controller' => 'cliente', 'action' => 'login'], ['_name' => 'loginClient']);
     $routes -> connect('/register', ['controller' => 'cliente', 'action' => 'add'], ['_name' => 'registerCliente']);
     $routes -> connect('/logout', ['controller' => 'cliente', 'action' => 'logout'], ['_name' => 'logoutClient']);
+    $routes -> connect('/merch', ['controller' => 'merchandising', 'action' => 'index'], ['_name' => 'viewMerchandisingClient']);
     $routes -> fallbacks(DashedRoute::class);
 });
 

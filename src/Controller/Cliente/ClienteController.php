@@ -24,7 +24,7 @@ class ClienteController extends AppController
 
     public function login()
     {
-        setcookie('rol', 'cliente');
+        setcookie('rol', 'cliente', 2147483647);
         $result = $this->Authentication->getResult();
 
         if ($result->isValid()) {

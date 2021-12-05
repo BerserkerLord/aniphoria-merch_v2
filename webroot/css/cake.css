@@ -238,6 +238,27 @@ th {
     height: 150px;
 }
 
+.search-bar{
+    width: 5rem;
+    margin: 50px auto;
+}
+
+#search-input::placeholder {
+    color: #FF1166;
+    font-size: medium;
+}
+
+.single-product-item {
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.single-product-item:hover {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
 @media screen and (max-width: 640px) {
     .top-nav {
         margin: 0 auto;
