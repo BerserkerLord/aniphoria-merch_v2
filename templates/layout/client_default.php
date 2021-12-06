@@ -84,7 +84,7 @@
 									<div class="header-icons">
 										<?= $this -> Html -> link('<i class="fas fa-shopping-cart"></i>', ['_name' => 'shoppingCart'], ['escape' => false])?>
                                         <?php
-                                            if(!$_SESSION['e'])
+                                            if(!isset($_SESSION['e']))
                                                echo $this -> Html ->link('<i class="fas fa-sign-in-alt"></i>', ['_name' => 'loginClient'], ['escape' => false]);
                                             else
                                                echo $this -> Html ->link('<i class="fas fa-sign-out-alt"></i>', ['_name' => 'logoutClient'], ['escape' => false]);
@@ -209,6 +209,7 @@
     <?= $this -> Html -> script('/template_assets/js/sticker.js') ?>
 	<!-- main js -->
     <?= $this -> Html -> script('/template_assets/js/main.js') ?>
+
 
 </body>
 </html>

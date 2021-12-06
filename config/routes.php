@@ -97,6 +97,7 @@ $routes->prefix('Admin', function (RouteBuilder $routes) {
     $routes -> connect('/cupones', ['controller' => 'cupon', 'action' => 'index'], ['_name' => 'viewCupones']);
     $routes -> connect('/logout', ['controller' => 'administrador', 'action' => 'logout'], ['_name' => 'logoutAdmin']);
     $routes -> connect('/dashboard', ['controller' => 'dashboard', 'action' => 'index'], ['_name' => 'dashAdmin']);
+    $routes -> connect('/payment', ['controller' => 'pedido', 'action' => 'payment']);
     $routes -> fallbacks(DashedRoute::class);
 });
 
@@ -113,6 +114,7 @@ $routes->prefix('Cliente', function (RouteBuilder $routes) {
     $routes -> connect('/pedidos', ['controller' => 'pedido', 'action' => 'index'], ['_name' => 'viewPedidosClient']);
     $routes -> connect('/direcciones', ['controller' => 'direccion', 'action' => 'index'], ['_name' => 'viewAdressesClient']);
     $routes -> connect('/checkout', ['controller' => 'pedido', 'action' => 'checkout'], ['_name' => 'checkout']);
+    $routes -> connect('/payment', ['controller' => 'pedido', 'action' => 'payment']);
     $routes -> fallbacks(DashedRoute::class);
 });
 

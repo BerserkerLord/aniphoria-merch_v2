@@ -75,6 +75,7 @@ class ComposerStaticInita2df2f141b4ec881bead058159855dcc
             'Symfony\\Component\\Console\\' => 26,
             'Symfony\\Component\\Config\\' => 25,
             'Svg\\' => 4,
+            'Stripe\\' => 7,
             'SlevomatCodingStandard\\' => 23,
             'Seld\\PharUtils\\' => 15,
             'Seld\\JsonLint\\' => 14,
@@ -231,6 +232,10 @@ class ComposerStaticInita2df2f141b4ec881bead058159855dcc
         'Svg\\' => 
         array (
             0 => __DIR__ . '/..' . '/phenx/php-svg-lib/src/Svg',
+        ),
+        'Stripe\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/stripe/stripe-php/lib',
         ),
         'SlevomatCodingStandard\\' => 
         array (

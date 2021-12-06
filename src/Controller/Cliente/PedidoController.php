@@ -2,15 +2,15 @@
 declare(strict_types=1);
 
 namespace App\Controller\Cliente;
+use App\Model\Entity\Direccion;
 use Cake\Datasource\ConnectionManager;
+use Stripe;
 use App\Controller\AppController;
 use Cake\Event\EventInterface;
 
 /**
  * Pedido Controller
- *
  * @property \App\Model\Table\PedidoTable $Pedido
- * @property \App\Model\Table\MerchandisingTable $Merchandising
  * @method \App\Model\Entity\Pedido[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
  */
 class PedidoController extends AppController
@@ -74,6 +74,7 @@ class PedidoController extends AppController
 
     public function checkout()
     {
+        $this->loadModel('Direccion');
         $cart = new Cart([
             // Maximum item can added to cart, 0 = Unlimited
             'cartMaxItem' => 0,
@@ -84,9 +85,33 @@ class PedidoController extends AppController
             // Do not use cookie, cart items will gone after browser closed
             'useCookie' => true,
         ]);
-        $query = $this-> Pedido -> Merchandising->find('all')->contain(['Categoria', 'Imagen']);
+        $query = $this->Pedido->Merchandising->find('all')->contain(['Categoria', 'Imagen']);
         $merchandising = $this->paginate(($query));
+        $query = $this->Direccion->find('list')->where(['Direccion.cliente_id' => $_SESSION['Auth']['id']]);
+        $direcciones = $this->paginate($query);
+        $this->set(compact('cart', 'merchandising', 'direcciones'));
+    }
 
-        $this->set(compact('cart', 'merchandising'));
+    public function payment()
+    {
+        require_once VENDOR_PATH. '/stripe/stripe-php/init.php';
+        Stripe\Stripe::setApiKey(STRIPE_SECRET);
+        try {
+            $stripe = Stripe\Charge::create([
+                "amount" => 10 * 100,
+                "currency" => "mxn",
+                "source" => $_REQUEST["stripeToken"],
+                "description" => "Test payment via Stripe From onlinewebtutorblog.com"
+            ]);
+            $this->Flash->success(__('Payment done successfully'));
+        } catch (Stripe\Exception\ApiErrorException $e) {
+            echo '<pre>';
+            print_r($e);
+            echo '</pre>';
+            die();
+        }
+        // after successfull payment, you can store payment related information into your database
+
+        return $this->redirect(['action' => 'checkout']);
     }
 }
