@@ -573,6 +573,7 @@ nav.main-menu ul li .e {
 }
 
 nav.main-menu ul li .e:hover {
+    text-decoration: none;
     color: #ff1166;
 }
 

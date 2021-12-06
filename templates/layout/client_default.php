@@ -480,7 +480,7 @@
 	<!-- waypoints -->
     <?= $this -> Html -> script('/template_assets/js/waypoints.js') ?>
 	<!-- owl carousel -->
-    <?= $this -> Html -> script('/template_assets/js/owl.carousel.min.jss') ?>
+    <?= $this -> Html -> script('/template_assets/js/owl.carousel.min.js') ?>
 	<!-- magnific popup -->
     <?= $this -> Html -> script('/template_assets/js/jquery.magnific-popup.min.js') ?>
 	<!-- mean menu -->
