@@ -37,7 +37,7 @@ class PagesController extends AppController
     {
         parent::beforeFilter($event);
 
-        $this->Authentication->allowUnauthenticated(['index']);
+        $this->Authentication->allowUnauthenticated(['index','about','contact']);
     }
 
     /**
@@ -68,6 +68,13 @@ class PagesController extends AppController
     public function about(): ?Response
     {
         setcookie('whereami','Sobre Nosotros', 20000);
+        $this -> viewBuilder() -> setLayout('client_default');
+        return $this -> render();
+    }
+
+    public function contact(): ?Response
+    {
+        setcookie('whereami','Contacto', 20000);
         $this -> viewBuilder() -> setLayout('client_default');
         return $this -> render();
     }

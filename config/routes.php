@@ -57,7 +57,8 @@ $routes->scope('/', function (RouteBuilder $builder) {
      */
     $builder->connect('/', ['controller' => 'Pages', 'action' => 'index'], ['_name' => 'index']);
     $builder -> connect('/admin', ['controller' => 'Pages', 'action' => 'admindex']);
-
+    $builder -> connect('/about', ['controller' => 'Pages', 'action' => 'about'], ['_name' => 'about']);
+    $builder -> connect('/contact', ['controller' => 'Pages', 'action' => 'contact'], ['_name' => 'contact']);
     /*
      * Páginas estáticas
      */
