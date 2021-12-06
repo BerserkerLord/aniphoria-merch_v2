@@ -17,7 +17,7 @@
                             $imageName = $merchandising->imagen[0]->nombre;
                         }
                     ?>
-                    <?= $this->Html->link($this->Html->image('/webroot/img/productos/'.$imageName, array("alt" => "imagen-producto",
+                    <?= $this->Html->link($this->Html->image('/img/productos/'.$imageName, array("alt" => "imagen-producto",
                         'width' => '250', 'height' => '250' )), ['controller' => 'Merchandising', 'action' => 'view', $merchandising->id], array('escape' => false)); ?>
                     <h3><?= $merchandising->articulo ?></h3>
                     <p class="product-price"><?= '$'.$merchandising->precio ?></p>

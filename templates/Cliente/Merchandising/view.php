@@ -14,9 +14,9 @@
                 <div class="row border m-0 mb-5">
                     <div class="col-4">
                         <?php foreach ($merchandising->imagen as $img) : ?>
-                            <?php $imageName=file_exists('/webroot/img/productos/'.$img->nombre)?$img->nombre:'default.png'; ?>
+                            <?php $imageName=file_exists('/img/productos/'.$img->nombre)?$img->nombre:'default.png'; ?>
                             <tr>
-                                <td><?= @$this->Html->image('/webroot/img/productos/'.$img->nombre, ['width' => '142', 'height' => '142']) ?></td>
+                                <td><?= @$this->Html->image('/img/productos/'.$img->nombre, ['width' => '142', 'height' => '142']) ?></td>
                             </tr>
                         <?php endforeach; ?>
                     </div>
@@ -64,7 +64,7 @@
                         foreach($related as $key=>$productRelated): ?>
                             <div class="col-3 text-center">
                                 <?php $imageName=empty($productRelated->imagen[0]->nombre)?'default.png':$productRelated->imagen[0]->nombre; ?>
-                                <?= $this->Html->link($this->Html->image('/webroot/img/productos/'.$imageName, array("alt" => "imagen-producto",
+                                <?= $this->Html->link($this->Html->image('/img/productos/'.$imageName, array("alt" => "imagen-producto",
                                     'width' => '250', 'height' => '250' )), ['controller' => 'Merchandising', 'action' => 'view', $productRelated->id], array('escape' => false)); ?>
                                 <h3><?= $productRelated->articulo ?></h3>
                                 <p class="product-price"><?= '$'.$productRelated->precio ?></p>

@@ -27,7 +27,7 @@ if (!$cart->isEmpty()) {
             ?>
                 <tr>
                     <?php $imageName=empty($merch->imagen[0]->nombre)?'default.jpg':$merch->imagen[0]->nombre; ?>
-                    <td><?= @$this->Html->image('/webroot/img/productos/'.$imageName, ['width' => '100', 'height' => '100', 'alt' => 'Imagen Articulo']) ?></td>
+                    <td><?= @$this->Html->image('/img/productos/'.$imageName, ['width' => '100', 'height' => '100', 'alt' => 'Imagen Articulo']) ?></td>
                     <td><?= h($merch->articulo) ?></td>
                     <td><?= h($item['quantity']) ?></td>
                     <td><?= h($item['attributes']['price']) ?></td>

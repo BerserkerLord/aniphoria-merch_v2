@@ -17,42 +17,36 @@ class Cart
 {
     /**
      * An unique ID for the cart.
-     *
      * @var string
      */
     protected $cartId;
 
     /**
      * Maximum item allowed in the cart.
-     *
      * @var int
      */
     protected $cartMaxItem = 0;
 
     /**
      * Maximum quantity of a item allowed in the cart.
-     *
      * @var int
      */
     protected $itemMaxQuantity = 0;
 
     /**
      * Enable or disable cookie.
-     *
      * @var bool
      */
     protected $useCookie = false;
 
     /**
      * A collection of cart items.
-     *
      * @var array
      */
     private $items = [];
 
     /**
      * Initialize cart.
-     *
      * @param array $options
      */
     public function __construct($options = [])
