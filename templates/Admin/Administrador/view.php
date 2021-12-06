@@ -3,6 +3,10 @@
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Administrador $administrador
  */
+
+if($_SESSION['Auth']['id'] == $administrador->toArray()['id'] || $_SESSION['Auth']['usuario'] == 'Admin_Principal'){
+    $hidden = true;
+}
 ?>
 <div class="row">
     <div class="column-responsive justify-content-center">
@@ -28,7 +32,7 @@
                             </table>
                             <div class="side-nav">
                                 <?= $this->Html->link('<i class="fas fa-pen pr-2"></i>Editar Administrador', ['action' => 'edit', $administrador->id], ['escape' => false, 'class' => 'side-nav-item']) ?>
-                                <?= $this->Form->postLink('<i class="fas fa-trash pr-2"></i>Eliminar Administrador', ['action' => 'delete', $administrador->id], ['confirm' => __('¿Seguro que desea hacer la eliminación?', $administrador->id), 'escape' => false, 'class' => 'side-nav-item']) ?>
+                                <?= $this->Form->postLink('<i class="fas fa-trash pr-2"></i>Eliminar Administrador', ['action' => 'delete', $administrador->id], ['confirm' => __('¿Seguro que desea hacer la eliminación?', $administrador->id), 'escape' => false, 'class' => 'side-nav-item', 'hidden' => $hidden]) ?>
                                 <?= $this->Html->link('<i class="fas fa-list pr-2"></i>Ver Administradores', ['action' => 'index'], ['escape' => false, 'class' => 'side-nav-item']) ?>
                                 <?= $this->Html->link('<i class="fas fa-plus-circle pr-2"></i>Nuevo Administrador', ['action' => 'add'], ['escape' => false, 'class' => 'side-nav-item']) ?>
                             </div>

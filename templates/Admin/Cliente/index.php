@@ -27,7 +27,12 @@
             <tbody>
                 <?php foreach ($cliente as $cliente): ?>
                 <tr>
-                    <?php $imageName=empty($cliente->foto)?'default.jpg':$cliente->foto; ?>
+                    <?php
+                        $imageName = $cliente->foto;
+                        if(!file_exists(WWW_ROOT.'/img/clientes/'.$cliente->foto) || empty($cliente->foto)){
+                            $imageName = 'default.jpg';
+                        }
+                    ?>
                     <td><?= @$this->Html->image('/img/clientes/'.$imageName, ['width' => '100', 'height' => '100', 'alt' => 'Imagen Cliente', 'class' => 'rounded-circle']) ?></td>
                     <td><?= $cliente->verificado ? __('Si') : __('No'); ?></td>
                     <td><?= h($cliente->nombre) ?></td>

@@ -134,7 +134,7 @@ class AdministradorController extends AppController
         $imgpath=WWW_ROOT.'img'.DS.'admins'.DS.$administrador->foto;
 
         if ($this->Administrador->delete($administrador)) {
-            if(!empty($administrador->foto && file_exists($administrador->foto))){
+            if(!empty($administrador->foto && file_exists(WWW_ROOT.'/img/admins/'.$administrador->foto))){
                 unlink($imgpath);
             }
             $this->Flash->success(__('El administrador ha sido eliminado.'));
@@ -148,11 +148,14 @@ class AdministradorController extends AppController
     public function addPhoto($administrador){
         if(!$administrador->getErrors){
             $image=$this->request->getData('imagen');
-            $nombre=MD5($image->getClientFilename()).'jpg';
-            $path=WWW_ROOT.'img'.DS.'admins'.DS.$nombre;
-            if($nombre){
-                $image->moveTo($path);
-                $administrador->foto=$nombre;
+            $extension = pathinfo($image->getClientFilename(), PATHINFO_EXTENSION);
+            if(!empty($image->getClientFilename())){
+                $nombre=MD5($image->getClientFilename()).'.'.$extension;
+                $path=WWW_ROOT.'img'.DS.'admins'.DS.$nombre;
+                if($nombre){
+                    $image->moveTo($path);
+                    $administrador->foto=$nombre;
+                }
             }
         }
     }
@@ -162,10 +165,12 @@ class AdministradorController extends AppController
             $image = $this->request->getData('imagen');
             $nombre = $image->getClientFilename();
             if ($nombre){
+                $extension = pathinfo($image->getClientFilename(), PATHINFO_EXTENSION);
+                $nombre=MD5($image->getClientFilename()).'.'.$extension;
                 $path=WWW_ROOT.'img'.DS.'admins'.DS.$nombre;
                 $image->moveTo($path);
                 $imgpath=WWW_ROOT.'img'.DS.'admins'.DS.$anterior;
-                if(!empty($administrador->foto)){
+                if(!empty($anterior)){
                     unlink($imgpath);
                 }
                 $administrador->foto=$nombre;

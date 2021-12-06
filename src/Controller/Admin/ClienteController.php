@@ -131,11 +131,14 @@ class ClienteController extends AppController
     public function addPhoto($cliente){
         if(!$cliente->getErrors){
             $image=$this->request->getData('imagen');
-            $nombre=MD5($image->getClientFilename().rand(1,10000));
-            $path=WWW_ROOT.'img'.DS.'clientes'.DS.$nombre;
-            if($nombre){
-                $image->moveTo($path);
-                $cliente->foto=$nombre;
+            $extension = pathinfo($image->getClientFilename(), PATHINFO_EXTENSION);
+            if(!empty($image->getClientFilename())){
+                $nombre=MD5($image->getClientFilename()).'.'.$extension;
+                $path=WWW_ROOT.'img'.DS.'clientes'.DS.$nombre;
+                if($nombre){
+                    $image->moveTo($path);
+                    $cliente->foto=$nombre;
+                }
             }
         }
     }
@@ -145,10 +148,12 @@ class ClienteController extends AppController
             $image = $this->request->getData('imagen');
             $nombre = $image->getClientFilename();
             if ($nombre){
+                $extension = pathinfo($image->getClientFilename(), PATHINFO_EXTENSION);
+                $nombre=MD5($image->getClientFilename()).'.'.$extension;
                 $path=WWW_ROOT.'img'.DS.'clientes'.DS.$nombre;
                 $image->moveTo($path);
                 $imgpath=WWW_ROOT.'img'.DS.'clientes'.DS.$anterior;
-                if(!empty($anterior) && file_exists($imgpath)){
+                if(!empty($anterior)){
                     unlink($imgpath);
                 }
                 $cliente->foto=$nombre;

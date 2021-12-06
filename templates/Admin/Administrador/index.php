@@ -20,20 +20,25 @@
             <tbody>
                 <?php foreach ($administrador as $administrador):
                     $hidden = false;
-                    if($_SESSION['Auth']['id'] == $administrador->toArray()['id']){
+                    if($_SESSION['Auth']['id'] == $administrador->toArray()['id'] || $_SESSION['Auth']['usuario'] == 'Admin_Principal'){
                         $hidden = true;
                     }
                 ?>
                 <tr>
-                    <?php $imageName=empty($administrador->foto)?'default.jpg':$administrador->foto; ?>
-                    <td><?= @$this->Html->image('/img/admins/'.$imageName, ['width' => '100', 'height' => '100', 'alt' => 'Imagen Admin', 'class' => 'rounded-circle']) ?></td>
+                    <?php
+                        $imageName = $administrador->foto;
+                         if(!file_exists(WWW_ROOT.'/img/admins/'.$administrador->foto) || empty($administrador->foto)){
+                            $imageName = 'default.jpg';
+                        }
+                    ?>
+                    <td><?= $this->Html->image('/img/admins/'.$imageName, ['width' => '100', 'height' => '100', 'alt' => 'Imagen Admin', 'class' => 'rounded-circle']) ?></td>
                     <td><?= h($administrador->usuario) ?></td>
                     <td><?= h($administrador->correo) ?></td>
                     <td class="actions">
                         <?= $this->Html->link('<i class="fas fa-eye pr-2"></i>', ['action' => 'view', $administrador->id], ['escape' => false, 'title' => 'Ver Administrador']) ?>
                         <?= $this->Html->link('<i class="fas fa-pen pr-2"></i>', ['action' => 'edit', $administrador->id], ['escape' => false, 'title' => 'Editar Administrador']) ?>
-                        <?= $this->Form->control('id', ['type' => 'hidden', 'value' => $merch->id]) ?>
-                        <?= $this->Form->postButton('Añadir al carrito', ['controller' => 'Merchandising', 'action' => 'shopCart'], ['name' => 'add']) ?>                    </td>
+                        <?= $this->Form->postLink('<i class="fas fa-trash pr-2"></i>', ['action' => 'delete', $administrador->id], ['confirm' => __('¿Seguro que desea hacer la eliminación?', $administrador->id), 'escape' => false, 'title' => 'Eliminar Administrador', 'hidden' => $hidden]) ?>
+                    </td>
                 </tr>
                 <?php endforeach; ?>
             </tbody>
