@@ -45,9 +45,9 @@
                                             <th><?= __('Acciones') ?></th>
                                         </tr>
                                         <?php foreach ($merchandising->imagen as $img) : ?>
-                                            <?php $imageName=file_exists('/webroot/img/productos/'.$img->nombre)?$img->nombre:'default.png'; ?>
+                                            <?php $imageName=file_exists('/img/productos/'.$img->nombre)?$img->nombre:'default.png'; ?>
                                             <tr>
-                                                <td><?= @$this->Html->image('/webroot/img/productos/'.$img->nombre, ['width' => '100', 'height' => '100']) ?></td>
+                                                <td><?= @$this->Html->image('/img/productos/'.$img->nombre, ['width' => '100', 'height' => '100']) ?></td>
                                                 <td class="tables-link">
                                                     <?= $this->Form->postLink('Eliminar', ['controller' => 'Imagen', 'action' => 'delete', $img->id], ['confirm' => __('¿Seguro que desea aliminar la imagen?', $img->id)]) ?>
                                                 </td>

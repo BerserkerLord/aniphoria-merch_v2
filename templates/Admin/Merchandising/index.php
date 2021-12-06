@@ -24,7 +24,7 @@
                 <?php foreach ($merchandising as $merchandising): ?>
                 <tr>
                     <?php $imageName=empty($merchandising->imagen[0]->nombre)?'default.png':$merchandising->imagen[0]->nombre; ?>
-                    <td><?= @$this->Html->image('/webroot/img/productos/'.$imageName, ['width' => '100', 'height' => '100', 'alt' => 'Imagen Admin']) ?></td>
+                    <td><?= @$this->Html->image('/img/productos/'.$imageName, ['width' => '100', 'height' => '100', 'alt' => 'Imagen Admin']) ?></td>
                     <td class="tables-link"><?= $merchandising->has('categorium') ? $this->Html->link($merchandising->categorium->categoria, ['controller' => 'Categoria', 'action' => 'view', $merchandising->categorium->id]) : '' ?></td>
                     <td><?= h($merchandising->articulo) ?></td>
                     <td><?= '$'.$this->Number->format($merchandising->costo) ?></td>

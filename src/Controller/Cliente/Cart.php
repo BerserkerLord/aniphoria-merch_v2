@@ -1,5 +1,7 @@
 <?php
 namespace App\Controller\Cliente;
+use Cake\Event\EventInterface;
+
 /**
  * Cart: A very simple PHP cart library.
  *
@@ -44,6 +46,13 @@ class Cart
      * @var array
      */
     private $items = [];
+
+    public function beforeFilter(EventInterface $event)
+    {
+        parent::beforeFilter($event);
+
+        $this->Authentication->allowUnauthenticated(['__construct','getItems','isEmpty','add', 'clear', 'update', 'remove', 'destroy', 'read', 'write']);
+    }
 
     /**
      * Initialize cart.

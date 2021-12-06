@@ -5,29 +5,24 @@
  */
 ?>
 <div class="row">
-    <aside class="column">
-        <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Html->link(__('List Cliente'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
-        </div>
-    </aside>
     <div class="column-responsive justify-content-center">
         <div class="cliente form content">
             <?= $this->Form->create($cliente, ['type' => 'file']) ?>
             <fieldset>
                 <legend><?= __('Add Cliente') ?></legend>
                 <?php
-                    echo $this->Form->control('nombre');
-                    echo $this->Form->control('apaterno');
-                    echo $this->Form->control('amaterno');
-                    echo $this->Form->control('fecha_nacimiento');
-                    echo $this->Form->control('usuario');
-                    echo $this->Form->control('telefono');
-                    echo $this->Form->control('correo', ['type' => 'email']);
-                    echo $this->Form->control('contrasenia', ['type' => 'password']);
+                echo $this->Form->control('nombre', ['label' => 'Nombre']);
+                echo $this->Form->control('apaterno', ['label' => 'Apellido Paterno']);
+                echo $this->Form->control('amaterno', ['label' => 'Apellido Materno']);
+                echo $this->Form->control('fecha_nacimiento', ['label' => 'Fecha de Nacimiento  ']);
+                echo $this->Form->control('usuario', ['label' => 'Usuario']);
+                echo $this->Form->control('telefono', ['label' => 'telefono']);
+                echo $this->Form->control('correo', ['type' => 'email', 'label' => 'Correo Electrónico']);
+                echo $this->Form->control('contrasenia', ['type' => 'password', 'label' => 'Contraseña']);
+                echo $this->Form->control('imagen', ['type' => 'file', 'label' => 'Fotografía']);
                 ?>
             </fieldset>
-            <?= $this->Form->button(__('Submit')) ?>
+            <?= $this->Form->button(__('Registrar')) ?>
             <?= $this->Form->end() ?>
         </div>
     </div>

@@ -17,7 +17,7 @@ class ClienteController extends AppController
     public function beforeFilter(EventInterface $event)
     {
         parent::beforeFilter($event);
-
+        $this -> viewBuilder() -> setLayout('client_default');
         $this->Authentication->allowUnauthenticated(['login', 'add']);
     }
 
@@ -27,8 +27,7 @@ class ClienteController extends AppController
         $result = $this->Authentication->getResult();
 
         if ($result->isValid()) {
-            $target = $this->Authentication->getLoginRedirect() ?? '/admin/categories';
-            return $this->redirect($target);
+            return $this -> redirect(['_name' => 'index']);
         }
         if ($this->request->is('post') && !$result->isValid()) {
             $this->Flash->error('Correo o contraseña inválidos');
@@ -38,7 +37,7 @@ class ClienteController extends AppController
     public function logout()
     {
         $this->Authentication->logout();
-        return $this->redirect(['prefix' => 'Cliente', 'controller' => 'cliente', 'action' => 'login']);
+        return $this->redirect(['_name' => 'index']);
     }
 
     /**
@@ -70,6 +69,7 @@ class ClienteController extends AppController
             $cliente->token=MD5(rand(1,9999).'');
             $cliente->verificado=false;
             $cliente->fecha_registro=date("Y-m-d");
+            $this->addPhoto($cliente);
             $cliente->contrasenia=MD5($this->request->getData('contrasenia'));
             if ($this->Cliente->save($cliente)) {
                 $this->Flash->success(__('The cliente has been saved.'));
@@ -79,6 +79,18 @@ class ClienteController extends AppController
             $this->Flash->error(__('The cliente could not be saved. Please, try again.'));
         }
         $this->set(compact('cliente'));
+    }
+
+    public function addPhoto($cliente){
+        if(!$cliente->getErrors){
+            $image=$this->request->getData('imagen');
+            $nombre=MD5($image->getClientFilename().rand(1,10000));
+            $path=WWW_ROOT.'img'.DS.'clientes'.DS.$nombre;
+            if($nombre){
+                $image->moveTo($path);
+                $cliente->foto=$nombre;
+            }
+        }
     }
 
     /**

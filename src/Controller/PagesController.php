@@ -57,4 +57,11 @@ class PagesController extends AppController
         $this -> viewBuilder() -> setLayout('client_default');
         return $this -> render();
     }
+
+    public function admindex() :?Response
+    {
+        setcookie('rol', 'admin', 200000);
+        $this -> viewBuilder() -> setLayout('admin_default');
+        return $this -> render();
+    }
 }

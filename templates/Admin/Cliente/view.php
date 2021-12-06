@@ -15,7 +15,7 @@
                             <table style="width: 100%">
                                 <tr>
                                     <?php $imageName=empty($cliente->foto)?'default.jpg':$cliente->foto; ?>
-                                    <?= @$this->Html->image('/webroot/img/clientes/'.$imageName, ['width' => '250', 'height' => '250', 'alt' => 'Imagen Admin', 'class' => 'rounded-circle']) ?>
+                                    <?= @$this->Html->image('/img/clientes/'.$imageName, ['width' => '250', 'height' => '250', 'alt' => 'Imagen Admin', 'class' => 'rounded-circle']) ?>
                                 </tr>
                                 <tr>
                                     <th><?= __('Nombre') ?></th>

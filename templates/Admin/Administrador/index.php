@@ -26,7 +26,7 @@
                 ?>
                 <tr>
                     <?php $imageName=empty($administrador->foto)?'default.jpg':$administrador->foto; ?>
-                    <td><?= @$this->Html->image('/webroot/img/admins/'.$imageName, ['width' => '100', 'height' => '100', 'alt' => 'Imagen Admin', 'class' => 'rounded-circle']) ?></td>
+                    <td><?= @$this->Html->image('/img/admins/'.$imageName, ['width' => '100', 'height' => '100', 'alt' => 'Imagen Admin', 'class' => 'rounded-circle']) ?></td>
                     <td><?= h($administrador->usuario) ?></td>
                     <td><?= h($administrador->correo) ?></td>
                     <td class="actions">

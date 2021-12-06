@@ -12,7 +12,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Responsive Bootstrap4 Shop Template, Created by Imran Hossain from https://imransdesign.com/">
+	<meta name="description" content="Página de ventas de mercancía de AniPhoria">
 
 	<!-- title -->
 	<title>AniPhoria</title>
@@ -38,6 +38,14 @@
     <?= $this->Html->css('/template_assets/css/main.css')?>
 	<!-- responsive -->
     <?= $this->Html->css('/template_assets/css/responsive.css')?>
+    <?= $this -> Html -> css('/css/cake.css') ?>
+    <?= $this -> Html -> css('/css/bootstrap.min.css') ?>
+    <?= $this -> Html -> css('/css/milligram.min.css') ?>
+    <?= $this->Html->css('/css/normalize.css')?>
+
+    <?= $this -> fetch('meta') ?>
+    <?= $this -> fetch('css') ?>
+    <?= $this -> fetch('script') ?>
 
 </head>
 <body>
@@ -56,23 +64,13 @@
 			<div class="row">
 				<div class="col-lg-12 col-sm-12 text-center">
 					<div class="main-menu-wrap">
-						<!-- logo -->
-						<div class="site-logo">
-							<a href="index.html">
-								<img src="assets/img/logo.png" alt="">
-							</a>
-						</div>
-						<!-- logo -->
 
 						<!-- menu start -->
 						<nav class="main-menu">
 							<ul>
-								<li class="current-list-item"><a href="#">Home</a>
-									<ul class="sub-menu">
-										<li><a href="index.html">Static Home</a></li>
-										<li><a href="index_2.html">Slider Home</a></li>
-									</ul>
-								</li>
+                                <li>
+                                    <?= $this -> Html -> link('Inicio', ['_name' => 'index'], ['escape' => false, 'class' => 'e']) ?>
+                                </li>
 								<li><a href="about.html">About</a></li>
 								<li><a href="#">Pages</a>
 									<ul class="sub-menu">
@@ -102,7 +100,7 @@
 								</li>
 								<li>
 									<div class="header-icons">
-										<a class="shopping-cart" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+										<?= $this -> Html -> link('<i class="fas fa-shopping-cart"></i>', ['_name' => 'shoppingCart'], ['escape' => false])?>
 										<a class="mobile-hide search-bar-icon" href="#"><i class="fas fa-search"></i></a>
 									</div>
 								</li>
@@ -117,19 +115,14 @@
 		</div>
 	</div>
 	<!-- end header -->
-
     <div class="hero-area hero-bg">
         <div class="container">
             <div class="row">
                 <div class="col-lg-9 offset-lg-2 text-center">
                     <div class="hero-text">
                         <div class="hero-text-tablecell">
-                            <p class="subtitle">Fresh & Organic</p>
-                            <h1>Delicious Seasonal Fruits</h1>
-                            <div class="hero-btns">
-                                <a href="shop.html" class="boxed-btn">Fruit Collection</a>
-                                <a href="contact.html" class="bordered-btn">Contact Us</a>
-                            </div>
+                            <p class="subtitle">Mercancías</p>
+                            <h1>AniPhoria</h1>
                         </div>
                     </div>
                 </div>
@@ -137,9 +130,10 @@
         </div>
     </div>
 
-    <main>
+    <div class="container-fluid justify-content-center">
+        <?= $this->Flash->render() ?>
         <?= $this->fetch('content') ?>
-    </main>
+    </div>
 
 <!-- product section --
 	<div class="product-section mt-150 mb-150">

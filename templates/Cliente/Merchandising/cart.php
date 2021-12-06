@@ -1,4 +1,9 @@
 <?php
+/**
+ * @var App\View\AppView $this
+ */
+
+
 if (!$cart->isEmpty()) {
     $allItems = $cart->getItems();
 ?>
@@ -43,7 +48,7 @@ if (!$cart->isEmpty()) {
         </div>
         <p>
         <div class="pull-left">
-            <button class="btn btn-danger btn-empty-cart">Empty Cart</button>
+            <?= $this -> Form -> postButton('Vaciar carrito', ['controller' => 'Merchandising', 'action' => 'cart'], ['class' => 'btn btn-danger btn-empty-cart', 'escape' => false, 'name' => 'clear']) ?>
         </div>
         <div class="pull-right text-right">
             <a href="?a=home" class="btn btn-default">Continue Shopping</a>
@@ -53,4 +58,13 @@ if (!$cart->isEmpty()) {
     </div>
 </div>
 
-<?php } ?>
+<?php
+}
+else {
+?>
+    <div class="col-md-2 container-fluid justify-content-center" style="padding: 20px">
+        <?= $this -> Html -> image('general/empty_cart.jpg', ['height' => '300px', 'width' => '300px']) ?>
+    </div>
+<?php
+}
+?>

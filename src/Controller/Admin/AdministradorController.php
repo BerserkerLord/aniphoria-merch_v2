@@ -17,8 +17,9 @@ class AdministradorController extends AppController
     public function beforeFilter(EventInterface $event)
     {
         parent::beforeFilter($event);
-
+        setcookie('rol', 'admin',200000);
         $this->Authentication->allowUnauthenticated(['login']);
+        $this -> viewBuilder() -> setLayout('admin_default'); //Pa admin
     }
 
     public function login()
@@ -27,7 +28,7 @@ class AdministradorController extends AppController
         $result = $this->Authentication->getResult();
 
         if ($result->isValid()) {
-            $target = $this->Authentication->getLoginRedirect() ?? '/admin/administrador/add';
+            $target = $this->Authentication->getLoginRedirect() ?? '/admin/';
             return $this->redirect($target);
         }
         if ($this->request->is('post') && !$result->isValid()) {
@@ -50,7 +51,7 @@ class AdministradorController extends AppController
     public function logout()
     {
         $this->Authentication->logout();
-        return $this->redirect(['prefix' => 'Admin', 'controller' => 'administrador', 'action' => 'login']);
+        return $this->redirect(['_name' => 'index']);
     }
 
     /**
