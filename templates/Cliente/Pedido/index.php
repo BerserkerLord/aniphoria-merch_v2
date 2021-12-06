@@ -1,7 +1,6 @@
 <?php
 /**
  * @var \App\View\AppView $this
- * @var \App\Model\Entity\Pedido[]|\Cake\Collection\CollectionInterface $pedido
  */
 ?>
 <div class="pedido index content">

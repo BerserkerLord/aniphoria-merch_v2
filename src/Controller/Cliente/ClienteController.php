@@ -27,6 +27,7 @@ class ClienteController extends AppController
         $result = $this->Authentication->getResult();
 
         if ($result->isValid()) {
+            $_SESSION['e'] = 1;
             return $this -> redirect(['_name' => 'index']);
         }
         if ($this->request->is('post') && !$result->isValid()) {
@@ -37,6 +38,7 @@ class ClienteController extends AppController
     public function logout()
     {
         $this->Authentication->logout();
+        $_SESSION['e'] = 0;
         return $this->redirect(['_name' => 'index']);
     }
 
@@ -90,7 +92,7 @@ class ClienteController extends AppController
             if ($this->Cliente->save($cliente)) {
                 $this->Flash->success(__('The cliente has been saved.'));
 
-                return $this->redirect(['action' => 'index']);
+                return $this->redirect(['prefix' => '', '_name' => 'index']);
             }
             $this->Flash->error(__('The cliente could not be saved. Please, try again.'));
         }

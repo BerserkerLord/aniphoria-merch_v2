@@ -40,7 +40,7 @@ if (!$cart->isEmpty()) {
                     <?= $this->Form->control('qty', ['type' => 'hidden', 'value' => $item['quantity']]); ?>
                     <?= $this->Form->control('imagen', ['type' => 'hidden', 'value' => $merch->imagen[0]->nombre]) ?>
                     <?= $this->Form->control('id', ['type' => 'hidden', 'value' => $merch->id]) ?>
-                    <td><?= $this->Form->postButton('Añadir al carrito', ['controller' => 'Merchandising', 'action' => 'cart'], ['name' => 'remove']) ?></td>
+                    <td><?= $this->Form->postButton('Sacar del carrito', ['controller' => 'Merchandising', 'action' => 'cart'], ['name' => 'remove']) ?></td>
                     <?= $this->Form->end(); ?>
                 </tr>
             <?php
@@ -57,8 +57,8 @@ if (!$cart->isEmpty()) {
             <?= $this -> Form -> postButton('Vaciar carrito', ['controller' => 'Merchandising', 'action' => 'cart'], ['class' => 'btn btn-danger btn-empty-cart', 'escape' => false, 'name' => 'clear']) ?>
         </div>
         <div class="pull-right text-right">
-            <a href="?a=home" class="btn btn-default">Continue Shopping</a>
-            <a href="?a=checkout" class="btn btn-danger">Checkout</a>
+            <?= $this -> Html -> link(__('Continue Shopping'), ['_name' => 'index', 'class' => 'btn btn-default']) ?>
+            <?= $this -> Html -> link(__('Checkout'), ['_name' => 'checkout', 'class' => 'btn btn-default']) ?>
         </div>
         </p>
     </div>

@@ -83,11 +83,16 @@
 								<li>
 									<div class="header-icons">
 										<?= $this -> Html -> link('<i class="fas fa-shopping-cart"></i>', ['_name' => 'shoppingCart'], ['escape' => false])?>
+                                        <?php
+                                            if(!$_SESSION['e'])
+                                               echo $this -> Html ->link('<i class="fas fa-sign-in-alt"></i>', ['_name' => 'loginClient'], ['escape' => false]);
+                                            else
+                                               echo $this -> Html ->link('<i class="fas fa-sign-out-alt"></i>', ['_name' => 'logoutClient'], ['escape' => false]);
+                                        ?>
 									</div>
 								</li>
 							</ul>
 						</nav>
-						<a class="mobile-show search-bar-icon" href="#"><i class="fas fa-search"></i></a>
 						<div class="mobile-menu"></div>
 						<!-- menu end -->
 					</div>
@@ -176,7 +181,7 @@
 	<div class="copyright">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-6 col-md-12">
+				<div class="col-lg-6 col-md-12 justify-content-center" style="text-align: center">
 					<p>Copyrights &copy; 2021 - <a href="https://cat-bounce.com/">AniPhoria</a>, Todos los izquierdos reservados.</p>
 				</div>
 			</div>

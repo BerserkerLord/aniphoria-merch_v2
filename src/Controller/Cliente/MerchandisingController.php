@@ -63,8 +63,8 @@ class MerchandisingController extends AppController
     public function view($id = null)
     {
         if(isset($_POST['add'])){
-            $this->cart()
-;        }
+            $this->cart();
+        }
         $merchandising = $this->Merchandising->get($id, [
             'contain' => ['Categoria', 'Imagen'],
         ]);
