@@ -32,8 +32,8 @@
                     <td class="actions">
                         <?= $this->Html->link('<i class="fas fa-eye pr-2"></i>', ['action' => 'view', $administrador->id], ['escape' => false, 'title' => 'Ver Administrador']) ?>
                         <?= $this->Html->link('<i class="fas fa-pen pr-2"></i>', ['action' => 'edit', $administrador->id], ['escape' => false, 'title' => 'Editar Administrador']) ?>
-                        <?= $this->Form->postLink('<i class="fas fa-trash pr-2"></i>', ['action' => 'delete', $administrador->id], ['confirm' => __('¿Seguro que desea hacer la eliminación?', $administrador->id), 'escape' => false, 'title' => 'Eliminar Administrador', 'hidden' => $hidden]) ?>
-                    </td>
+                        <?= $this->Form->control('id', ['type' => 'hidden', 'value' => $merch->id]) ?>
+                        <?= $this->Form->postButton('Añadir al carrito', ['controller' => 'Merchandising', 'action' => 'shopCart'], ['name' => 'add']) ?>                    </td>
                 </tr>
                 <?php endforeach; ?>
             </tbody>

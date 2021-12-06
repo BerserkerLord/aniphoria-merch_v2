@@ -18,6 +18,7 @@ if (!$cart->isEmpty()) {
                 <th class="actions">Articulo</th>
                 <th class="actions">Cantidad</th>
                 <th class="actions">Precio</th>
+                <th class="actions">Acciones</th>
             </tr>
             </thead>
             <tbody>
@@ -35,7 +36,12 @@ if (!$cart->isEmpty()) {
                     <td><?= @$this->Html->image('/img/productos/'.$imageName, ['width' => '100', 'height' => '100', 'alt' => 'Imagen Articulo']) ?></td>
                     <td><?= h($merch->articulo) ?></td>
                     <td><?= h($item['quantity']) ?></td>
-                    <td><?= h($item['attributes']['price']) ?></td>
+                    <td><?= h($item['attributes']['price']) ?></td><?= $this->Form->create(null); ?>
+                    <?= $this->Form->control('qty', ['type' => 'hidden', 'value' => $item['quantity']]); ?>
+                    <?= $this->Form->control('imagen', ['type' => 'hidden', 'value' => $merch->imagen[0]->nombre]) ?>
+                    <?= $this->Form->control('id', ['type' => 'hidden', 'value' => $merch->id]) ?>
+                    <td><?= $this->Form->postButton('Añadir al carrito', ['controller' => 'Merchandising', 'action' => 'cart'], ['name' => 'remove']) ?></td>
+                    <?= $this->Form->end(); ?>
                 </tr>
             <?php
                 }

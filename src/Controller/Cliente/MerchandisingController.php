@@ -125,11 +125,10 @@ class MerchandisingController extends AppController
                     break;
                 }
             }
-
-            $cart->remove($merch->id, [
-                'price' => $merch->price,
-                'color' => (isset($_POST['color'])) ? $_POST['color'] : '',
-            ]);
+                $cart->remove($merch->id, [
+                    'price' => $merch->precio,
+                    'imagen' => $_POST['imagen']
+                ]);
         }
         $this->set(compact('cart', 'merchandising'));
     }
