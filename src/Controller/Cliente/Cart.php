@@ -47,13 +47,6 @@ class Cart
      */
     private $items = [];
 
-    public function beforeFilter(EventInterface $event)
-    {
-        parent::beforeFilter($event);
-
-        $this->Authentication->allowUnauthenticated(['__construct','getItems','isEmpty','add', 'clear', 'update', 'remove', 'destroy', 'read', 'write']);
-    }
-
     /**
      * Initialize cart.
      * @param array $options

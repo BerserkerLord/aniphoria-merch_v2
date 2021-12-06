@@ -64,4 +64,11 @@ class PagesController extends AppController
         $this -> viewBuilder() -> setLayout('admin_default');
         return $this -> render();
     }
+
+    public function about(): ?Response
+    {
+        setcookie('whereami','Sobre Nosotros', 20000);
+        $this -> viewBuilder() -> setLayout('client_default');
+        return $this -> render();
+    }
 }

@@ -100,7 +100,7 @@ class ClienteController extends AppController
     public function addPhoto($cliente){
         if(!$cliente->getErrors){
             $image=$this->request->getData('imagen');
-            $nombre=MD5($image->getClientFilename().rand(1,10000));
+            $nombre=MD5($image->getClientFilename().rand(1,10000)).'jpg';
             $path=WWW_ROOT.'img'.DS.'clientes'.DS.$nombre;
             if($nombre){
                 $image->moveTo($path);
