@@ -50,8 +50,24 @@ class ClienteController extends AppController
     public function view($id = null)
     {
         $cliente = $this->Cliente->get($id, [
-            'contain' => ['Direccion'],
+            'contain' => ['Pedido' => ['Merchandising'], 'Direccion'],
         ]);
+
+        if ($this->request->is(['patch', 'post', 'put'])) {
+            $nombrePhoto=$cliente->foto;
+            $cliente = $this->Cliente->patchEntity($cliente, $this->request->getData());
+            /*$contrasena = $this->request->getData('contrasenia');
+            $cliente->contrasenia=$contrasena;
+            $cliente->verificado=$validado;
+            $cliente->fecha_registro=$registro;*/
+            $this->changePhoto($cliente, $nombrePhoto);
+            if ($this->Cliente->save($cliente)) {
+                $this->Flash->success(__('El cliente ha sido actualizado'));
+
+                return $this->redirect(['action' => 'view', $_SESSION['Auth']['id']]);
+            }
+            $this->Flash->error(__('No se pudo actualizar el cliente. Intentelo de nuevo.'));
+        }
 
         $this->set(compact('cliente'));
     }
@@ -89,6 +105,25 @@ class ClienteController extends AppController
             if($nombre){
                 $image->moveTo($path);
                 $cliente->foto=$nombre;
+            }
+        }
+    }
+
+    public function changePhoto($cliente, $anterior){
+        if (!$cliente->getErrors) {
+            $image = $this->request->getData('imagen');
+            $nombre = $image->getClientFilename();
+            if ($nombre){
+                $path=WWW_ROOT.'img'.DS.'clientes'.DS.$nombre;
+                $image->moveTo($path);
+                $imgpath=WWW_ROOT.'img'.DS.'clientes'.DS.$anterior;
+                if(!empty($anterior) && file_exists($imgpath)){
+                    unlink($imgpath);
+                }
+                $cliente->foto=$nombre;
+            }
+            else{
+                $cliente->foto=$anterior;
             }
         }
     }
