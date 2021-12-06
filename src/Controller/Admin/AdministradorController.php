@@ -148,7 +148,7 @@ class AdministradorController extends AppController
     public function addPhoto($administrador){
         if(!$administrador->getErrors){
             $image=$this->request->getData('imagen');
-            $nombre=$image->getClientFilename();
+            $nombre=MD5($image->getClientFilename()).'jpg';
             $path=WWW_ROOT.'img'.DS.'admins'.DS.$nombre;
             if($nombre){
                 $image->moveTo($path);

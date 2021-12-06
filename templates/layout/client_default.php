@@ -15,10 +15,10 @@
 	<meta name="description" content="Página de ventas de mercancía de AniPhoria">
 
 	<!-- title -->
-	<title>AniPhoria</title>
+	<title>AniPhoria - <?php echo $_COOKIE['whereami'] ?? 'Inicio' ?></title>
 
 	<!-- favicon -->
-	<link rel="shortcut icon" type="image/png" href="/webroot/img/clientes/doelker.jpg">
+	<link rel="shortcut icon" type="image/png" href="/webroot/img/clientes/dollier.jpg">
 	<!-- google font -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
@@ -52,7 +52,7 @@
 
 	<!--PreLoader-->
     <div class="loader">
-        <div class="loader-inner">
+        <div class="loader-inner" style="padding-right: 15rem; padding-bottom: 7rem">
             <div class="circle"></div>
         </div>
     </div>
@@ -71,37 +71,16 @@
                                 <li>
                                     <?= $this -> Html -> link('Inicio', ['_name' => 'index'], ['escape' => false, 'class' => 'e']) ?>
                                 </li>
-								<li><a href="about.html">About</a></li>
-								<li><a href="#">Pages</a>
-									<ul class="sub-menu">
-										<li><a href="404.html">404 page</a></li>
-										<li><a href="about.html">About</a></li>
-										<li><a href="cart.html">Cart</a></li>
-										<li><a href="checkout.html">Check Out</a></li>
-										<li><a href="contact.html">Contact</a></li>
-										<li><a href="news.html">News</a></li>
-										<li><a href="shop.html">Shop</a></li>
-									</ul>
-								</li>
-								<li><a href="news.html">News</a>
-									<ul class="sub-menu">
-										<li><a href="news.html">News</a></li>
-										<li><a href="single-news.html">Single News</a></li>
-									</ul>
-								</li>
+                                <li>
+                                    <?= $this -> Html -> link('Acerca De', ['_name' => 'about'], ['escape' => false, 'class' => 'e']) ?>
+                                </li>
+                                <li>
+                                    <?= $this -> Html -> link('Productos', ['_name' => 'viewMerchandisingClient'], ['escape' => false, 'class' => 'e']) ?>
+                                </li>
 								<li><a href="contact.html">Contact</a></li>
-								<li><a href="shop.html">Shop</a>
-									<ul class="sub-menu">
-										<li><a href="shop.html">Shop</a></li>
-										<li><a href="checkout.html">Check Out</a></li>
-										<li><a href="single-product.html">Single Product</a></li>
-										<li><a href="cart.html">Cart</a></li>
-									</ul>
-								</li>
 								<li>
 									<div class="header-icons">
 										<?= $this -> Html -> link('<i class="fas fa-shopping-cart"></i>', ['_name' => 'shoppingCart'], ['escape' => false])?>
-										<a class="mobile-hide search-bar-icon" href="#"><i class="fas fa-search"></i></a>
 									</div>
 								</li>
 							</ul>
@@ -118,10 +97,10 @@
     <div class="hero-area hero-bg">
         <div class="container">
             <div class="row">
-                <div class="col-lg-9 offset-lg-2 text-center">
+                <div class="col-lg-9 offset-lg-2 text-center container-fluid justify-content-center" style="padding-right: 8rem">
                     <div class="hero-text">
                         <div class="hero-text-tablecell">
-                            <p class="subtitle">Mercancías</p>
+                            <p class="subtitle"><?php echo($_COOKIE['whereami'] ?? 'Mercancía'); ?></p>
                             <h1>AniPhoria</h1>
                         </div>
                     </div>

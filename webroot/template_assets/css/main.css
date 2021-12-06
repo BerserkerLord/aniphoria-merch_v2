@@ -22,6 +22,7 @@ body {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   font-size: 1rem;
+  align-content: center;
   letter-spacing: 0.1px;
   line-height: 1.8;
   color: #363636;
@@ -90,6 +91,14 @@ h2, .h2 {
   font-size: 3rem;
   font-weight: 700;
   line-height: 3.25rem;
+}
+
+.content h3 {
+    font-size: 24;
+}
+
+.content p {
+    font-size: 16px;
 }
 
 @media only screen and (max-width: 767.96px) {
@@ -465,7 +474,7 @@ a.boxed-btn, a.bordered-btn, a.cart-btn {
   font-size: 15px;
   width: 530px;
   margin: 0 auto;
-  color: #ffffff;
+  color: #000000;
   margin-top: 10px;
   line-height: 1.8;
 }
@@ -1396,7 +1405,7 @@ a.mobile-show.search-bar-icon:hover {
 }
 
 .hero-area {
-  height: 75%;
+  height: 100%;
   position: relative;
   z-index: 1;
 }
@@ -1422,11 +1431,11 @@ html, body {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 7px;
-  font-size: 15px;
+  font-size: 24px;
 }
 
 .hero-text h1 {
-  font-size: 64px;
+  font-size: 128px;
   font-weight: 700;
   line-height: 1.3;
   color: #fff;
@@ -2177,7 +2186,7 @@ a.video-play-btn {
 }
 
 .feature-bg:after {
-  background-image: url(../img/feature-bg.jpg);
+  background-image: url(../../img/stathicc/about-1.jpg);
   position: absolute;
   right: 0;
   top: 0;
@@ -2193,19 +2202,15 @@ a.video-play-btn {
 }
 
 .team-bg-1 {
-  background-image: url(../img/team/team-1.jpg);
+  background-image: url(../../img/stathicc/team-1.jpg);
 }
 
 .team-bg-2 {
-  background-image: url(../img/team/team-2.jpg);
+  background-image: url(../../img/stathicc/team-2.jpg);
 }
 
 .team-bg-3 {
-  background-image: url(../img/team/team-3.jpg);
-}
-
-.team-bg-4 {
-  background-image: url(../../img/general/aestethicc.jpg);
+  background-image: url(../../img/stathicc/team-3.jpg);
 }
 
 .team-bg {
@@ -2421,7 +2426,9 @@ ul.social-link-team li a {
 }
 
 .single-product-item {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  height: 55rem;
 }
 
 .product-image {
