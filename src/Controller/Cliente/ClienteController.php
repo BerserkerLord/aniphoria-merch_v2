@@ -38,7 +38,7 @@ class ClienteController extends AppController
     public function logout()
     {
         $this->Authentication->logout();
-        
+
         return $this->redirect(['_name' => 'index']);
     }
 
@@ -58,10 +58,6 @@ class ClienteController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $nombrePhoto=$cliente->foto;
             $cliente = $this->Cliente->patchEntity($cliente, $this->request->getData());
-            /*$contrasena = $this->request->getData('contrasenia');
-            $cliente->contrasenia=$contrasena;
-            $cliente->verificado=$validado;
-            $cliente->fecha_registro=$registro;*/
             $this->changePhoto($cliente, $nombrePhoto);
             if ($this->Cliente->save($cliente)) {
                 $this->Flash->success(__('El cliente ha sido actualizado'));

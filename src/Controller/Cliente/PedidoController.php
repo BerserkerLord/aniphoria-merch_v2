@@ -2,6 +2,7 @@
 declare(strict_types=1);
 
 namespace App\Controller\Cliente;
+use App\Controller\Cliente\Cart;
 use App\Model\Entity\Direccion;
 use Cake\Datasource\ConnectionManager;
 use Stripe;
@@ -11,6 +12,8 @@ use Cake\Event\EventInterface;
 /**
  * Pedido Controller
  * @property \App\Model\Table\PedidoTable $Pedido
+ * @property \App\Model\Table\MerchandisingTable $Merchandising
+ * @property \App\Model\Table\PedidoMerchandisingTable $PedidoMerchandising
  * @method \App\Model\Entity\Pedido[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
  */
 class PedidoController extends AppController
@@ -104,14 +107,53 @@ class PedidoController extends AppController
                 "description" => "Test payment via Stripe From onlinewebtutorblog.com"
             ]);
             $this->Flash->success(__('Payment done successfully'));
+
+            $this -> loadModel('Merchandising');
+            $this -> loadModel('PedidoMerchandising');
+            $pedido = $this->Pedido->newEmptyEntity();
+            if ($this->request->is('post')) {
+                $pedido -> direccion_id = $this -> request -> getData('direccion_id');
+                $pedido -> fecha = date('Y-m-d');
+                $pedido -> estatus_id = 5;
+                $pedido -> cliente_id = $_SESSION['Auth'] -> id;
+                $query = $this->Pedido->find()->select(['id' => 'MAX(Pedido.id)']);
+                $max = $this -> paginate($query);
+                $nextid = $max -> toArray()[0]['id'] + 1;
+
+                if ($this->Pedido->save($pedido)) {
+                    $cart = new Cart([
+                        // Maximum item can added to cart, 0 = Unlimited
+                        'cartMaxItem' => 0,
+
+                        // Maximum quantity of a item can be added to cart, 0 = Unlimited
+                        'itemMaxQuantity' => 10,
+
+                        // Do not use cookie, cart items will gone after browser closed
+                        'useCookie' => true,
+                    ]);
+                    $allItems = $cart -> getItems();
+                    foreach ($allItems as $id => $items)
+                    {
+                        foreach ($items as $item)
+                        {
+                            $pedidoMerch = $this -> PedidoMerchandising -> newEmptyEntity();
+                            $pedidoMerch -> pedido_id = $nextid;
+                            $pedidoMerch -> merchandising_id = $item['id'];
+                            $pedidoMerch -> cantidad = $item['quantity'];
+                            $this -> PedidoMerchandising -> save($pedidoMerch);
+                        }
+                    }
+                    $cart -> clear();
+                }
+            }
+
         } catch (Stripe\Exception\ApiErrorException $e) {
             echo '<pre>';
             print_r($e);
             echo '</pre>';
             die();
         }
-        // after successfull payment, you can store payment related information into your database
 
-        return $this->redirect(['action' => 'checkout']);
+        return $this->redirect(['_name' => 'index']);
     }
 }

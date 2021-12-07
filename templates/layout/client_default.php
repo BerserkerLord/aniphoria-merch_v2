@@ -80,38 +80,44 @@
                                 <li>
                                     <?= $this -> Html -> link('Contacto', ['_name' => 'contact'], ['escape' => false, 'class' => 'e']) ?>
                                 </li>
+                                <?php
+                                if(isset($_SESSION['e']))
+                                {
+                                    ?>
+                                    <li class="nav-item dropdown">
+                                        <?php
+                                        $imageName = "";
+                                        if (isset($_SESSION['Auth'])) {
+                                            $imageName = $_SESSION['Auth']->foto;
+                                        }
+                                        if (!file_exists(WWW_ROOT . '/img/clientes/' . $imageName) || empty($imageName)) {
+                                            $imageName = 'default.jpg';
+                                        }
+                                        ?>
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <?php
+                                            if(isset($_SESSION['Auth'])){ ?>
+                                                <?= $this->Html->image('/img/clientes/'.$imageName, ['width' => '40', 'height' => '40', 'alt' => 'Imagen Admin', 'class' => 'rounded-circle']) ?>
+                                            <?php } ?>
+                                        </a>
+                                        <div class="dropdown-menu profile" aria-labelledby="navbarDropdownMenuLink">
+                                            <a class="dropdown-item" href="<?='/cliente/cliente/view/' . $_SESSION['Auth'] -> id?>">Perfil</a>
+                                            <a class="dropdown-item" href="<?='/cliente/direcciones/' . $_SESSION['Auth'] -> id?>">Direcciones</a>
+                                            <a class="dropdown-item" href="<?='/cliente/pedidos/' . $_SESSION['Auth'] -> id?>">Pedidos</a>
+                                        </div>
+                                    </li>
+                                    <?php
+                                }
+                                ?>
 								<li>
 									<div class="header-icons">
 										<?= $this -> Html -> link('<i class="fas fa-shopping-cart"></i>', ['_name' => 'shoppingCart'], ['escape' => false])?>
                                         <?php
                                             if(!isset($_SESSION['e']))
-                                               echo $this -> Html ->link('<i class="fas fa-sign-in-alt"></i>', ['_name' => 'loginClient'], ['escape' => false]);
+                                                echo $this -> Html ->link('<i class="fas fa-sign-in-alt"></i>', ['_name' => 'loginClient'], ['escape' => false]);
                                             else
-                                               echo $this -> Html ->link('<i class="fas fa-sign-out-alt"></i>', ['_name' => 'logoutClient'], ['escape' => false]);
+                                                echo $this->Html->link('<i class="fas fa-sign-out-alt"></i>', ['_name' => 'logoutClient'], ['escape' => false]);
                                         ?>
-                                        <?php
-                                            $imageName = "";
-                                            if(isset($_SESSION['Auth'])){
-                                                $imageName = $_SESSION['Auth']->foto;
-                                            }
-                                            if(!file_exists(WWW_ROOT.'/img/clientes/'.$imageName) || empty($imageName)){
-                                                $imageName = 'default.jpg';
-                                            }
-                                        ?>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <?php
-                                        if(isset($_SESSION['Auth'])){ ?>
-                                            <?= $this->Html->image('/img/clientes/'.$imageName, ['width' => '40', 'height' => '40', 'alt' => 'Imagen Admin', 'class' => 'rounded-circle']) ?>
-                                        <?php } ?>
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                        <?= $this->Html->link('Perfil', ['_name' => 'viewCliente']) ?>
-                                        <a class="dropdown-item" href="#">Action</a>
-                                        <a class="dropdown-item" href="#">Another action</a>
-                                        <a class="dropdown-item" href="#">Something else here</a>
-                                    </div>
-                                </li>
                                     </div>
 								</li>
 							</ul>

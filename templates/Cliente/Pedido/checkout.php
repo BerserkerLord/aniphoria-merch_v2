@@ -18,22 +18,6 @@ if (!$cart->isEmpty()) {
                 <div class="checkout-accordion-wrap">
                     <div class="accordion" id="accordionExample">
                         <div class="card single-accordion">
-                            <div class="card-header" id="headingTwo">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        Dirección de envío
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                                <div class="card-body">
-                                    <div class="shipping-address-form">
-                                        <?= $this->Form->control('direccion_id', ['options' => $direcciones, 'label' => 'Dirección']); ?>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card single-accordion">
                             <div class="card-header" id="headingThree">
                                 <h5 class="mb-0">
                                     <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
@@ -52,6 +36,7 @@ if (!$cart->isEmpty()) {
                                             "data-stripe-publishable-key" => STRIPE_KEY,
                                             "id" => "payment-form"
                                         ]) ?>
+                                        <?= $this->Form->control('direccion_id', ['options' => $direcciones, 'label' => 'Dirección']); ?>
                                         <div class="panel-body">
                                             <div class='form-row row'>
                                                 <div class='col-xs-12 form-group required'>
@@ -85,17 +70,13 @@ if (!$cart->isEmpty()) {
                                                         type='text'>
                                                 </div>
                                             </div>
-
                                             <div class="row">
                                                 <div class="col-xs-12">
-                                                    <button class="btn btn-primary btn-lg btn-block" type="submit">Pay Now ($70)</button>
+                                                    <button class="btn btn-primary btn" type="submit">Pagar</button>
                                                 </div>
                                             </div>
-
                                             <?= $this->Form->end() ?>
                                         </div>
-
-
                                     </div>
                                 </div>
                             </div>
@@ -158,7 +139,6 @@ if (!$cart->isEmpty()) {
                         </tr>
                         </tbody>
                     </table>
-                    <a href="#" class="boxed-btn">Comprar owo</a>
                 </div>
             </div>
         </div>

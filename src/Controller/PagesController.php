@@ -16,6 +16,7 @@ declare(strict_types=1);
  */
 namespace App\Controller;
 
+use Cake\Core\App;
 use Cake\Core\Configure;
 use Cake\Event\EventInterface;
 use Cake\Http\Exception\ForbiddenException;
@@ -29,6 +30,7 @@ use Cake\View\Exception\MissingTemplateException;
  * This controller will render views from templates/Pages/
  *
  * @link https://book.cakephp.org/4/en/controllers/pages-controller.html
+ * @property \App\Model\Table\MerchandisingTable $Merchandising
  */
 class PagesController extends AppController
 {
@@ -52,10 +54,13 @@ class PagesController extends AppController
      *   be found and not in debug mode.
      * @throws \Cake\View\Exception\MissingTemplateException In debug mode.
      */
-    public function index(): ?Response
+    public function index()
     {
+        $this -> loadModel('Merchandising');
+        $query = $this->Merchandising->find('all')->contain(['Categoria', 'Imagen']);
+        $merchandising = $this->paginate($query);
         $this -> viewBuilder() -> setLayout('client_default');
-        return $this -> render();
+        $this->set(compact('merchandising'));
     }
 
     public function admindex() :?Response

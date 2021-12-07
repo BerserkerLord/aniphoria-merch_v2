@@ -568,10 +568,22 @@ nav.main-menu ul li {
 Pa borra
  */
 nav.main-menu ul li a {
-  color: #fff;
+  color: #ffffff;
   font-weight: 700;
   display: block;
   padding: 15px;
+}
+
+nav.main-menu ul li .profile a{
+    color: #1F1F1F;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+nav.main-menu ul li .profile a:hover{
+    color: #ff1166;
+    text-decoration: none;
+    font-size: 12px;
 }
 
 nav.main-menu ul li .e {
@@ -688,10 +700,9 @@ nav.mean-nav > ul > li:first-child > a {
   border-top: none;
 }
 
-.header-icons a {
+.header-icons a{
   color: #fff;
   display: inline-block;
-  padding: 10px;
 }
 
 .site-logo {
