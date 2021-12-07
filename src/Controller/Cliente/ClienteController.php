@@ -38,7 +38,7 @@ class ClienteController extends AppController
     public function logout()
     {
         $this->Authentication->logout();
-
+        unset($_SESSION['e']);
         return $this->redirect(['_name' => 'index']);
     }
 
