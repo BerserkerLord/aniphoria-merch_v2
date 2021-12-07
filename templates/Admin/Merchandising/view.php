@@ -23,11 +23,11 @@
                                 </tr>
                                 <tr>
                                     <th><?= __('Costo') ?></th>
-                                    <td><?= '$'.$this->Number->format($merchandising->costo) ?></td>
+                                    <td><?= '$'.number_format($merchandising->costo, 2)?></td>
                                 </tr>
                                 <tr>
                                     <th><?= __('Precio') ?></th>
-                                    <td><?= '$'.$this->Number->format($merchandising->precio) ?></td>
+                                    <td><?= '$'.'$'.number_format($merchandising->precio, 2) ?></td>
                                 </tr>
                             </table>
                             <div class="text">

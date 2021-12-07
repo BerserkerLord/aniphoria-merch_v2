@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'c3a19e6c0d832c99f5ac6734b5c89a4e15fbf55d',
+        'reference' => '76aef034cefa75b0307a2f588e6f9661d070fdba',
         'name' => 'cakephp/app',
         'dev' => true,
     ),
@@ -25,7 +25,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'c3a19e6c0d832c99f5ac6734b5c89a4e15fbf55d',
+            'reference' => '76aef034cefa75b0307a2f588e6f9661d070fdba',
             'dev_requirement' => false,
         ),
         'cakephp/authentication' => array(
@@ -774,6 +774,15 @@
             'aliases' => array(),
             'reference' => '9d583721a7157ee997f235f327de038e7ea6dac4',
             'dev_requirement' => true,
+        ),
+        'stripe/stripe-php' => array(
+            'pretty_version' => 'v7.104.0',
+            'version' => '7.104.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../stripe/stripe-php',
+            'aliases' => array(),
+            'reference' => '6bfd895eaa3f6ebb49c10f9ab9ccc9e5baadded5',
+            'dev_requirement' => false,
         ),
         'symfony/config' => array(
             'pretty_version' => 'v5.3.10',

@@ -5,6 +5,7 @@ namespace App\Controller\Api;
 
 use App\Controller\AppController;
 use App\Model\Table\ClienteTable;
+use Cake\Datasource\ConnectionManager;
 use Cake\Event\EventInterface;
 use PHPUnit\Util\Json;
 use Cake\ORM\Locator\LocatorAwareTrait;
@@ -45,6 +46,7 @@ class ApiController extends AppController
 
     public function login()
     {
+        $connection = ConnectionManager::get('default');
         $this -> Cliente = new ClienteTable();
         $clienteValidation = $this->getTableLocator()->get('cliente');
         $this -> request -> allowMethod('post');
@@ -53,9 +55,14 @@ class ApiController extends AppController
         if($query == 1){
             $id = $clienteValidation->find()->select('id')->where(['correo' => $data['correo'], 'AND' => ['contrasenia' => $data['contrasenia']]])->execute()->fetch('assoc');
             $cliente = $this -> Cliente -> get($id['cliente__id'], ['contain' => ['Pedido' => ['Merchandising'], 'Direccion']]);
+
+            $anios = $connection->execute('SELECT COUNT(p.id) AS pedidos, YEAR(p.fecha) AS anio FROM pedido AS p
+                                        INNER JOIN cliente c ON p.cliente_id = c.id
+                                        WHERE cliente_id = :id_cliente
+                                        GROUP BY anio', ['id_cliente' => $id['cliente__id']])->fetchAll('assoc');
             $this -> set(['status' => $query,
-                'cliente' => $cliente]);
-            $this->viewBuilder()->setOption('serialize', ['status', 'cliente']);
+                'cliente' => $cliente, 'anios' => $anios]);
+            $this->viewBuilder()->setOption('serialize', ['status', 'cliente', 'anios']);
         } else {
             $this -> set(['status' => $query]);
             $this->viewBuilder()->setOption('serialize', ['status']);

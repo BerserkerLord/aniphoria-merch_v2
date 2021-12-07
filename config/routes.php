@@ -84,7 +84,7 @@ $routes->scope('/', function (RouteBuilder $builder) {
  * Rutas para administrador
  */
 $routes->prefix('Admin', function (RouteBuilder $routes) {
-    $routes -> connect('/login', ['controller' => 'administrador', 'action' => 'login'], ['_name' => 'loginAdmin']);
+    $routes -> connect('/administrador/login', ['controller' => 'administrador', 'action' => 'login'], ['_name' => 'loginAdmin']);
     $routes -> connect('/categories', ['controller' => 'categoria', 'action' => 'index'], ['_name' => 'viewCategories']);
     $routes -> connect('/clients', ['controller' => 'cliente', 'action' => 'index'], ['_name' => 'viewClients']);
     $routes -> connect('/compra', ['controller' => 'compra', 'action' => 'index'], ['_name' => 'viewCompras']);
@@ -97,6 +97,7 @@ $routes->prefix('Admin', function (RouteBuilder $routes) {
     $routes -> connect('/cupones', ['controller' => 'cupon', 'action' => 'index'], ['_name' => 'viewCupones']);
     $routes -> connect('/logout', ['controller' => 'administrador', 'action' => 'logout'], ['_name' => 'logoutAdmin']);
     $routes -> connect('/dashboard', ['controller' => 'dashboard', 'action' => 'index'], ['_name' => 'dashAdmin']);
+    $routes -> connect('/payment', ['controller' => 'pedido', 'action' => 'payment']);
     $routes -> fallbacks(DashedRoute::class);
 });
 
@@ -106,13 +107,14 @@ $routes->prefix('Admin', function (RouteBuilder $routes) {
 $routes->prefix('Cliente', function (RouteBuilder $routes) {
     $routes -> connect('/login', ['controller' => 'cliente', 'action' => 'login'], ['_name' => 'loginClient']);
     $routes -> connect('/register', ['controller' => 'cliente', 'action' => 'add'], ['_name' => 'registerClient']);
-    $routes -> connect('/view/{1}', ['controller' => 'cliente', 'action' => 'view'], ['_name' => 'viewCliente']);
+    $routes -> connect('/view', ['controller' => 'cliente', 'action' => 'view'], ['_name' => 'viewCliente']);
     $routes -> connect('/logout', ['controller' => 'cliente', 'action' => 'logout'], ['_name' => 'logoutClient']);
     $routes -> connect('/merch', ['controller' => 'merchandising', 'action' => 'index'], ['_name' => 'viewMerchandisingClient']);
     $routes -> connect('/cart', ['controller' => 'merchandising', 'action' => 'cart'], ['_name' => 'shoppingCart']);
     $routes -> connect('/pedidos', ['controller' => 'pedido', 'action' => 'index'], ['_name' => 'viewPedidosClient']);
     $routes -> connect('/direcciones', ['controller' => 'direccion', 'action' => 'index'], ['_name' => 'viewAdressesClient']);
     $routes -> connect('/checkout', ['controller' => 'pedido', 'action' => 'checkout'], ['_name' => 'checkout']);
+    $routes -> connect('/payment', ['controller' => 'pedido', 'action' => 'payment']);
     $routes -> fallbacks(DashedRoute::class);
 });
 

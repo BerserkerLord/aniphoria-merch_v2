@@ -18,7 +18,7 @@
                 <?php
                     echo $this->Form->control('rfc', ['label' => 'RFC']);
                     echo $this->Form->control('razon_social', ['label' => 'Razón Social']);
-                    echo $this->Form->control('direccion', ['label' => 'Dirección']);
+                    echo $this->Form->control('direccion', ['label' => 'Dirección', 'type' => 'textarea']);
                     echo $this->Form->control('telefono', ['label' => 'Teléfono']);
                 ?>
             </fieldset>

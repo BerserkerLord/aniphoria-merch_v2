@@ -89,7 +89,30 @@
                                             else
                                                echo $this -> Html ->link('<i class="fas fa-sign-out-alt"></i>', ['_name' => 'logoutClient'], ['escape' => false]);
                                         ?>
-									</div>
+                                        <?php
+                                            $imageName = "";
+                                            if(isset($_SESSION['Auth'])){
+                                                $imageName = $_SESSION['Auth']->foto;
+                                            }
+                                            if(!file_exists(WWW_ROOT.'/img/clientes/'.$imageName) || empty($imageName)){
+                                                $imageName = 'default.jpg';
+                                            }
+                                        ?>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <?php
+                                        if(isset($_SESSION['Auth'])){ ?>
+                                            <?= $this->Html->image('/img/clientes/'.$imageName, ['width' => '40', 'height' => '40', 'alt' => 'Imagen Admin', 'class' => 'rounded-circle']) ?>
+                                        <?php } ?>
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                        <?= $this->Html->link('Perfil', ['_name' => 'viewCliente']) ?>
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </li>
+                                    </div>
 								</li>
 							</ul>
 						</nav>
@@ -209,6 +232,11 @@
     <?= $this -> Html -> script('/template_assets/js/sticker.js') ?>
 	<!-- main js -->
     <?= $this -> Html -> script('/template_assets/js/main.js') ?>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <-- Always remember to call the above files first before calling the bootstrap.min.js file -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script>
+        $('.dropdown-toggle').dropdown()
+    </script>
 </body>
 </html>

@@ -1,4 +1,8 @@
 <?php
+defined("VENDOR_PATH") || define('VENDOR_PATH', $_SERVER['DOCUMENT_ROOT']. DS . 'aniphoria-merch_v2' . DS . 'vendor');
+defined("STRIPE_KEY") || define('STRIPE_KEY', "pk_live_51K3hj0ASnHgMecFayjN32C3eWWOnIjxrSOQrvglg50vp6ikpZBWjM5nEfqwtwtveoj6fYtQboYtByjlzZMfksCva00vj92CY35");
+defined("STRIPE_SECRET") || define('STRIPE_SECRET', "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");
+
 /**
  * CakePHP(tm) : Rapid Development Framework (https://cakephp.org)
  * Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)

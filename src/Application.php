@@ -120,6 +120,7 @@ class Application extends BaseApplication implements AuthenticationServiceProvid
                 $mod = 'Administrador';
             }
         }
+
         $service = new AuthenticationService();
         // Define where users should be redirected to when they are not authenticated
         $service->setConfig([
