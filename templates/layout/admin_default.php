@@ -62,6 +62,7 @@
             <li><?= $this -> Html -> link('<i class="fas fa-map-signs pr-2"></i>Direcciones', ['_name' => 'viewAddresses'], ['escape' => false]) ?></li>
             <li><?= $this -> Html -> link('<i class="fas fa-comments pr-2"></i>Comentarios', ['_name' => 'viewComentarios'], ['escape' => false]) ?></li>
             <li><?= $this -> Html -> link('<i class="fas fa-tag pr-2"></i>Cupones de Descuento', ['_name' => 'viewCupones'], ['escape' => false]) ?></li>
+            <li><?= $this -> Html -> link('<i class="fas fa-chart-line pr-2"></i>Dashboard', ['_name' => 'dashAdmin'], ['escape' => false]) ?></li>
             <li><?= $this -> Html -> link('<i class="fas fa-running pr-2"></i>Salir', ['_name' => $_SESSION['rol']='admin'?'logoutAdmin':'logoutClient'], ['escape' => false]) ?></li>
         </ul>
     </nav>
