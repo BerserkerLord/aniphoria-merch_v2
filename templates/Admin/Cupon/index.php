@@ -25,8 +25,8 @@
                     <td><?= h($cupon->codigo) ?></td>
                     <td><?= h($cupon->fecha_lanzamiento) ?></td>
                     <td><?= h($cupon->fecha_expiracion) ?></td>
-                    <td><?= $this->Number->format($cupon->porcentaje).'%' ?></td>
-                    <td><?= '$'.$this->Number->format($cupon->minimo) ?></td>
+                    <td><?= number_format($cupon->porcentaje, 2).'%' ?></td>
+                    <td><?= '$'.number_format($cupon->minimo, 2) ?></td>
                     <td class="actions">
                         <?= $this->Html->link('<i class="fas fa-eye pr-2"></i>', ['action' => 'view', $cupon->id], ['escape' => false, 'title' => 'Ver Cupón']) ?>
                         <?= $this->Html->link('<i class="fas fa-pen pr-2"></i>', ['action' => 'edit', $cupon->id], ['escape' => false, 'title' => 'Editar Cupón']) ?>

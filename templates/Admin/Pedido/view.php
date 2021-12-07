@@ -43,11 +43,15 @@
                                 </tr>
                                 <tr>
                                     <th><?= __('Subtotal') ?></th>
-                                    <td><?= '$'.h($subtotal) ?></td>
+                                    <td><?= '$'.number_format($subtotal, 2) ?></td>
                                 </tr>
                                 <tr>
                                     <th><?= __('Total') ?></th>
-                                    <td><?= '$'.h($total) ?></td>
+                                    <td><?= '$'.number_format($total, 2) ?></td>
+                                </tr>
+                                <tr>
+                                    <th><?= __('Método de pago') ?></th>
+                                    <td><?= $pedido->metodo ? __('Tarjeta') : __('Efectivo'); ?></td>
                                 </tr>
                             </table>
                             <div class="related">
@@ -67,11 +71,11 @@
                                                 <tr>
                                                     <td><?= h($merchandising->categorium->categoria) ?></td>
                                                     <td><?= h($merchandising->articulo) ?></td>
-                                                    <td><?= '$'.h($merchandising->costo) ?></td>
-                                                    <td><?= '$'.h($merchandising->precio) ?></td>
+                                                    <td><?= '$'.number_format($merchandising->costo, 2) ?></td>
+                                                    <td><?= '$'.number_format($merchandising->precio, 2) ?></td>
                                                     <td><?= h($merchandising->_joinData->cantidad).' unidades' ?></td>
                                                     <?php $total_producto = $merchandising->precio * $merchandising->_joinData->cantidad; ?>
-                                                    <td><?= '$'.$total_producto ?></td>
+                                                    <td><?= '$'.number_format($total_producto, 2) ?></td>
                                                 </tr>
                                             <?php endforeach; ?>
                                         </table>

@@ -26,9 +26,8 @@ class AdministradorController extends AppController
     {
         setcookie('rol', 'administrador');
         $result = $this->Authentication->getResult();
-
         if ($result->isValid()) {
-            $target = $this->Authentication->getLoginRedirect() ?? '/admin/';
+            $target = $this->Authentication->getLoginRedirect() ?? '/admin/administrador/';
             return $this->redirect($target);
         }
         if ($this->request->is('post') && !$result->isValid()) {

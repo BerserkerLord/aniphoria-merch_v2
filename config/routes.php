@@ -84,7 +84,7 @@ $routes->scope('/', function (RouteBuilder $builder) {
  * Rutas para administrador
  */
 $routes->prefix('Admin', function (RouteBuilder $routes) {
-    $routes -> connect('/login', ['controller' => 'administrador', 'action' => 'login'], ['_name' => 'loginAdmin']);
+    $routes -> connect('/administrador/login', ['controller' => 'administrador', 'action' => 'login'], ['_name' => 'loginAdmin']);
     $routes -> connect('/categories', ['controller' => 'categoria', 'action' => 'index'], ['_name' => 'viewCategories']);
     $routes -> connect('/clients', ['controller' => 'cliente', 'action' => 'index'], ['_name' => 'viewClients']);
     $routes -> connect('/compra', ['controller' => 'compra', 'action' => 'index'], ['_name' => 'viewCompras']);

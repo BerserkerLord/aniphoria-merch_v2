@@ -4,7 +4,8 @@
  * @var \App\Model\Entity\Administrador $administrador
  */
 
-if($_SESSION['Auth']['id'] == $administrador->toArray()['id'] || $_SESSION['Auth']['usuario'] == 'Admin_Principal'){
+$hidden = false;
+if($_SESSION['Auth']['id'] == $administrador->toArray()['id'] || $administrador->usuario == 'Admin_Principal'){
     $hidden = true;
 }
 ?>

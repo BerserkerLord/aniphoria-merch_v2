@@ -20,6 +20,7 @@
                     <th class="actions"><?= __('Subtotal') ?></th>
                     <th class="actions"><?= __('Total') ?></th>
                     <th class="actions"><?= __('Acciones') ?></th>
+                    <th><?= __('Método de pago') ?></th>
                 </tr>
             </thead>
             <tbody>
@@ -39,8 +40,9 @@
                         if(isset($pedido['cupon'])){ $descuento = ($subtotal*$pedido['cupon']['porcentaje'])/100; }
                         $total = $subtotal - $descuento;
                     ?>
-                    <td>$<?= $subtotal ?></td>
-                    <td>$<?= $total ?></td>
+                    <td>$<?= number_format($subtotal, 2) ?></td>
+                    <td>$<?= number_format($total, 2) ?></td>
+                    <td><?= $pedido->metodo ? __('Tarjeta') : __('Efectivo'); ?></td>
                     <td class="actions">
                         <?= $this->Html->link('<i class="fas fa-eye pr-2"></i>', ['action' => 'view', $pedido->id], ['escape' => false, 'title' => 'Ver Pedido']) ?>
                         <?= $this->Html->link('<i class="fas fa-check pr-2"></i>', ['action' => 'edit', $pedido->id], ['escape' => false, 'title' => 'Cambiar estatus']) ?>

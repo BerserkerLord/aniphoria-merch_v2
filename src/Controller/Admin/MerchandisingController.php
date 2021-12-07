@@ -62,15 +62,16 @@ class MerchandisingController extends AppController
         $merchandising = $this->Merchandising->newEmptyEntity();
         $merch = $this->Merchandising->newEmptyEntity();
         if ($this->request->is('post')) {
-            $merchandising = $this->Merchandising->patchEntity($merchandising, $this->constructData($this->request->getData()));
+            $data = $this->constructData($this->request->getData());
+            $merchandising = $this->Merchandising->patchEntity($merchandising, $data);
             if ($this->Merchandising->save($merchandising)) {
-                if(!empty($this->constructData($this->request->getData())['imagen']['0']['nombre'])){ $this->addImages(); }
+                if(!empty($this->constructData($this->request->getData())['imagen']['0']['nombre'])){ $this->addImages($data); }
                 $this->Flash->success(__('El artículo ha sido agregado correctamente.'));
                 return $this->redirect(['action' => 'index']);
             }
             $this->Flash->error(__('El artículo no se ha podido agregar. Intentelo de nuevo.'));
         }
-        $categoria = $this->Merchandising->Categoria->find('list', ['limit' => 200]);
+        $categoria = $this->Merchandising->Categoria->find('list', ['limit' => 200])->where(['Categoria.estatus' => '1']);
         $this->set(compact('merchandising', 'categoria'));
     }
 
@@ -86,23 +87,23 @@ class MerchandisingController extends AppController
         $merchandising = $this->Merchandising->get($id, [
             'contain' => [],
         ]);
-        if ($this->request->is(['patch', 'post', 'put'])) {
-            $merchandising = $this->Merchandising->patchEntity($merchandising, $this->constructData($this->request->getData()));
+        if ($this->request->is(['patch', 'post', 'put'])){
+            $data = $this->constructData($this->request->getData());
+            $merchandising = $this->Merchandising->patchEntity($merchandising, $data);
             if ($this->Merchandising->save($merchandising)) {
                 $this->Flash->success(__('El artículo ha sido actualizado correctamente.'));
-                if(!empty($this->constructData($this->request->getData())['imagen']['0']['nombre'])){ $this->addImages(); }
+                if(!empty($this->constructData($this->request->getData())['imagen']['0']['nombre'])){ $this->addImages($data); }
                 return $this->redirect(['action' => 'index']);
             }
             $this->Flash->error(__('El artículo no se ha podido actualizar. Intentelo de nuevo.'));
         }
-        $categoria = $this->Merchandising->Categoria->find('list', ['limit' => 200]);
+        $categoria = $this->Merchandising->Categoria->find('list', ['limit' => 200])->where(['Categoria.estatus' => '1']);
         $this->set(compact('merchandising', 'categoria'));
     }
 
-    public function addImages(){
+    public function addImages($data){
         foreach($this -> request-> getData('imagen') as $key =>$imagen){
-            $nameImg = $imagen->getClientFilename();
-            $pathImagen = WWW_ROOT.'img/productos/'.$nameImg;
+            $pathImagen = WWW_ROOT.'img/productos/'.$data['imagen'][$key]['nombre'];
             $imagen -> moveTo($pathImagen);
         }
     }
@@ -113,9 +114,10 @@ class MerchandisingController extends AppController
         if(!empty($this->request->getData('imagen')[0]->getClientFilename())){
 
             $imagenes=array();
-            foreach($this -> request-> getData('imagen') as $key=> $images){
+            foreach($this -> request-> getData('imagen') as $key=> $images) {
                 //$imagen = array('nombre'=>substr(crypt(sha1(hash('sha512', md5(rand(1, 9999).$images))), 'cruzazulcampeon'), 1, 10));
-                $imagen=array('nombre'=>$images->getClientFilename());
+                $ext = pathinfo($images->getClientFilename(), PATHINFO_EXTENSION);
+                $imagen=array('nombre'=>MD5($images->getClientFilename()).'.'.$ext);
                 array_push($imagenes, $imagen);
             }
             $data = array(

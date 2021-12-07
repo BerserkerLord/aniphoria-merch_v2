@@ -5,8 +5,10 @@
  */
 $hidden = false;
 $disable = '';
-if($_SESSION['Auth']['id'] == $administrador->toArray()['id'] || $_SESSION['Auth']['usuario'] == 'Admin_Principal'){
+if($_SESSION['Auth']['id'] == $administrador->toArray()['id']){
     $hidden = true;
+}
+if($_SESSION['Auth']['usuario'] != 'Admin_Principal'){
     $disable = 'disabled';
 }
 

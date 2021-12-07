@@ -58,15 +58,15 @@
                                                                             <td class="line0"><?= $merch['id'] ?></td>
                                                                             <td class="line0"><?= $merch['articulo'] ?></td>
                                                                             <td class="line0 alignright"><?= $merch['_joinData']['cantidad'] ?></td>
-                                                                            <td class="line0 alignright">$<?= $merch['costo'] ?></td>
-                                                                            <td class="line0 alignright">$<?= $total_producto ?></td>
+                                                                            <td class="line0 alignright">$<?= number_format($merch['costo'], 2) ?></td>
+                                                                            <td class="line0 alignright">$<?= number_format($total_producto, 2) ?></td>
                                                                         </tr>
                                                                         <?php
                                                                             }
                                                                         ?>
                                                                         <tr class="total">
                                                                             <td class="alignright" colspan="4">Total</td>
-                                                                            <td class="alignright" colspan="4">$<?= $total ?></td>
+                                                                            <td class="alignright" colspan="4">$<?= number_format($total, 2) ?></td>
                                                                         </tr>
                                                                     </tbody>
                                                                 </table>

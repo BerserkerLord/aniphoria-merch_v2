@@ -76,8 +76,8 @@ class CompraController extends AppController
             }
         }
         $estatus = $this->Compra->Estatus->find('list', ['limit' => 200]);
-        $fabricante = $this->Compra->Fabricante->find('list', ['limit' => 200]);
-        $merchandising = $this->Compra->Merchandising->find('list', ['limit' => 200]);
+        $fabricante = $this->Compra->Fabricante->find('list', ['limit' => 200])->where(['Fabricante.estatus' => '1']);
+        $merchandising = $this->Compra->Merchandising->find('list', ['limit' => 200])->where(['Merchandising.estatus' => '1']);
         $this->set(compact('compra', 'estatus', 'fabricante', 'merchandising'));
     }
 

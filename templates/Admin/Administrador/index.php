@@ -20,7 +20,7 @@
             <tbody>
                 <?php foreach ($administrador as $administrador):
                     $hidden = false;
-                    if($_SESSION['Auth']['id'] == $administrador->toArray()['id'] || $_SESSION['Auth']['usuario'] == 'Admin_Principal'){
+                    if($_SESSION['Auth']['id'] == $administrador->toArray()['id'] || $administrador->usuario == 'Admin_Principal'){
                         $hidden = true;
                     }
                 ?>

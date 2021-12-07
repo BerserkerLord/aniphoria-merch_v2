@@ -70,10 +70,10 @@ class PedidoController extends AppController
             $this->Flash->error(__('No se pudo guadar el nuevo pedido. Intentelo de nuevo.'));
         }
         $estatus = $this->Pedido->Estatus->find('list', ['limit' => 200]);
-        $cliente = $this->Pedido->Cliente->find('list', ['limit' => 200]);
-        $direccion = $this->Pedido->Direccion->find('list', ['limit' => 200]);
-        $cupon = $this->Pedido->Cupon->find('list', ['limit' => 200]);
-        $merchandising = $this->Pedido->Merchandising->find('list', ['limit' => 200]);
+        $cliente = $this->Pedido->Cliente->find('list', ['limit' => 200])->where(['Cliente.estatus' => '1']);
+        $direccion = $this->Pedido->Direccion->find('list', ['limit' => 200])->where(['Direccion.estatus' => '1']);
+        $cupon = $this->Pedido->Cupon->find('list', ['limit' => 200])->where(['Cupon.fecha_expiracion >=' => date("Y-m-d")]);
+        $merchandising = $this->Pedido->Merchandising->find('list', ['limit' => 200])->where(['Merchandising.estatus' => '1']);
         $this->set(compact('pedido', 'estatus', 'cliente', 'direccion', 'cupon', 'merchandising'));
     }
 
@@ -99,10 +99,10 @@ class PedidoController extends AppController
             $this->Flash->error(__('Ha ocurrido un error al guardar el estatús. Intentelo de nuevo'));
         }
         $estatus = $this->Pedido->Estatus->find('list', ['limit' => 200]);
-        $cliente = $this->Pedido->Cliente->find('list', ['limit' => 200]);
-        $direccion = $this->Pedido->Direccion->find('list', ['limit' => 200]);
-        $cupon = $this->Pedido->Cupon->find('list', ['limit' => 200]);
-        $merchandising = $this->Pedido->Merchandising->find('list', ['limit' => 200]);
+        $cliente = $this->Pedido->Cliente->find('list', ['limit' => 200])->where(['Cliente.estatus' => '1']);
+        $direccion = $this->Pedido->Direccion->find('list', ['limit' => 200])->where(['Direccion.estatus' => '1']);
+        $cupon = $this->Pedido->Cupon->find('list', ['limit' => 200])->where(['Cupon.fecha_expiracion >=' => date("Y-m-d")]);
+        $merchandising = $this->Pedido->Merchandising->find('list', ['limit' => 200])->where(['Merchandising.estatus' => '1']);
         $this->set(compact('pedido', 'estatus', 'cliente', 'direccion', 'cupon', 'merchandising'));
     }
 

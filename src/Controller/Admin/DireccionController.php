@@ -53,7 +53,7 @@ class DireccionController extends AppController
             }
             $this->Flash->error(__('Hubo un error al registrar la dirección. Intentelo nuevamente'));
         }
-        $cliente = $this->Direccion->Cliente->find('list', ['limit' => 200]);
+        $cliente = $this->Direccion->Cliente->find('list', ['limit' => 200])->where(['Cliente.estatus' => '1']);
         $this->set(compact('direccion', 'cliente'));
     }
 
@@ -78,7 +78,7 @@ class DireccionController extends AppController
             }
             $this->Flash->error(__('Hubo un error al actualizar la dirección. Intentelo nuevamente.'));
         }
-        $cliente = $this->Direccion->Cliente->find('list', ['limit' => 200]);
+        $cliente = $this->Direccion->Cliente->find('list', ['limit' => 200])->where(['Cliente.estatus' => '1']);
         $this->set(compact('direccion', 'cliente'));
     }
 

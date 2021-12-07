@@ -3,6 +3,10 @@
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Pedido $pedido
  */
+$metodo = 'Efectivo';
+if(!$pedido['metodo']){
+    $metodo = 'Tarjeta';
+}
 ?>
 <table class="body-wrap">
     <tbody>
@@ -33,6 +37,7 @@
                                                     <br>Factura<?= ' #' . $pedido['id'] ?>
                                                     <br><?= $pedido['fecha'] ?>
                                                     <br>Estatus<?= ': ' . $pedido['estatus']['estatus'] ?>
+                                                    <br>Metodo de pago: <?= $metodo ?>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -59,8 +64,8 @@
                                                                     <td class="line0"><?= $merch['id'] ?></td>
                                                                     <td class="line0"><?= $merch['articulo'] ?></td>
                                                                     <td class="line0 alignright"><?= $merch['_joinData']['cantidad'] ?></td>
-                                                                    <td class="line0 alignright">$<?= $merch['costo'] ?></td>
-                                                                    <td class="line0 alignright">$<?= $total_producto ?></td>
+                                                                    <td class="line0 alignright">$<?= number_format($merch['costo'], 2) ?></td>
+                                                                    <td class="line0 alignright">$<?= number_format($total_producto, 2) ?></td>
                                                                 </tr>
                                                                 <?php
                                                                     if(isset($pedido['cupon'])){
@@ -71,15 +76,15 @@
                                                             ?>
                                                         <tr class="total">
                                                             <td class="alignright" colspan="4">SubTotal</td>
-                                                            <td class="alignright" colspan="4">$<?= $subtotal ?></td>
+                                                            <td class="alignright" colspan="4">$<?= number_format($subtotal, 2) ?></td>
                                                         </tr>
                                                         <tr class="total">
                                                             <td class="alignright" colspan="4">Descuento</td>
-                                                            <td class="alignright" colspan="4">$<?= $descuento ?></td>
+                                                            <td class="alignright" colspan="4">$<?= number_format($descuento, 2) ?></td>
                                                         </tr>
                                                         <tr class="Descuentos">
                                                             <td class="alignright" colspan="4">Total</td>
-                                                            <td class="alignright" colspan="4">$<?= $total ?></td>
+                                                            <td class="alignright" colspan="4">$<?= number_format($total, 2) ?></td>
                                                         </tr>
                                                     </tbody>
                                                 </table>

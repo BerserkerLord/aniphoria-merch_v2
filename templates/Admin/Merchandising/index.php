@@ -27,8 +27,8 @@
                     <td><?= @$this->Html->image('/img/productos/'.$imageName, ['width' => '100', 'height' => '100', 'alt' => 'Imagen Admin']) ?></td>
                     <td class="tables-link"><?= $merchandising->has('categorium') ? $this->Html->link($merchandising->categorium->categoria, ['controller' => 'Categoria', 'action' => 'view', $merchandising->categorium->id]) : '' ?></td>
                     <td><?= h($merchandising->articulo) ?></td>
-                    <td><?= '$'.$this->Number->format($merchandising->costo) ?></td>
-                    <td><?= '$'.$this->Number->format($merchandising->precio) ?></td>
+                    <td><?= '$'.number_format($merchandising->costo, 2) ?></td>
+                    <td><?= '$'.number_format($merchandising->precio, 2) ?></td>
                     <td><?= $merchandising->estatus ? __('Activo') : __('Inactivo'); ?></td>
                     <td class="actions">
                         <?= $this->Html->link('<i class="fas fa-eye pr-2"></i>', ['action' => 'view', $merchandising->id], ['escape' => false, 'title' => 'Ver Artículo']) ?>
