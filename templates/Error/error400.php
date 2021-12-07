@@ -11,7 +11,7 @@ use Cake\Error\Debugger;
     <div>
         <div>
             <div class="error-text" style="text-align: center; align-content: center">
-                <?= $this -> Html -> image('general/404.png', ['alt' => 'ded']) ?>
+                <?= $this -> Html -> image('general/404.jpg', ['alt' => 'ded']) ?>
                 <h1 style="color: #ff1166">Oops! Not Found.</h1>
                 <p>The page you requested for is not found.</p>
             </div>

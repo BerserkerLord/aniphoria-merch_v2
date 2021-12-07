@@ -12,7 +12,7 @@
                     <div class="row">
                         <?php
                         foreach($merchandising as $merchandising): ?>
-                            <div class="col-3 text-center">
+                            <div class="col-4 text-center">
                                 <?php
                                 if(empty($merchandising->imagen[0]->nombre)){
                                     $imageName = 'default.png';

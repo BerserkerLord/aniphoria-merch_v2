@@ -79,13 +79,13 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-team-item">
                         <div class="team-bg team-bg-2"></div>
-                        <h4>René Doelker Monroy <span>Weon</span></h4>
+                        <h4>René Doelker Monroy <span>Desarrollador Frontend</span></h4>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0">
                     <div class="single-team-item">
                         <div class="team-bg team-bg-3"></div>
-                        <h4>Darío Sebastián Zárate Ceballos <span>Programador Web</span></h4>
+                        <h4>Darío Sebastián Zárate Ceballos <span>Desarrollador Backend</span></h4>
                     </div>
                 </div>
             </div>
