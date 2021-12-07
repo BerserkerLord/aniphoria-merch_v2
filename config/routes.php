@@ -107,7 +107,7 @@ $routes->prefix('Admin', function (RouteBuilder $routes) {
 $routes->prefix('Cliente', function (RouteBuilder $routes) {
     $routes -> connect('/login', ['controller' => 'cliente', 'action' => 'login'], ['_name' => 'loginClient']);
     $routes -> connect('/register', ['controller' => 'cliente', 'action' => 'add'], ['_name' => 'registerClient']);
-    $routes -> connect('/view/{1}', ['controller' => 'cliente', 'action' => 'view'], ['_name' => 'viewCliente']);
+    $routes -> connect('/view', ['controller' => 'cliente', 'action' => 'view'], ['_name' => 'viewCliente']);
     $routes -> connect('/logout', ['controller' => 'cliente', 'action' => 'logout'], ['_name' => 'logoutClient']);
     $routes -> connect('/merch', ['controller' => 'merchandising', 'action' => 'index'], ['_name' => 'viewMerchandisingClient']);
     $routes -> connect('/cart', ['controller' => 'merchandising', 'action' => 'cart'], ['_name' => 'shoppingCart']);
