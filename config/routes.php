@@ -114,7 +114,7 @@ $routes->prefix('Cliente', function (RouteBuilder $routes) {
     $routes -> connect('/pedidos/{id}', ['controller' => 'pedido', 'action' => 'index'], ['_name' => 'viewPedidosClient']);
     $routes -> connect('/direcciones/{id}', ['controller' => 'direccion', 'action' => 'index'], ['_name' => 'viewAdressesClient']);
     $routes -> connect('/checkout', ['controller' => 'pedido', 'action' => 'checkout'], ['_name' => 'checkout']);
-    $routes -> connect('/payment', ['controller' => 'pedido', 'action' => 'payment']);
+    $routes -> connect('/payment', ['controller'  => 'pedido', 'action' => 'payment']);
     $routes -> fallbacks(DashedRoute::class);
 });
 

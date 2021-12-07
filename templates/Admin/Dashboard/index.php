@@ -103,7 +103,7 @@ array_push($colors, 'skyblue');
         ]);
 
         var options = {
-            title:'Ganancias por mes',
+            title:'Ganancias por semana',
             legend: 'none'
         };
 
